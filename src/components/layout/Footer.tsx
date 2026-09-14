@@ -43,7 +43,7 @@ export function Footer() {
                 <img 
                   src="/logo/solargard.png" 
                   alt="Solar Gard Logo" 
-                  className="object-contain brightness-0 invert opacity-90" 
+                  className="object-contain" 
                   style={{ height: '60px', width: 'auto', maxWidth: '240px' }}
                 />
               </div>

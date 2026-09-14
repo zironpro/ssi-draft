@@ -27,7 +27,7 @@ export function Stats() {
 
       {/* Stats Content */}
       <div className="container-master relative z-10 w-full pt-10 pb-20 md:pb-32">
-        <div className="flex flex-col md:flex-row justify-center items-center w-full">
+        <div className="grid grid-cols-2 md:grid-cols-4 w-full gap-y-10 md:gap-y-0">
           {stats.map((stat, index) => (
             <motion.div
               key={index}
@@ -35,14 +35,14 @@ export function Stats() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.6, delay: 0.2 + index * 0.15 }}
-              className={`flex flex-col items-center justify-center w-full md:w-1/4 py-6 md:py-0 ${
+              className={`flex flex-col items-center justify-center w-full ${
                 index !== stats.length - 1 ? 'md:border-r md:border-black/10' : ''
               }`}
             >
-              <span className="text-5xl md:text-6xl font-serif text-[var(--accent)] mb-2 tracking-tight">
+              <span className="text-4xl sm:text-5xl md:text-6xl font-serif text-[var(--accent)] mb-2 tracking-tight">
                 {stat.value}
               </span>
-              <span className="text-sm md:text-base font-medium text-gray-700 tracking-wide text-center px-4">
+              <span className="text-xs sm:text-sm md:text-base font-medium text-gray-700 tracking-wide text-center px-2 sm:px-4">
                 {stat.label}
               </span>
             </motion.div>

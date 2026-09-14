@@ -56,7 +56,7 @@ export function Navbar() {
             <img 
               src="/logo/solargard.png" 
               alt="Solar Gard Logo" 
-              className="object-contain brightness-0 invert opacity-90" 
+              className="object-contain" 
               style={{ height: '80px', width: 'auto', maxWidth: '300px' }}
             />
           </div>
