@@ -1,125 +1,151 @@
 "use client";
 
-import Image from "next/image";
-import { motion } from "framer-motion";
-import { useRef } from "react";
+import { useRef, useState, useEffect } from"react";
+import Link from"next/link";
+import { ArrowRight } from"lucide-react";
+import { motion, useScroll, useTransform, useSpring } from"framer-motion";
 
-const projects = [
-  { id: 1, image: "/images/hero.png", alt: "Residential exterior with window film" },
-  { id: 2, image: "/images/heroimg.png", alt: "Commercial office interior" },
-  { id: 3, image: "/images/hero.png", alt: "Residential living room with ocean view" },
-  { id: 4, image: "/images/heroimg.png", alt: "Automotive window tinting" },
-  { id: 5, image: "/images/hero.png", alt: "Modern architectural glass" },
+const services = [
+ {
+ title:"Coloured Films",
+ category:"Service",
+ image:"/images/services/coloured_films.jpg",
+ href:"/services/coloured-films"
+ },
+ {
+ title:"Best Safety & Security Window Film in UAE",
+ category:"Service",
+ image:"/images/services/safety_film.jpg",
+ href:"/services/safety-security"
+ },
+ {
+ title:"Wallpaper-Installation",
+ category:"Service",
+ image:"/images/services/wallpaper.jpg",
+ href:"/services/wallpaper"
+ },
+ {
+ title:"Decorative Film",
+ category:"Service",
+ image:"/images/services/decorative_film.jpg",
+ href:"/services/decorative"
+ },
+ {
+ title:"Glass & Aluminium Installation and Maintenance",
+ category:"Service",
+ image:"/images/services/glass_aluminium.jpg",
+ href:"/services/glass-aluminium"
+ },
+ {
+ title:"Print and Vinyls",
+ category:"Service",
+ image:"/images/services/print_vinyls.jpg",
+ href:"/services/print-vinyls"
+ },
+ {
+ title:"Luxury Interior Wrapping",
+ category:"Service",
+ image:"/images/services/luxury_wrapping.jpg",
+ href:"/services/luxury-wrapping"
+ },
+ {
+ title:"Switchable Smart Film",
+ category:"Service",
+ image:"/images/services/smart_film.jpg",
+ href:"/services/smart-film"
+ }
 ];
 
-export function OurWork() {
-  const scrollContainerRef = useRef<HTMLDivElement>(null);
+export default function OurWork() {
+ const targetRef = useRef<HTMLDivElement>(null);
+ 
+ // Track scroll progress of the target section
+ const { scrollYProgress } = useScroll({
+ target: targetRef,
+ offset: ["start start","end end"],
+ });
 
-  const scrollLeft = () => {
-    if (scrollContainerRef.current) {
-      scrollContainerRef.current.scrollBy({ left: -400, behavior: "smooth" });
-    }
-  };
+ // Extremely buttery, inertia-based Apple scroll feel
+ const smoothProgress = useSpring(scrollYProgress, {
+ stiffness: 40,
+ damping: 20,
+ mass: 0.5,
+ restDelta: 0.001,
+ });
 
-  const scrollRight = () => {
-    if (scrollContainerRef.current) {
-      scrollContainerRef.current.scrollBy({ left: 400, behavior: "smooth" });
-    }
-  };
+ const trackRef = useRef<HTMLDivElement>(null);
+ const [maxScroll, setMaxScroll] = useState(0);
 
-  return (
-    <section className="section-master bg-[var(--surface-primary)] text-[var(--foreground)] overflow-hidden">
-      <div className="container-master flex flex-col gap-12 md:gap-16">
-        
-        {/* Header Section */}
-        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 lg:gap-16">
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.8 }}
-            className="flex flex-col gap-4 max-w-2xl"
-          >
-            <p className="text-sm tracking-[0.2em] font-semibold text-gray-500 uppercase">
-              Our Work
-            </p>
-            <h2 className="heading-fluid-lg font-serif leading-[1.1] text-balance">
-              Real Spaces. Real Results.
-            </h2>
-          </motion.div>
-          
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="max-w-lg lg:pb-2 flex flex-col items-start lg:items-end gap-6 lg:text-right"
-          >
-            <p className="text-fluid-base text-gray-600 leading-relaxed text-pretty lg:text-right">
-              See how our window films make a difference in homes, businesses and vehicles.
-            </p>
-            
-            {/* Carousel Navigation Arrows */}
-            <div className="flex items-center gap-4">
-              <button 
-                onClick={scrollLeft}
-                className="w-12 h-12 flex items-center justify-center rounded-full border border-gray-300 text-gray-600 hover:border-[var(--accent)] hover:text-[var(--accent)] transition-colors"
-                aria-label="Scroll left"
-              >
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 19l-7-7 7-7" />
-                </svg>
-              </button>
-              <button 
-                onClick={scrollRight}
-                className="w-12 h-12 flex items-center justify-center rounded-full border border-gray-300 text-gray-600 hover:border-[var(--accent)] hover:text-[var(--accent)] transition-colors"
-                aria-label="Scroll right"
-              >
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5l7 7-7 7" />
-                </svg>
-              </button>
-            </div>
-          </motion.div>
-        </div>
+ useEffect(() => {
+ const updateMaxScroll = () => {
+ if (trackRef.current) {
+ // Calculate the exact distance to scroll left: Total Track Width - Viewport Width
+ setMaxScroll(trackRef.current.scrollWidth - window.innerWidth);
+ }
+ };
+ 
+ updateMaxScroll();
+ window.addEventListener("resize", updateMaxScroll);
+ return () => window.removeEventListener("resize", updateMaxScroll);
+ }, []);
 
-        {/* Image Carousel */}
-        <motion.div 
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="relative -mx-4 px-4 sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8"
-        >
-          <div 
-            ref={scrollContainerRef}
-            className="flex gap-4 md:gap-6 overflow-x-auto snap-x snap-mandatory hide-scrollbar pb-4"
-            style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
-          >
-            {/* Custom CSS to hide scrollbar while keeping functionality */}
-            <style jsx>{`
-              .hide-scrollbar::-webkit-scrollbar {
-                display: none;
-              }
-            `}</style>
-            
-            {projects.map((project) => (
-              <div 
-                key={project.id}
-                className="relative flex-none w-[280px] sm:w-[350px] md:w-[400px] lg:w-[450px] aspect-[4/3] rounded-xl overflow-hidden snap-start group cursor-pointer"
-              >
-                <Image
-                  src={project.image}
-                  alt={project.alt}
-                  fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-              </div>
-            ))}
-          </div>
-        </motion.div>
+ // Map the smooth progress directly to a pixel value for flawless GPU interpolation
+ const x = useTransform(smoothProgress, [0, 1], [0, -maxScroll]);
 
-      </div>
-    </section>
-  );
+ return (
+ <section ref={targetRef} className="relative h-[300vh] bg-[var(--color-warm-ivory)]">
+ 
+ {/* Sticky container that locks to the screen while we scroll vertically */}
+ <div className="sticky top-0 flex flex-col h-screen w-full overflow-hidden">
+ 
+ {/* Title - Positioned naturally at the top */}
+ <div className="container-master w-full pt-16 md:pt-24 pb-4 md:pb-8 shrink-0">
+ <h2 className="text-[28px] md:text-[40px] lg:text-[48px] font-heading font-semibold tracking-[0.15em] text-[var(--color-deep-forest)] leading-tight uppercase">
+ What We’re Offering
+ </h2>
+ </div>
+
+ {/* Horizontal Sliding Track */}
+ <div className="flex-1 w-full flex items-center overflow-hidden pb-8 md:pb-16">
+ <motion.div 
+ ref={trackRef}
+ style={{ x }} 
+ className="flex gap-6 px-4 md:px-10 h-[50vh] md:h-[65vh] w-max"
+ >
+ {services.map((service, i) => (
+ <div 
+ key={service.title} 
+ className="relative w-[85vw] md:w-[45vw] lg:w-[30vw] h-full flex-shrink-0"
+ >
+ <Link href={service.href} className="group relative block w-full h-full overflow-hidden rounded-lg bg-[var(--color-deep-forest)]">
+ 
+ <div className="absolute inset-0 w-[120%] -left-[10%]">
+ <div 
+ className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
+ style={{ backgroundImage: `url('${service.image}')` }}
+ />
+ </div>
+ 
+ <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80" />
+
+ <div className="absolute bottom-0 left-0 w-full p-6 md:p-12 text-[var(--color-warm-ivory)]">
+ <div className="text-[var(--color-arch-sand)] text-[10px] md:text-[12px] font-semibold tracking-[0.2em] uppercase mb-2 md:mb-3 transition-transform duration-500 group-hover:-translate-y-2">
+ {service.category}
+ </div>
+ <h3 className="text-[20px] md:text-[28px] lg:text-[32px] font-semibold tracking-tight mb-4 md:mb-6 leading-snug transition-transform duration-500 group-hover:-translate-y-2 uppercase">
+ {service.title}
+ </h3>
+ 
+ <div className="inline-flex items-center gap-2 font-button font-bold tracking-[0.2em] text-[10px] md:text-xs uppercase transition-all opacity-100 md:opacity-0 md:-translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 duration-500">
+ LEARN MORE <ArrowRight className="size-4" />
+ </div>
+ </div>
+ </Link>
+ </div>
+ ))}
+ </motion.div>
+ </div>
+ </div>
+ </section>
+ );
 }

@@ -1,5 +1,11 @@
 @import "tailwindcss";
 
+@theme {
+  --font-heading: var(--font-heading);
+  --font-sans: var(--font-sans);
+  --font-button: var(--font-button);
+}
+
 /* =============================================================================
    VERSION 3 — IPHONE-FIRST MASTER RESPONSIVE SYSTEM
    Next.js + Tailwind CSS v4
@@ -38,7 +44,12 @@
   --color-solar-bronze:   #B08A57;   /* RGB 176 138 87  — warm gold   */
   --color-glass-silver:   #B8BEC1;   /* RGB 184 190 193 — light silver */
   --color-glass-dark:     #293238;   /* RGB 41  50  56  — slate dark  */
-
+  --color-deep-forest:    #1A1A1A; /* SolarGard Charcoal */
+  --color-warm-ivory:     #FFFFFF; /* SolarGard Pure White */
+  --color-arch-sand:      #4B5563; /* SolarGard Medium/Dark Gray */
+  --color-muted-sage:     #007BC0; /* SolarGard Blue */
+  --color-soft-glass:     #F3F4F6; /* Soft Gray */
+  --color-muted-copper:   #F5B21E; /* SolarGard Yellow */
   /* Semantic aliases — use these in components */
   --background:           var(--color-arch-white);
   --foreground:           var(--color-obsidian);

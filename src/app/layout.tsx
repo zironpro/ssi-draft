@@ -1,15 +1,21 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Cormorant_Garamond, Inter, Manrope } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const fontHeading = Cormorant_Garamond({
   subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-heading",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const fontSans = Inter({
   subsets: ["latin"],
+  variable: "--font-sans",
+});
+
+const fontButton = Manrope({
+  subsets: ["latin"],
+  variable: "--font-button",
 });
 
 export const metadata: Metadata = {
@@ -19,18 +25,20 @@ export const metadata: Metadata = {
 
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { GlobalCta } from "@/components/shared/GlobalCta";
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${fontHeading.variable} ${fontSans.variable} ${fontButton.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">
+      <body className="min-h-full flex flex-col font-sans">
         <Navbar />
         <main className="flex-1">
           {children}
         </main>
+        <GlobalCta />
         <Footer />
       </body>
     </html>
