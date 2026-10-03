@@ -81,7 +81,7 @@ export function BlogHero() {
  <div className="overflow-hidden pb-2"><div className="res-hero-line">BLOG.</div></div>
  </h1>
 
- <p className="res-hero-sub text-base md:text-lg text-[var(--color-warm-ivory)]/80 leading-relaxed max-w-2xl mx-auto mb-10 font-medium">
+ <p className="res-hero-sub text-base md:text-lg text-white/90 leading-relaxed max-w-2xl mx-auto mb-10 font-medium">
  Insights, guides, and comprehensive articles to keep you updated on the latest industry trends.
  </p>
 

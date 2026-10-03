@@ -81,7 +81,7 @@ export function ContactHero() {
  <div className="overflow-hidden pb-2"><div className="con-hero-line">TOUCH.</div></div>
  </h1>
 
- <p className="con-hero-sub text-base md:text-lg text-[var(--color-warm-ivory)]/80 leading-relaxed max-w-2xl mx-auto mb-10 font-medium">
+ <p className="con-hero-sub text-base md:text-lg text-white/90 leading-relaxed max-w-2xl mx-auto mb-10 font-medium">
  Ready to elevate your space? We're here to answer your questions and provide tailored solutions.
  </p>
 

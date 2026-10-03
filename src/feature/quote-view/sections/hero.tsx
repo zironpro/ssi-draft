@@ -81,7 +81,7 @@ export function QuoteHero() {
           <div className="overflow-hidden pb-2"><div className="res-hero-line">QUOTE.</div></div>
         </h1>
 
-        <p className="res-hero-sub text-base md:text-lg text-[var(--color-warm-ivory)]/80 leading-relaxed max-w-2xl mx-auto mb-10 font-medium">
+        <p className="res-hero-sub text-base md:text-lg text-white/90 leading-relaxed max-w-2xl mx-auto mb-10 font-medium">
           Provide us with some basic information about your project, and our specialists will provide a detailed proposal tailored to your specific building requirements.
         </p>
 

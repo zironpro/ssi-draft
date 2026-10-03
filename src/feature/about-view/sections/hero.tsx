@@ -81,7 +81,7 @@ export function AboutHero() {
  <div className="overflow-hidden pb-2"><div className="abt-hero-line">SOLARSAFETY.</div></div>
  </h1>
 
- <p className="abt-hero-sub text-base md:text-lg text-[var(--color-warm-ivory)]/80 leading-relaxed max-w-3xl mx-auto mb-10 font-medium">
+ <p className="abt-hero-sub text-base md:text-lg text-white/90 leading-relaxed max-w-3xl mx-auto mb-10 font-medium">
  Pioneering advanced architectural film and glass solutions. We exist to protect, enhance, and transform your environments.
  </p>
 

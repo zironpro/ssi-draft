@@ -83,7 +83,7 @@ export function IndustriesHero() {
  <div className="overflow-hidden pb-2"><div className="ind-hero-line">WE SERVE.</div></div>
  </h1>
 
- <p className="ind-hero-sub text-base md:text-lg text-[var(--color-warm-ivory)]/80 leading-relaxed max-w-3xl mx-auto mb-10 font-medium">
+ <p className="ind-hero-sub text-base md:text-lg text-white/90 leading-relaxed max-w-3xl mx-auto mb-10 font-medium">
  Delivering specialized window film and glass solutions tailored to the unique demands of diverse sectors.
  </p>
 

@@ -133,7 +133,7 @@ export function ProductDetailHero({ title, subtitle, image, stats = [], breadcru
  </h1>
  </div>
 
- <p className="pd-hero-sub text-base md:text-lg text-[var(--color-arch-sand)] leading-relaxed mb-12 font-medium max-w-2xl">
+ <p className="pd-hero-sub text-base md:text-lg text-white/90 leading-relaxed mb-12 font-medium max-w-2xl">
  {subtitle}
  </p>
 

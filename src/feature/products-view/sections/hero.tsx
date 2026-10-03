@@ -86,7 +86,7 @@ export function ProductsHero() {
  <div className="overflow-hidden pb-2"><div className="prod-hero-line">PRODUCTS.</div></div>
  </h1>
 
- <p className="prod-hero-sub text-base md:text-lg text-[var(--color-warm-ivory)]/80 leading-relaxed max-w-3xl mx-auto mb-10 font-medium">
+ <p className="prod-hero-sub text-base md:text-lg text-white/90 leading-relaxed max-w-3xl mx-auto mb-10 font-medium">
  Discover our wide range of high-quality architectural glass and films designed to meet your specific needs and exceed your expectations.
  </p>
 

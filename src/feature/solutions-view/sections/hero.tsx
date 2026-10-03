@@ -80,7 +80,7 @@ export function SolutionsHero() {
  <div className="overflow-hidden pb-2"><div className="sol-hero-line">SOLUTIONS.</div></div>
  </h1>
 
- <p className="sol-hero-sub text-base md:text-lg text-[var(--color-warm-ivory)]/80 leading-relaxed max-w-3xl mx-auto mb-10 font-medium">
+ <p className="sol-hero-sub text-base md:text-lg text-white/90 leading-relaxed max-w-3xl mx-auto mb-10 font-medium">
  Comprehensive services designed to transform, protect, and elevate your commercial and residential spaces.
  </p>
 

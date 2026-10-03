@@ -83,7 +83,7 @@ export function ServicesHero() {
  <div className="overflow-hidden pb-2"><div className="srv-hero-line">SERVICES.</div></div>
  </h1>
 
- <p className="srv-hero-sub text-base md:text-lg text-[var(--color-warm-ivory)]/80 leading-relaxed max-w-3xl mx-auto mb-10 font-medium">
+ <p className="srv-hero-sub text-base md:text-lg text-white/90 leading-relaxed max-w-3xl mx-auto mb-10 font-medium">
  From precise installations to comprehensive consultations, our team guarantees flawless execution for every project.
  </p>
 
