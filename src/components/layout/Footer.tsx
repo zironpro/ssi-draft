@@ -32,10 +32,10 @@ export function Footer() {
   return (
     <footer className="bg-[#0a0a0a] text-white pt-20 pb-10 border-t border-white/5">
       <div className="container-master">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8 mb-16">
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-12 gap-y-12 gap-x-8 mb-16">
           
           {/* Brand & Logos Column */}
-          <div className="lg:col-span-4 flex flex-col gap-6">
+          <div className="col-span-2 md:col-span-4 lg:col-span-4 flex flex-col gap-6">
             <div className="flex items-center gap-4 group shrink-0">
               <div className="relative flex items-center shrink-0">
                 <img 
@@ -77,7 +77,7 @@ export function Footer() {
           </div>
 
           {/* Links Columns */}
-          <div className="lg:col-span-2 flex flex-col gap-6">
+          <div className="col-span-1 md:col-span-1 lg:col-span-2 flex flex-col gap-6">
             <h4 className="text-[var(--accent)] font-semibold tracking-wider text-xs uppercase">Products</h4>
             <ul className="flex flex-col gap-4">
               {footerLinks.products.map((link) => (
@@ -90,7 +90,7 @@ export function Footer() {
             </ul>
           </div>
 
-          <div className="lg:col-span-2 flex flex-col gap-6">
+          <div className="col-span-1 md:col-span-1 lg:col-span-2 flex flex-col gap-6">
             <h4 className="text-[var(--accent)] font-semibold tracking-wider text-xs uppercase">Solutions</h4>
             <ul className="flex flex-col gap-4">
               {footerLinks.solutions.map((link) => (
@@ -103,7 +103,7 @@ export function Footer() {
             </ul>
           </div>
 
-          <div className="lg:col-span-2 flex flex-col gap-6">
+          <div className="col-span-1 md:col-span-1 lg:col-span-2 flex flex-col gap-6">
             <h4 className="text-[var(--accent)] font-semibold tracking-wider text-xs uppercase">Company</h4>
             <ul className="flex flex-col gap-4">
               {footerLinks.company.map((link) => (
@@ -116,7 +116,7 @@ export function Footer() {
             </ul>
           </div>
 
-          <div className="lg:col-span-2 flex flex-col gap-6">
+          <div className="col-span-1 md:col-span-1 lg:col-span-2 flex flex-col gap-6">
             <h4 className="text-[var(--accent)] font-semibold tracking-wider text-xs uppercase">Contact</h4>
             <ul className="flex flex-col gap-4">
               {footerLinks.contact.map((link) => (
@@ -135,8 +135,8 @@ export function Footer() {
         <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-gray-500">
           <p>© {new Date().getFullYear()} SSI Films. All rights reserved.</p>
           <div className="flex items-center gap-6">
-            <Link href="/" className="hover:text-gray-300 transition-colors">Privacy Policy</Link>
-            <Link href="/" className="hover:text-gray-300 transition-colors">Terms of Service</Link>
+            <Link href="/privacy-policy" className="hover:text-gray-300 transition-colors">Privacy Policy</Link>
+            <Link href="/terms-of-service" className="hover:text-gray-300 transition-colors">Terms of Service</Link>
           </div>
         </div>
       </div>
