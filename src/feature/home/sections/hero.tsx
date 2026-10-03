@@ -54,21 +54,25 @@ export function Hero() {
             {/* Base Image */}
             <div className="absolute inset-0">
               {/* Desktop Image */}
-              <Image
-                src="/main-hero/Tinted Glass House at Sunset.png"
-                alt="Tinted Glass House at Sunset"
-                fill
-                className="object-cover hidden md:block"
-                priority
-              />
+              <div className="absolute inset-0 hidden md:block">
+                <Image
+                  src="/main-hero/Tinted Glass House at Sunset.png"
+                  alt="Tinted Glass House at Sunset"
+                  fill
+                  className="object-cover"
+                  priority
+                />
+              </div>
               {/* Mobile Image */}
-              <Image
-                src="/hero/mobile-hero.png"
-                alt="Mobile Hero"
-                fill
-                className="object-cover block md:hidden"
-                priority
-              />
+              <div className="absolute inset-0 block md:hidden">
+                <Image
+                  src="/hero/mobile-hero.png"
+                  alt="Mobile Hero"
+                  fill
+                  className="object-cover"
+                  priority
+                />
+              </div>
             </div>
 
             {/* Reveal Image Mask (Desktop Only) */}
