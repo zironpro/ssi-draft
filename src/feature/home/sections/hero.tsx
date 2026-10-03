@@ -53,18 +53,27 @@ export function Hero() {
           <div className="relative w-full h-full pointer-events-none">
             {/* Base Image */}
             <div className="absolute inset-0">
+              {/* Desktop Image */}
               <Image
                 src="/main-hero/Tinted Glass House at Sunset.png"
                 alt="Tinted Glass House at Sunset"
                 fill
-                className="object-cover"
+                className="object-cover hidden md:block"
+                priority
+              />
+              {/* Mobile Image */}
+              <Image
+                src="/hero/mobile-hero.png"
+                alt="Mobile Hero"
+                fill
+                className="object-cover block md:hidden"
                 priority
               />
             </div>
 
-            {/* Reveal Image Mask */}
+            {/* Reveal Image Mask (Desktop Only) */}
             <motion.div
-              className="absolute inset-0 pointer-events-none"
+              className="absolute inset-0 pointer-events-none hidden md:block"
               style={{ maskImage, WebkitMaskImage: maskImage }}
             >
               <Image
@@ -79,9 +88,9 @@ export function Hero() {
         </div>
       </motion.div>
 
-      {/* Cursor Label: follows the reveal spotlight */}
+      {/* Cursor Label: follows the reveal spotlight (Desktop Only) */}
       <motion.div
-        className="absolute top-0 left-0 z-30 pointer-events-none"
+        className="absolute top-0 left-0 z-30 pointer-events-none hidden md:block"
         style={{ x: smoothMouseX, y: smoothMouseY }}
       >
         <motion.div
