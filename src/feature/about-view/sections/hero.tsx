@@ -38,7 +38,7 @@ export function AboutHero() {
 
  gsap.to(imageRef.current, {
  scale: 1.1,
- y: 100,
+ y: 0, /* removed parallax gap */
  ease:"none",
  scrollTrigger: {
  trigger: heroRef.current,
@@ -68,19 +68,14 @@ export function AboutHero() {
  return (
  <section
  ref={heroRef}
- className="relative w-full h-[80vh] min-h-[600px] overflow-hidden bg-[var(--color-deep-forest)] flex items-center justify-center"
+ className="relative w-full h-[80vh] min-h-[600px] overflow-hidden bg-[var(--color-deep-forest)] flex items-center justify-center pt-24 lg:pt-32"
  >
- <div className="absolute inset-0 overflow-hidden z-0">
- <img
- ref={imageRef}
- src="/hero/Minimalist Cream Wave Background.png"
- alt="About SolarSafety"
- className="w-full h-full object-cover origin-center"
- />
+ <div className="absolute inset-0 w-full h-full overflow-hidden z-0">
+ <div ref={imageRef} className="w-full h-full bg-cover bg-center origin-center" style={{ backgroundImage: `url('/hero/about-hero.jpg')` }} />
  <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-deep-forest)]/90 via-[var(--color-deep-forest)]/60 to-[var(--color-deep-forest)]/30" />
  </div>
 
- <div className="container-master relative z-10 w-full px-4 text-center abt-hero-content mt-16 md:mt-0">
+ <div className="container-master relative z-10 w-full px-4 text-center abt-hero-content mt-0">
  <h1 className="text-[40px] md:text-[60px] lg:text-[70px] font-heading font-semibold tracking-[0.15em] uppercase text-[var(--color-warm-ivory)] leading-[1] mb-6 flex flex-col items-center">
  <div className="overflow-hidden pb-2"><div className="abt-hero-line">ABOUT</div></div>
  <div className="overflow-hidden pb-2"><div className="abt-hero-line">SOLARSAFETY.</div></div>

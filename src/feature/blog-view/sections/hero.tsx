@@ -38,7 +38,7 @@ export function BlogHero() {
 
  gsap.to(imageRef.current, {
  scale: 1.1,
- y: 100,
+ y: 0, /* removed parallax gap */
  ease:"none",
  scrollTrigger: {
  trigger: heroRef.current,
@@ -68,19 +68,14 @@ export function BlogHero() {
  return (
  <section
  ref={heroRef}
- className="relative w-full h-[70vh] min-h-[500px] overflow-hidden bg-[var(--color-deep-forest)] flex items-center justify-center"
+ className="relative w-full h-[70vh] min-h-[500px] overflow-hidden bg-[var(--color-deep-forest)] flex items-center justify-center pt-24 lg:pt-32"
  >
- <div className="absolute inset-0 overflow-hidden z-0">
- <img
- ref={imageRef}
- src="/hero/Minimalist Cream Wave Background.png"
- alt="Blog Hub"
- className="w-full h-full object-cover origin-center"
- />
- <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-deep-forest)]/90 via-[var(--color-deep-forest)]/50 to-[var(--color-deep-forest)]/30" />
+ <div className="absolute inset-0 w-full h-full overflow-hidden z-0">
+ <div ref={imageRef} className="w-full h-full bg-cover bg-center origin-center" style={{ backgroundImage: `url('/hero/blog-hero.jpg')` }} />
+ <div className="absolute inset-0 bg-[var(--color-deep-forest)]/60" />
  </div>
 
- <div className="container-master relative z-10 w-full px-4 text-center res-hero-content mt-16 md:mt-0">
+ <div className="container-master relative z-10 w-full px-4 text-center res-hero-content mt-0">
  <h1 className="text-[40px] md:text-[60px] lg:text-[70px] font-heading font-semibold tracking-[0.15em] uppercase text-[var(--color-warm-ivory)] leading-[1] mb-6 flex flex-col items-center">
  <div className="overflow-hidden pb-2"><div className="res-hero-line">OUR</div></div>
  <div className="overflow-hidden pb-2"><div className="res-hero-line">BLOG.</div></div>

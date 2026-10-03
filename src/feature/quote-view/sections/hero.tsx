@@ -29,7 +29,12 @@ export function QuoteHero() {
  return (
  <section ref={containerRef} className="pt-40 pb-20 bg-[var(--color-deep-forest)] text-white relative overflow-hidden">
  {/* Background Elements */}
- <div className="absolute inset-0 opacity-10">
+ <div className="absolute inset-0 w-full h-full overflow-hidden z-0">
+ <img
+ src="/hero/quote-hero.jpg"
+ alt="Get a Quote"
+ className="w-full h-full object-cover origin-center opacity-30 mix-blend-overlay"
+ />
  <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-[var(--color-muted-copper)] to-transparent opacity-30" />
  </div>
 

@@ -66,7 +66,7 @@ export function ProductDetailHero({ title, subtitle, image, stats = [], breadcru
 
  gsap.to(imageRef.current, {
  scale: 1.1,
- y: 100,
+ y: 0, /* removed parallax gap */
  ease:"none",
  scrollTrigger: {
  trigger: heroRef.current,
@@ -98,7 +98,7 @@ export function ProductDetailHero({ title, subtitle, image, stats = [], breadcru
  ref={heroRef}
  className="relative w-full h-[90vh] min-h-[700px] overflow-hidden bg-[var(--color-deep-forest)] flex items-center"
  >
- <div className="absolute inset-0 overflow-hidden z-0">
+ <div className="absolute inset-0 w-full h-full overflow-hidden z-0">
  <img
  ref={imageRef}
  src={image}
