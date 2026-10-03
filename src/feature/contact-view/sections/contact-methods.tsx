@@ -76,8 +76,7 @@ export function ContactMethods() {
                 <p className="text-sm font-bold text-[var(--color-arch-sand)] uppercase tracking-wider mb-2">Address:</p>
                 <p className="text-lg text-[var(--color-deep-forest)] font-medium leading-relaxed">
                   Solar Safety Films Inc.<br />
-                  123 Architectural Avenue<br />
-                  Business Bay, Dubai, UAE
+                  X4QF+VR4 Dubai - United Arab Emirates
                 </p>
               </div>
             </div>

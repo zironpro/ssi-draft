@@ -21,8 +21,8 @@ const footerLinks = {
     { name: "Contact Us", href: "/contact" },
   ],
   contact: [
-    { name: "123 Architectural Avenue", href: "#" },
-    { name: "Business Bay, Dubai, UAE", href: "#" },
+    { name: "X4QF+VR4 Dubai", href: "#" },
+    { name: "United Arab Emirates", href: "#" },
     { name: "+971 55 840 8421", href: "tel:+971558408421" },
     { name: "sales@solarsafety.ae", href: "mailto:sales@solarsafety.ae" },
   ]
