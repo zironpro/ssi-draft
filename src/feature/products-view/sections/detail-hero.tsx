@@ -64,17 +64,7 @@ export function ProductDetailHero({ title, subtitle, image, stats = [], breadcru
  1.8
  );
 
- gsap.to(imageRef.current, {
- scale: 1.1,
- y: 0, /* removed parallax gap */
- ease:"none",
- scrollTrigger: {
- trigger: heroRef.current,
- start:"top top",
- end:"bottom top",
- scrub: true,
- },
- });
+
 
  gsap.to(".pd-hero-content", {
  y: -150,
@@ -96,17 +86,11 @@ export function ProductDetailHero({ title, subtitle, image, stats = [], breadcru
  return (
  <section
  ref={heroRef}
- className="relative w-full h-[90vh] min-h-[700px] overflow-hidden bg-[var(--color-deep-forest)] flex items-center"
+ className="relative w-full py-32 min-h-[500px] md:py-0 md:h-[90vh] md:min-h-[700px] overflow-hidden bg-[var(--color-deep-forest)] flex items-center"
  >
  <div className="absolute inset-0 w-full h-full overflow-hidden z-0">
- <img
- ref={imageRef}
- src={image}
- alt={title}
- className="w-full h-full object-cover origin-center"
- />
- <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-deep-forest)] via-[var(--color-deep-forest)]/40 to-transparent" />
- <div className="absolute inset-0 bg-gradient-to-r from-[var(--color-deep-forest)]/80 to-transparent" />
+ <div ref={imageRef} className="w-full h-full bg-cover bg-center origin-center" style={{ backgroundImage: `url('${image}')` }} />
+ <div className="absolute inset-0 bg-[var(--color-deep-forest)]/60" />
  </div>
 
  <div className="container-master relative z-10 w-full px-4 pd-hero-content mt-20">
