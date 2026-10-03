@@ -37,8 +37,8 @@ export function ContactLocation() {
  <div>
  <h4 className="text-xl font-bold mb-2">Phone</h4>
  <p className="text-[var(--color-warm-ivory)]/70 leading-relaxed">
- +971 4 123 4567<br />
- +971 50 987 6543 (Mobile)
+ +971 55 840 8421<br />
+ +971 55 840 8421 (Mobile)
  </p>
  </div>
  </div>
@@ -50,8 +50,8 @@ export function ContactLocation() {
  <div>
  <h4 className="text-xl font-bold mb-2">Email</h4>
  <p className="text-[var(--color-warm-ivory)]/70 leading-relaxed">
- info@solarsafetyfilms.com<br />
- sales@solarsafetyfilms.com
+ sales@solarsafety.ae<br />
+ sales@solarsafety.ae
  </p>
  </div>
  </div>

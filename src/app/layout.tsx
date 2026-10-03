@@ -26,6 +26,7 @@ export const metadata: Metadata = {
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { GlobalCta } from "@/components/shared/GlobalCta";
+import { ScrollToTop } from "@/components/shared/ScrollToTop";
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
@@ -34,6 +35,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${fontHeading.variable} ${fontSans.variable} ${fontButton.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col font-sans">
+        <ScrollToTop />
         <Navbar />
         <main className="flex-1">
           {children}

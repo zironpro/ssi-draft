@@ -93,7 +93,7 @@ export function Performance() {
  className="pt-2"
  >
  <a
- href="#"
+ href="/quote"
  className="inline-flex items-center justify-center rounded-lg bg-[var(--accent)] px-8 py-4 text-center text-base font-button font-medium text-white hover:bg-[var(--accent-muted)] transition-all duration-300"
  >
  Learn More
