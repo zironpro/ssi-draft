@@ -1,4 +1,4 @@
-"use client";
+"use client"; // TS Fix Synced
 
 import { useState, useEffect, useRef } from"react";
 import Link from"next/link";
@@ -51,7 +51,7 @@ const solutions = [
 
 export default function Solutions() {
  const [activeIndex, setActiveIndex] = useState(0);
- const listRefs = useRef<(HTMLDivElement | null)[]>([]);
+ const listRefs = useRef<(HTMLAnchorElement | null)[]>([]);
 
  useEffect(() => {
  // Enable ScrollSpy behavior
