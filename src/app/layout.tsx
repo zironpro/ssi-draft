@@ -27,6 +27,7 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { GlobalCta } from "@/components/shared/GlobalCta";
 import { ScrollToTop } from "@/components/shared/ScrollToTop";
+import { GlobalWhatsApp } from "@/components/shared/GlobalWhatsApp";
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
@@ -42,6 +43,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         </main>
         <GlobalCta />
         <Footer />
+        <GlobalWhatsApp />
       </body>
     </html>
   );

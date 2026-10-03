@@ -92,7 +92,7 @@ export function Hero() {
         >
           <span className="h-1.5 w-1.5 rounded-full bg-white" />
           <span className="text-[10px] font-sans font-semibold tracking-[0.2em] uppercase text-white whitespace-nowrap">
-           With Film
+           Without Film
           </span>
         </motion.div>
       </motion.div>
