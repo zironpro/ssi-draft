@@ -8,6 +8,7 @@ import Credibility from "./sections/credibility";
 
 
 import { GlobalFaq } from "@/components/shared/GlobalFaq";
+import { Herovid } from "./sections/scroll-hero";
 
 const homeFaqs = [
   {
@@ -27,6 +28,7 @@ const homeFaqs = [
 export function HomeView() {
  return (
  <main className="min-h-screen bg-white dark:bg-gray-900">
+    <Herovid />
     <Hero />
     <Features />
     <Solutions />
