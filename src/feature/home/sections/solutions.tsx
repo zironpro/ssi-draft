@@ -45,7 +45,7 @@ const solutions = [
     title: "DECORATIVE WRAPS",
     slug: "interior-enhancement",
     desc: "Premium architectural vinyl wraps for resurfacing walls, reception desks, doors, and interior elements with luxury textures.",
-    image: "/sub-solutions/interior-wrapping.png",
+    image: "/images/solutions/wrapping.png",
   }
 ];
 
