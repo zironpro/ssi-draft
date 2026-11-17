@@ -6,24 +6,24 @@ import { Plus, Minus } from "lucide-react";
 
 const defaultFaqs = [
   {
-    question: "What makes your steel fabrication services unique?",
-    answer: "We combine decades of experience with state-of-the-art technology to deliver precision steel fabrication. Our process ensures strict quality control, timely delivery, and custom solutions tailored to your specific project needs.",
+    question: "What are the primary benefits of installing Solar Gard window films?",
+    answer: "Solar Gard window films reject up to 82% of total solar energy, block 99% of damaging UV radiation, reduce harsh glare, and significantly reduce cooling costs while protecting interior furnishings from fading.",
   },
   {
-    question: "Do you handle both commercial and industrial projects?",
-    answer: "Yes, we have extensive experience across various sectors including commercial, industrial, and infrastructure. Whether it's structural frameworks for buildings or specialized components for industrial machinery, we have the capabilities to handle it.",
+    question: "How do anti-shatter safety and security films protect my property?",
+    answer: "Our certified Solar Gard safety and security films bond to glass, holding fragments firmly together in the event of severe impact, seismic events, or accidental breakage to prevent dangerous flying glass hazards.",
   },
   {
-    question: "What is your typical project turnaround time?",
-    answer: "Turnaround times vary depending on the scope and complexity of the project. However, our streamlined manufacturing processes and dedicated project management allow us to meet tight deadlines without compromising on quality. Contact us with your project details for a specific timeline.",
+    question: "Do you provide installation for both residential and commercial projects?",
+    answer: "Yes. As the official UAE distributor of Saint-Gobain Solar Gard, SSI Films provides certified professional consultation, supply, and installation across luxury villas, commercial towers, government facilities, and automotive projects.",
   },
   {
-    question: "Do you offer custom design and engineering services?",
-    answer: "Absolutely. Our in-house team of engineers and designers works closely with clients to develop custom solutions. From initial conceptualization to final structural drawings, we ensure your vision is translated into a highly functional and durable final product.",
+    question: "Can window films help improve daytime privacy without blocking natural light?",
+    answer: "Yes. Our privacy and solar control films provide excellent daytime one-way privacy while still allowing clear outward visibility and natural daylight to brighten your interior spaces.",
   },
   {
-    question: "What quality assurance standards do you follow?",
-    answer: "We adhere to the highest industry standards for quality and safety. Our facilities and processes are certified, and every project undergoes rigorous inspection at multiple stages of fabrication to ensure it meets both our strict internal criteria and all relevant regulations.",
+    question: "What warranties and quality assurances are provided?",
+    answer: "All Saint-Gobain Solar Gard window films installed by SSI Films come with extensive manufacturer-backed warranties covering bubbling, peeling, cracking, and de-lamination for long-term peace of mind.",
   }
 ];
 

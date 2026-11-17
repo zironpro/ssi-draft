@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -17,20 +17,22 @@ const navLinks: NavLink[] = [
     name: "Products", 
     href: "/products",
     subLinks: [
-      { name: "Safety & Security", href: "/products/safety-and-security" },
+      { name: "Solar Safety Film", href: "/products/safety-and-security" },
       { name: "Solar Control", href: "/products/solar-control" },
       { name: "Privacy", href: "/products/privacy" },
-      { name: "Decorative", href: "/products/decorative" },
-      { name: "Specialty", href: "/products/specialty" },
+      { name: "Decorative Films", href: "/products/decorative" },
+      { name: "Decorative Wraps", href: "/products/specialty" },
     ]
   },
   { 
     name: "Solutions", 
     href: "/solutions",
     subLinks: [
-      { name: "Solar & Heat Control", href: "/solutions/solar-and-heat-control" },
-      { name: "Safety & Security", href: "/solutions/safety-and-security" },
-      { name: "Privacy & Decorative", href: "/solutions/privacy" },
+      { name: "Solar Heat Control", href: "/solutions/solar-and-heat-control" },
+      { name: "Solar Safety Film", href: "/solutions/safety-and-security" },
+      { name: "Privacy Films", href: "/solutions/privacy" },
+      { name: "Decorative Films", href: "/solutions/decorative" },
+      { name: "Decorative Wraps", href: "/solutions/interior-enhancement" },
       { name: "All Solutions", href: "/solutions" },
     ]
   },
@@ -44,36 +46,38 @@ export function Navbar() {
   const pathname = usePathname();
   const isHome = pathname === "/";
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isPastHero, setIsPastHero] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [openMobileDropdown, setOpenMobileDropdown] = useState<string | null>(null);
+  const lastScrollYRef = useRef(0);
 
   useEffect(() => {
+    lastScrollYRef.current = window.scrollY;
+    setIsScrolled(window.scrollY > 20);
+
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-      
-      setIsScrolled(currentScrollY > 20);
-      setIsPastHero(currentScrollY > window.innerHeight * 0.9);
+      const lastY = lastScrollYRef.current;
+      const diff = currentScrollY - lastY;
 
-      if (currentScrollY > lastScrollY && currentScrollY > 100) {
+      setIsScrolled(currentScrollY > 20);
+
+      // In the top scroll video / at the top of the page, always show
+      if (currentScrollY <= 60) {
+        setIsVisible(true);
+      } else if (diff > 8) {
+        // When scrolling down -> hide
         setIsVisible(false);
-      } else {
+      } else if (diff < -8) {
+        // When scrolling up -> show
         setIsVisible(true);
       }
-      
-      setLastScrollY(currentScrollY);
+
+      lastScrollYRef.current = currentScrollY;
     };
-    
+
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [lastScrollY]);
-
-  // Initial check on mount
-  useEffect(() => {
-    setIsScrolled(window.scrollY > 20);
-    setIsPastHero(window.scrollY > window.innerHeight * 0.9);
   }, []);
 
   // Prevent scroll when mobile menu is open
@@ -98,13 +102,15 @@ export function Navbar() {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
-          !mobileMenuOpen && ((isHome && !isPastHero) || !isVisible)
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+          !mobileMenuOpen && !isVisible
             ? "-translate-y-full opacity-0 pointer-events-none"
             : "translate-y-0 opacity-100"
         } ${
           isScrolled || mobileMenuOpen
-            ? "bg-[var(--color-obsidian)]/90 backdrop-blur-md py-3"
+            ? "bg-[var(--color-obsidian)]/90 backdrop-blur-md py-3 shadow-lg"
+            : isHome
+            ? "bg-gradient-to-b from-black/80 via-black/40 to-transparent py-4 md:py-5"
             : "bg-[var(--color-obsidian)] py-5"
         }`}
       >
@@ -204,7 +210,7 @@ export function Navbar() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setMobileMenuOpen(false)}
-              className="lg:hidden fixed inset-0 z-40 bg-black/60 backdrop-blur-sm"
+              className="lg:hidden fixed inset-0 z-[60] bg-black/60 backdrop-blur-sm"
             />
             
             {/* Sheet */}
@@ -221,7 +227,7 @@ export function Navbar() {
                   setMobileMenuOpen(false);
                 }
               }}
-              className="lg:hidden fixed bottom-0 left-0 right-0 z-50 bg-[var(--color-obsidian)] rounded-t-3xl border-t border-white/10 shadow-2xl pb-8 flex flex-col"
+              className="lg:hidden fixed bottom-0 left-0 right-0 z-[70] bg-[var(--color-obsidian)] rounded-t-3xl border-t border-white/10 shadow-2xl pb-8 flex flex-col"
               style={{ maxHeight: '85vh' }}
             >
               {/* Drag Handle */}

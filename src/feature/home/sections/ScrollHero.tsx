@@ -20,6 +20,8 @@ import { useEffect, useRef, type CSSProperties, type ReactNode } from "react";
  * - Canvas is decorative (aria-hidden); the poster <img> carries the alt text.
  */
 
+export type HeroStep = { title: string; text?: string };
+
 type Props = {
   /** Total number of frames (default 150) */
   frameCount?: number;
@@ -38,6 +40,12 @@ type Props = {
   background?: string;
   /** Static gradient between the frames and the copy, keeps text readable */
   scrim?: string;
+  /** Short captions that appear one after another as the user scrolls */
+  steps?: HeroStep[];
+  /** Tailwind classes for the steps wrapper (set body font here) */
+  stepsClassName?: string;
+  /** Tailwind classes for each step title (set display font here) */
+  stepTitleClassName?: string;
 };
 
 const defaultUrl = (i: number) =>
@@ -70,12 +78,16 @@ export default function ScrollHero({
   height = 1080,
   children,
   background = "#000",
+  steps = [],
+  stepsClassName = "",
+  stepTitleClassName = "",
   scrim = "linear-gradient(90deg, rgba(0,0,0,.72) 0%, rgba(0,0,0,.35) 55%, rgba(0,0,0,0) 100%)",
 }: Props) {
   const sectionRef = useRef<HTMLElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const posterRef = useRef<HTMLImageElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
+  const stepRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   useEffect(() => {
     const section = sectionRef.current;
@@ -151,6 +163,24 @@ export default function ScrollHero({
         const o = Math.max(0, 1 - progress / 0.25);
         content.style.opacity = String(o);
         content.style.pointerEvents = o < 0.05 ? "none" : "auto";
+      }
+      // Step captions: each owns an equal slice of the scroll after the intro
+      const n = stepRefs.current.length;
+      if (n) {
+        const start = 0.28;
+        const end = 0.97;
+        const slice = (end - start) / n;
+        const fade = slice * 0.28;
+        stepRefs.current.forEach((el, i) => {
+          if (!el) return;
+          const s0 = start + i * slice;
+          const e0 = s0 + slice;
+          const fadeIn = (progress - s0) / fade;
+          const fadeOut = i === n - 1 ? 1 : (e0 - progress) / fade;
+          const op = Math.min(1, Math.max(0, Math.min(fadeIn, fadeOut)));
+          el.style.opacity = String(op);
+          el.style.transform = `translate3d(0, ${(1 - op) * 14}px, 0)`;
+        });
       }
     };
 
@@ -295,6 +325,46 @@ export default function ScrollHero({
         <div ref={contentRef} style={styles.content}>
           {children}
         </div>
+        {steps.length > 0 && (
+          <div
+            className={stepsClassName}
+            style={{
+              position: "absolute",
+              left: "clamp(1.5rem, 6vw, 6rem)",
+              right: "clamp(1.5rem, 6vw, 6rem)",
+              bottom: "clamp(2rem, 8vh, 5rem)",
+              zIndex: 2,
+              height: "6rem",
+              pointerEvents: "none",
+              color: "#fff",
+            }}
+          >
+            {steps.map((step, i) => (
+              <div
+                key={step.title}
+                ref={(el) => {
+                  stepRefs.current[i] = el;
+                }}
+                style={{ position: "absolute", inset: 0, opacity: 0, willChange: "opacity, transform" }}
+              >
+                <p style={{ margin: 0, fontSize: "0.7rem", letterSpacing: "0.22em", opacity: 0.7 }}>
+                  {String(i + 1).padStart(2, "0")} / {String(steps.length).padStart(2, "0")}
+                </p>
+                <h2
+                  className={stepTitleClassName}
+                  style={{ margin: "0.35rem 0 0", fontSize: "clamp(1.5rem, 3vw, 2.25rem)", lineHeight: 1.1, fontWeight: 400 }}
+                >
+                  {step.title}
+                </h2>
+                {step.text && (
+                  <p style={{ margin: "0.4rem 0 0", fontSize: "0.875rem", opacity: 0.85 }}>
+                    {step.text}
+                  </p>
+                )}
+              </div>
+            ))}
+          </div>
+        )}
       </div>
     </section>
   );

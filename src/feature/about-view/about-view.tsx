@@ -7,16 +7,16 @@ import { GlobalFaq } from "@/components/shared/GlobalFaq";
 
 const aboutFaqs = [
   {
-    question: "How long has ZironPro been in the steel fabrication business?",
-    answer: "We have been providing high-quality steel fabrication services for over two decades. Our extensive experience has allowed us to perfect our processes and build a strong reputation in the industry.",
+    question: "How long has SSI Films been serving the UAE and GCC region?",
+    answer: "SSI Films (Solar Safety Insulation LLC) has been delivering world-class architectural and automotive surface protection solutions for over two decades as the official UAE distributor for Saint-Gobain Solar Gard.",
   },
   {
-    question: "Where are your manufacturing facilities located?",
-    answer: "Our primary state-of-the-art manufacturing facility is strategically located to optimize logistics and ensure timely delivery of structural components nationwide.",
+    question: "Where is SSI Films located in the UAE?",
+    answer: "Our headquarters and primary operations are based in Dubai, UAE, providing specialized film supply, precision cutting, and certified turnkey installation across all seven emirates and the broader GCC.",
   },
   {
-    question: "What is your company's approach to sustainability?",
-    answer: "We are committed to sustainable practices. We actively recycle scrap metal, optimize energy use in our facilities, and source steel from environmentally responsible mills whenever possible.",
+    question: "What is your company's commitment to energy efficiency and sustainability?",
+    answer: "Our Solar Gard architectural window films are certified to dramatically reduce solar heat gain, decreasing indoor cooling energy consumption by up to 30% and lowering overall carbon emissions for buildings.",
   }
 ];
 
