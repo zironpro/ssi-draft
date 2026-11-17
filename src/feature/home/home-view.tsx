@@ -28,9 +28,9 @@ const homeFaqs = [
 export function HomeView() {
  return (
  <main className="min-h-screen bg-white dark:bg-gray-900">
-    <Herovid />
+    {/* <Herovid /> */}
+    <Hero />
     <Credibility />
-    {/* <Hero /> */}
     <Features />
     <Solutions />
     <Performance />
