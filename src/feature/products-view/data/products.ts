@@ -26,7 +26,7 @@ export interface Category {
 
 export const productsData: Record<string, Category> = {
 "safety-and-security": {
- name:"Safety & Security",
+    name: "Solar Safety Film",
  slug:"safety-and-security",
  shortDescription:"Deter unwanted entries and protect against flying glass.",
  heroImage:"/products/safety-and-security.png",
@@ -292,7 +292,7 @@ export const productsData: Record<string, Category> = {
  }
  },
 "privacy": {
- name:"Privacy",
+    name: "Privacy Films",
  slug:"privacy",
  shortDescription:"Achieve total or partial light block-out with premium textured and opaque films.",
  heroImage:"/products/privacy.png",
@@ -404,7 +404,7 @@ export const productsData: Record<string, Category> = {
  }
  },
 "decorative": {
- name:"Decorative",
+    name: "Decorative Films",
  slug:"decorative",
  shortDescription:"Enhance privacy and elevate aesthetics with customizable frosted and patterned designs.",
  heroImage:"/products/decorative.png",
@@ -481,7 +481,7 @@ export const productsData: Record<string, Category> = {
  }
  },
 "specialty": {
- name:"Specialty",
+    name: "Decorative Wraps",
  slug:"specialty",
  shortDescription:"Advanced solutions including antimicrobial layers and luxury interior wrapping.",
  heroImage:"/products/speciality.png",

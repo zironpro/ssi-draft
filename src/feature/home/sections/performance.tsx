@@ -81,7 +81,7 @@ export function Performance() {
  transition={{ duration: 0.8, delay: 0.2 }}
  >
  <p className="text-fluid-base text-gray-300 leading-relaxed text-pretty">
- Our window films are engineered with advanced technology to deliver lasting performance, safety and style — backed by industry expertise and proven results.
+ Our window films are engineered with advanced technology to deliver lasting thermal performance, anti-shatter safety, and architectural elegance — backed by Saint-Gobain Solar Gard expertise and proven results.
  </p>
  </motion.div>
 

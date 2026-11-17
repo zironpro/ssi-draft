@@ -8,9 +8,9 @@ import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 const products = [
   {
     id: 1,
-    title: "Safety & Security",
+    title: "Solar Safety Film",
     slug: "safety-and-security",
-    category: "Product",
+    category: "Anti-Shatter & Security",
     image: "/products/safety-and-security.png",
     href: "/products/safety-and-security"
   },
@@ -18,7 +18,7 @@ const products = [
     id: 2,
     title: "Solar Control",
     slug: "solar-control",
-    category: "Product",
+    category: "Heat & Glare Reduction",
     image: "/products/dsolar-control.png",
     href: "/products/solar-control"
   },
@@ -26,24 +26,24 @@ const products = [
     id: 3,
     title: "Privacy",
     slug: "privacy",
-    category: "Product",
+    category: "Daytime Privacy",
     image: "/products/privacy.png",
     href: "/products/privacy"
   },
   {
     id: 4,
-    title: "Decorative",
+    title: "Decorative Films",
     slug: "decorative",
-    category: "Product",
+    category: "Architectural & Frosted",
     image: "/products/decorative.png",
     href: "/products/decorative"
   },
   {
     id: 5,
-    title: "Specialty",
+    title: "Decorative Wraps",
     slug: "specialty",
-    category: "Product",
-    image: "/products/speciality.png",
+    category: "Interior Architectural Resurfacing",
+    image: "/sub-solutions/interior-wrapping.png",
     href: "/products/specialty"
   }
 ];

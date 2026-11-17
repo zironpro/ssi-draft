@@ -29,13 +29,13 @@ export function HomeView() {
  return (
  <main className="min-h-screen bg-white dark:bg-gray-900">
     <Herovid />
+    <Credibility />
     {/* <Hero /> */}
     <Features />
     <Solutions />
     <Performance />
     <Stats />
     <OurWork />
-    <Credibility />
     <GlobalFaq items={homeFaqs} />
  </main>
  );

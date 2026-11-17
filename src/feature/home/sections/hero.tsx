@@ -112,29 +112,37 @@ export function Hero() {
 
       {/* UI Overlays matching Solaris reference */}
       <div className="absolute inset-0 z-20 pointer-events-none text-black/80">
-        {/* Top Left Logo Area */}
-        <div className="absolute top-8 left-8 md:top-10 md:left-10 flex items-center gap-4 md:gap-6 pointer-events-auto">
-          <div className="relative flex items-center shrink-0">
-            <img
-              src="/logo/ssi"
-              alt="SSI Logo"
-              className="object-contain invert"
-              style={{ height: "50px", width: "auto", maxWidth: "200px" }}
-              onError={(e) => {
-                e.currentTarget.style.display = "none";
-                e.currentTarget.parentElement!.innerHTML =
-                  '<span class="text-2xl font-bold text-black/80 tracking-widest uppercase">SSI Films</span>';
-              }}
-            />
+        {/* Top Left Logo Area with Official Distributor Badge */}
+        <div className="absolute top-8 left-8 md:top-10 md:left-10 flex flex-col gap-2 pointer-events-auto">
+          <div className="inline-flex items-center gap-2 self-start rounded-full border border-black/10 bg-white/70 px-3 py-1 backdrop-blur-md">
+            <span className="h-1.5 w-1.5 rounded-full bg-[var(--accent)]" />
+            <span className="text-[10px] md:text-xs font-semibold tracking-[0.15em] uppercase text-black/80">
+              Official Distributor of Solar Gard
+            </span>
           </div>
-          <div className="w-[1px] h-6 bg-black/20 shrink-0"></div>
-          <div className="flex relative items-center shrink-0">
-            <img
-              src="/logo/solargard.png"
-              alt="Solar Gard Logo"
-              className="object-contain"
-              style={{ height: "90px", width: "auto", maxWidth: "300px" }}
-            />
+          <div className="flex items-center gap-4 md:gap-6">
+            <div className="relative flex items-center shrink-0">
+              <img
+                src="/logo/ssi"
+                alt="SSI Logo"
+                className="object-contain invert"
+                style={{ height: "46px", width: "auto", maxWidth: "180px" }}
+                onError={(e) => {
+                  e.currentTarget.style.display = "none";
+                  e.currentTarget.parentElement!.innerHTML =
+                    '<span class="text-2xl font-bold text-black/80 tracking-widest uppercase">SSI Films</span>';
+                }}
+              />
+            </div>
+            <div className="w-[1px] h-6 bg-black/20 shrink-0"></div>
+            <div className="flex relative items-center shrink-0">
+              <img
+                src="/logo/solargard.png"
+                alt="Solar Gard Logo"
+                className="object-contain"
+                style={{ height: "80px", width: "auto", maxWidth: "260px" }}
+              />
+            </div>
           </div>
         </div>
 
@@ -164,27 +172,50 @@ export function Hero() {
           </div>
         </div>
 
-        {/* Right Side Features */}
-        <div className="absolute right-8 md:right-[10%] top-1/3 flex flex-col gap-32 text-right">
+        {/* Right Side Features - Clearer and More Prominent */}
+        <div className="absolute right-8 md:right-[10%] top-1/3 flex flex-col gap-24 text-right pointer-events-auto">
           <div className="relative group">
-            <div className="flex flex-col text-[10px] md:text-xs font-sans tracking-[0.2em] font-semibold text-black/60">
-              <span>GLARE</span>
-              <span>CONTROL</span>
+            <div className="inline-flex items-center gap-3 rounded-2xl border border-black/10 bg-white/85 px-4 py-3 shadow-xl backdrop-blur-md transition-transform group-hover:scale-105">
+              <div className="flex flex-col text-right">
+                <span className="text-xs md:text-sm font-sans tracking-[0.2em] font-bold text-black">GLARE CONTROL</span>
+                <span className="text-[10px] font-medium text-black/60">Balanced Natural Light</span>
+              </div>
+              <div className="w-8 h-8 rounded-lg bg-[var(--accent)]/15 flex items-center justify-center text-[var(--accent)] shrink-0">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <circle cx="12" cy="12" r="5"></circle>
+                  <line x1="12" y1="1" x2="12" y2="3"></line>
+                  <line x1="12" y1="21" x2="12" y2="23"></line>
+                  <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                  <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                  <line x1="1" y1="12" x2="3" y2="12"></line>
+                  <line x1="21" y1="12" x2="23" y2="12"></line>
+                  <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                  <line x1="18.36" y1="4.22" x2="19.78" y2="5.64"></line>
+                </svg>
+              </div>
             </div>
-            <svg className="absolute top-1/2 right-[110%] w-32 md:w-48 overflow-visible" height="1">
-              <line x1="150" y1="0" x2="0" y2="40" stroke="rgba(0,0,0,0.2)" strokeWidth="1" strokeDasharray="4 4" />
-              <circle cx="0" cy="40" r="2" fill="rgba(0,0,0,0.3)" />
+            <svg className="absolute top-1/2 right-[105%] w-24 md:w-36 overflow-visible pointer-events-none" height="1">
+              <line x1="100" y1="0" x2="0" y2="30" stroke="rgba(0,0,0,0.3)" strokeWidth="1.5" strokeDasharray="4 4" />
+              <circle cx="0" cy="30" r="3" fill="var(--accent)" />
             </svg>
           </div>
 
           <div className="relative group">
-            <div className="flex flex-col text-[10px] md:text-xs font-sans tracking-[0.2em] font-semibold text-black/60">
-              <span>ENHANCED</span>
-              <span>PRIVACY</span>
+            <div className="inline-flex items-center gap-3 rounded-2xl border border-black/10 bg-white/85 px-4 py-3 shadow-xl backdrop-blur-md transition-transform group-hover:scale-105">
+              <div className="flex flex-col text-right">
+                <span className="text-xs md:text-sm font-sans tracking-[0.2em] font-bold text-black">ENHANCED PRIVACY</span>
+                <span className="text-[10px] font-medium text-black/60">One-Way Daytime View</span>
+              </div>
+              <div className="w-8 h-8 rounded-lg bg-[var(--accent)]/15 flex items-center justify-center text-[var(--accent)] shrink-0">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg>
+              </div>
             </div>
-            <svg className="absolute top-1/2 right-[110%] w-32 md:w-48 overflow-visible" height="1">
-              <line x1="150" y1="0" x2="0" y2="-40" stroke="rgba(0,0,0,0.2)" strokeWidth="1" strokeDasharray="4 4" />
-              <circle cx="0" cy="-40" r="2" fill="rgba(0,0,0,0.3)" />
+            <svg className="absolute top-1/2 right-[105%] w-24 md:w-36 overflow-visible pointer-events-none" height="1">
+              <line x1="100" y1="0" x2="0" y2="-30" stroke="rgba(0,0,0,0.3)" strokeWidth="1.5" strokeDasharray="4 4" />
+              <circle cx="0" cy="-30" r="3" fill="var(--accent)" />
             </svg>
           </div>
         </div>

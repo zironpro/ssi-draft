@@ -14,9 +14,9 @@ if (typeof window !=="undefined") {
 const products = [
  {
  id: 1,
- title:"Safety & Security",
- slug:"safety-and-security",
- description:"Deter unwanted entries and protect against flying glass from impact or weather.",
+ title: "Solar Safety Film",
+    slug: "safety-and-security",
+    description: "Certified anti-shatter defense that binds glass together upon impact, preventing severe injury and forced entry.",
  image:"https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?q=80&w=2070&auto=format&fit=crop",
  },
  {
@@ -35,17 +35,17 @@ const products = [
  },
  {
  id: 4,
- title:"Decorative",
- slug:"decorative",
+ title: "Decorative Films",
+    slug: "decorative",
  description:"Enhance privacy and elevate aesthetics with customizable frosted and patterned designs.",
  image:"https://images.unsplash.com/photo-1600607688969-a5bfcd646154?q=80&w=2070&auto=format&fit=crop",
  },
  {
  id: 5,
- title:"Specialty",
- slug:"specialty",
- description:"Advanced solutions including antimicrobial layers and luxury interior wrapping.",
- image:"https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=2053&auto=format&fit=crop",
+ title: "Decorative Wraps",
+    slug: "specialty",
+    description: "Architectural vinyl wraps for luxury resurfacing and antimicrobial surface protection.",
+    image: "/sub-solutions/interior-wrapping.png",
  }
 ];
 

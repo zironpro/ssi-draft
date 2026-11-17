@@ -16,7 +16,8 @@ const body = Manrope({
 const steps = [
   { title: "Block the heat", text: "Up to 82% of solar heat rejected." },
   { title: "Filter the UV", text: "99% of harmful rays stopped." },
-  { title: "Stay protected", text: "Anti-shatter safety on every pane." },
+  { title: "Glare Control & Privacy", text: "Balanced natural daylight with enhanced privacy." },
+  { title: "Anti-Shatter Safety", text: "Certified protection holding glass together on impact." },
 ];
 
 export function Herovid() {
@@ -32,6 +33,8 @@ export function Herovid() {
       alt="Professional SSI technicians installing Saint-Gobain Solar Gard architectural window film on glass facade for superior solar heat rejection, glare control, and anti-shatter safety"
     >
       <div className={`max-w-xl ${body.className}`}>
+
+
         <h1
           className={`${display.className} text-3xl font-normal leading-[1.1] tracking-tight text-white sm:text-4xl lg:text-5xl`}
         >

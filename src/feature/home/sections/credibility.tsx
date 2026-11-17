@@ -2,22 +2,22 @@
 
 export default function Credibility() {
   return (
-    <section className="py-24 md:py-32 bg-[var(--color-warm-ivory)] border-t border-[var(--border-light)]">
+    <section className="py-14 md:py-20 bg-[var(--color-warm-ivory)] border-y border-[var(--border-light)]">
       <div className="container-master flex flex-col items-center text-center">
-        <h2 className="text-xs font-bold tracking-[0.2em] uppercase text-[var(--accent)] mb-8">
-          OFFICIAL DISTRIBUTOR
+        <h2 className="text-xs md:text-sm font-bold tracking-[0.25em] uppercase text-[var(--accent)] mb-6">
+          OFFICIAL DISTRIBUTOR OF SOLAR GARD
         </h2>
         
-        <div className="mb-12">
+        <div className="mb-8">
           <img 
             src="/logo/Solar-Gard-Saint-Gobain.webp" 
-            alt="SolarGard by Saint-Gobain" 
-            className="w-[120px] md:w-[150px] h-auto object-contain mx-auto"
+            alt="Solar Gard Saint-Gobain Official Distributor" 
+            className="w-[140px] md:w-[180px] h-auto object-contain mx-auto"
           />
         </div>
 
-        <p className="max-w-2xl text-xl md:text-3xl font-medium tracking-tight text-[var(--color-deep-forest)] leading-relaxed">
-          Trusted window film technology engineered for performance, protection and comfort.
+        <p className="max-w-2xl text-lg md:text-2xl font-medium tracking-tight text-[var(--color-deep-forest)] leading-relaxed">
+          World-class window film technology engineered for solar heat control, anti-shatter safety, and architectural comfort.
         </p>
       </div>
     </section>

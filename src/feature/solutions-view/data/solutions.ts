@@ -33,9 +33,8 @@ export const solutionsData: Record<string, SolutionCategory> = {
     heroSubtitle: "Take absolute control of your indoor climate, reduce energy costs, and enhance comfort.",
     descriptionTitle: "Efficient thermal management engineered for modern architecture.",
     descriptionParagraphs: [
-      "Uncontrolled solar heat can rapidly make interior spaces uninhabitable, placing a tremendous burden on HVAC systems and drastically increasing energy costs. In extreme climates like the UAE, managing this solar heat gain is not just a luxury—it is an architectural necessity.",
-      "Our premium solar control solutions mitigate these issues directly at the source: the glass. By utilizing advanced spectrally selective technologies, we reject heat-causing infrared rays before they penetrate the building envelope.",
-      "The result is immediate, tangible relief. Occupants enjoy consistent, comfortable temperatures free from hot and cold spots, while property owners benefit from significant, long-term savings on cooling expenses and reduced wear on mechanical systems."
+      "Uncontrolled solar heat gain burdens HVAC equipment and drastically drives up cooling energy costs in extreme climates like the UAE.",
+      "Solar Gard spectrally selective window films reject up to 82% of solar heat and 99% of harmful UV rays directly at the glass envelope, delivering consistent indoor comfort and rapid energy savings."
     ],
     descriptionImage: "/solutions/solar-and-heat-control.png",
     subSolutions: {
@@ -47,9 +46,8 @@ export const solutionsData: Record<string, SolutionCategory> = {
         heroImage: "/sub-solutions/heat-reduction.png",
         descriptionTitle: "Advanced Thermal Rejection Technology",
         descriptionParagraphs: [
-          "Standard glass acts as a magnifying glass for solar energy, trapping heat indoors and creating an uncomfortable greenhouse effect. Our heat reduction films act as an invisible thermal shield.",
-          "Utilizing advanced nano-ceramic and metallized technologies, these films target and reflect the specific wavelengths of light responsible for heat gain (Infrared) while allowing desirable visible light to pass through.",
-          "By bouncing this energy away before it enters the building, HVAC systems operate far more efficiently. This leads to massive energy savings, a significantly lowered carbon footprint, and a rapid return on investment, typically paying for itself within 2 to 5 years."
+          "Standard glazing allows excessive infrared radiation to enter, creating hot spots and escalating air conditioning loads.",
+          "Our nano-ceramic and metallized films reflect up to 82% of infrared heat while preserving natural light, reducing cooling costs by up to 30% with ROI in 2-5 years."
         ],
         descriptionImage: "/sub-solutions/heat-reduction.png",
         stats: [
@@ -78,9 +76,8 @@ export const solutionsData: Record<string, SolutionCategory> = {
         heroImage: "/sub-solutions/glare-reduction.png",
         descriptionTitle: "Soften the Light, Save Your Eyes",
         descriptionParagraphs: [
-          "Direct, unfiltered sunlight can render computer screens unreadable, wash out presentations, and cause severe eye strain and headaches for employees and residents alike.",
-          "Traditional solutions like blinds or curtains force you to choose between comfort and natural light, completely blocking your view of the outside world.",
-          "Our glare reduction films act like premium sunglasses for your building. They filter out harsh, blinding light while maintaining pristine optical clarity, creating a softly lit, comfortable environment perfect for modern screen-heavy workspaces and relaxing living rooms."
+          "Intense sunlight causes blinding reflections on screens and monitors, resulting in eye strain and reduced workplace productivity.",
+          "Solar Gard glare reduction films filter out up to 93% of harsh glare without dark interior shadowing, preserving true exterior views."
         ],
         descriptionImage: "/sub-solutions/glare-reduction.png",
         stats: [
@@ -109,9 +106,8 @@ export const solutionsData: Record<string, SolutionCategory> = {
         heroImage: "/sub-solutions/uv-protection.png",
         descriptionTitle: "Total Ultraviolet Defense",
         descriptionParagraphs: [
-          "Ultraviolet (UV) rays are the silent destroyers of interior spaces. They are the leading cause of fading and degradation for expensive hardwood floors, designer furniture, retail merchandise, and irreplaceable artwork.",
-          "More importantly, unfiltered UV rays pose significant long-term skin health risks to occupants sitting near windows for extended periods.",
-          "Our UV protection solutions block over 99.9% of both UVA and UVB rays. Operating like a permanent, invisible sunscreen for your building (SPF 285+), they extend the life of your interior investments and provide peace of mind for your health."
+          "Ultraviolet radiation degrades expensive flooring, leather furniture, merchandise, and artwork while posing skin health risks.",
+          "Our museum-grade UV films block 99.9% of damaging UVA and UVB rays (SPF 285+ equivalent), protecting interior assets permanently."
         ],
         descriptionImage: "/sub-solutions/uv-protection.png",
         stats: [
@@ -135,16 +131,15 @@ export const solutionsData: Record<string, SolutionCategory> = {
     }
   },
   "safety-and-security": {
-    name: "Safety & Security",
+    name: "Solar Safety Film",
     slug: "safety-and-security",
-    shortDescription: "Comprehensive protection for life and property against severe impacts.",
+    shortDescription: "Certified anti-shatter defense against impacts, forced entry, and severe storms.",
     heroImage: "/solutions/safety-and-security.png",
-    heroSubtitle: "Mitigate threats from break-ins, catastrophic accidents, and severe weather events.",
-    descriptionTitle: "Fortify your glass surfaces into impenetrable barriers.",
+    heroSubtitle: "Engineered defense systems designed to hold shattered glass intact under extreme pressure.",
+    descriptionTitle: "Fortify glass surfaces into certified anti-shatter safety barriers.",
     descriptionParagraphs: [
-      "Glass is naturally fragile and brittle, making it the most vulnerable entry point and the weakest link in the security of any residential or commercial structure.",
-      "When subjected to force—whether from a burglar's tool, flying storm debris, or a blast wave—standard glass shatters into lethal projectiles.",
-      "Our advanced safety and security solutions reinforce existing glass with high-tensile, micro-layered polyesters. This turns standard windows into robust, flexible barriers that hold shattered glass tightly together, delaying forced entry, protecting against environmental threats, and saving lives."
+      "Glass is the most vulnerable component of any building envelope during accidents, severe storms, or forced entry attempts.",
+      "Certified Solar Gard Solar Safety Film reinforces existing glazing with high-tensile polyester layers, binding shattered glass fragments firmly together to eliminate flying shard hazards and deter intrusion."
     ],
     descriptionImage: "/solutions/safety-and-security.png",
     subSolutions: {
@@ -156,9 +151,8 @@ export const solutionsData: Record<string, SolutionCategory> = {
         heroImage: "/sub-solutions/glass-protection.png",
         descriptionTitle: "Sacrificial Defense Systems",
         descriptionParagraphs: [
-          "Public-facing glass, mirrors, and transit windows are constant targets for vandalism, including key scratching, acid etching, and spray paint graffiti. Replacing these damaged panels is an exorbitant ongoing expense.",
-          "Our glass protection solutions provide a robust, completely clear sacrificial layer that takes the brunt of the damage. It acts as an invisible shield over your pristine surfaces.",
-          "When vandals strike, the damaged film is simply peeled away by our technicians and replaced for a fraction of the cost of new glass, instantly restoring the surface to perfect condition with zero operational downtime."
+          "High-traffic glass, mirrors, and storefronts are susceptible to scratches, acid etching, and graffiti vandalism.",
+          "Our optically clear sacrificial films absorb surface damage and can be quickly replaced at a fraction of the cost of new glass."
         ],
         descriptionImage: "/sub-solutions/glass-protection.png",
         stats: [
@@ -180,16 +174,15 @@ export const solutionsData: Record<string, SolutionCategory> = {
         ]
       },
       "shatter-protection": {
-        name: "Shatter Protection",
+        name: "Anti-Shatter Protection",
         slug: "shatter-protection",
         shortDescription: "Prevent hazardous flying glass shards from causing severe injury.",
         subtitle: "Essential, invisible safety for accidental impacts and extreme weather.",
         heroImage: "/sub-solutions/shatter-protection.png",
         descriptionTitle: "Critical Containment and Life Safety",
         descriptionParagraphs: [
-          "When standard annealed glass breaks, it splinters into jagged, dagger-like shards that pose a massive risk of severe lacerations or death during an accident.",
-          "Our shatter protection solutions are engineered with aggressive, high-strength adhesives that bond tightly to the glass. In the event of an impact, earthquake, or severe storm, the glass may break, but the film holds every piece securely within the frame.",
-          "This brings non-tempered glass up to strict human-impact safety codes, ensuring peace of mind for schools, daycares, homes, and high-traffic commercial environments."
+          "Unprotected annealed glass shatters into razor-sharp projectiles that present severe hazards to occupants during impacts or blasts.",
+          "Solar Gard anti-shatter films use high-tack adhesives to hold fractured glass safely within the frame, meeting ANSI Z97.1 and CPSC safety glazing standards."
         ],
         descriptionImage: "/sub-solutions/shatter-protection.png",
         stats: [
@@ -214,13 +207,12 @@ export const solutionsData: Record<string, SolutionCategory> = {
         name: "Forced Entry Security",
         slug: "security",
         shortDescription: "Delay forced entry, deter burglars, and mitigate blast hazards.",
-        subtitle: "Heavy-duty, military-grade fortification against severe kinetic threats.",
+        subtitle: "Heavy-duty fortification against severe kinetic threats.",
         heroImage: "/sub-solutions/security.png",
         descriptionTitle: "Impenetrable Passive Security Perimeters",
         descriptionParagraphs: [
-          "Intruders and smash-and-grab thieves rely on quick, unimpeded access. A standard glass door can be breached in seconds with a heavy object.",
-          "Our security solutions utilize multi-layered, micro-laminated polyesters that are exceptionally tear-resistant. When paired with structural silicone attachment systems, they lock the glass into the frame.",
-          "This vastly increases the time, effort, and noise required to breach the perimeter. By delaying entry by up to 3 minutes, you provide crucial time for alarms to sound and rapid response teams to arrive, frequently causing the attacker to abandon the attempt entirely."
+          "Smash-and-grab intruders rely on instant glass breakage for rapid unauthorized entry.",
+          "Heavy-duty multi-laminate security films combined with structural silicone attachments delay forced entry by up to 3 minutes, giving security personnel critical response time."
         ],
         descriptionImage: "/sub-solutions/security.png",
         stats: [
@@ -244,16 +236,15 @@ export const solutionsData: Record<string, SolutionCategory> = {
     }
   },
   "privacy": {
-    name: "Privacy Solutions",
+    name: "Privacy Films",
     slug: "privacy",
     shortDescription: "Control visibility without sacrificing aesthetic appeal or natural light.",
     heroImage: "/solutions/privacy.png",
     heroSubtitle: "Tailored privacy solutions for every environment—from boardrooms to bathrooms.",
     descriptionTitle: "Discrete spaces, brilliant architectural design.",
     descriptionParagraphs: [
-      "In modern open-plan architecture, balancing the desire for natural light with the need for confidentiality is a constant challenge.",
-      "Whether you need to obscure a corporate boardroom, add daytime reflective privacy to your living room, or completely black out a construction zone, we offer a massive catalog of tailored solutions.",
-      "Achieve the exact level of opacity, light transmission, and aesthetic finish your specific space demands without resorting to heavy, dust-collecting blinds."
+      "Modern glass architecture requires thoughtful balancing of external openness with essential interior confidentiality.",
+      "Our privacy film solutions provide customized daytime one-way visibility, soft translucent frosting, or total blackout without bulky window coverings."
     ],
     descriptionImage: "/solutions/privacy.png",
     subSolutions: {
@@ -265,9 +256,8 @@ export const solutionsData: Record<string, SolutionCategory> = {
         heroImage: "/sub-solutions/office-privacy.png",
         descriptionTitle: "Corporate Discretion & Aesthetics",
         descriptionParagraphs: [
-          "Modern corporate offices love floor-to-ceiling glass walls, but they inherently lack confidentiality. Our office privacy solutions provide stunning sandblasted, frosted, and dusted aesthetics at a fraction of the cost of factory-etched glass.",
-          "You can selectively obscure meeting rooms, HR departments, and executive suites from prying eyes without blocking the flow of ambient natural light across the floorplan.",
-          "Furthermore, these films can be custom-cut into distraction bands, modern stripes, or complex geometric patterns to elevate the interior design."
+          "Glass meeting rooms and executive suites frequently lack visual privacy for sensitive discussions and presentations.",
+          "Frosted and dusted films diffuse ambient daylight across floorplans while obscuring sightlines, available in custom distraction bands and branded patterns."
         ],
         descriptionImage: "/sub-solutions/office-privacy.png",
         stats: [
@@ -296,9 +286,8 @@ export const solutionsData: Record<string, SolutionCategory> = {
         heroImage: "/sub-solutions/residential-privacy.png",
         descriptionTitle: "Your home is your sanctuary.",
         descriptionParagraphs: [
-          "Living in densely populated areas often means compromising your view for the sake of privacy. You shouldn't have to live in a fishbowl or keep your curtains drawn all day.",
-          "Our residential solutions utilize advanced reflective and dual-reflective technologies to create a one-way mirror effect. During the day, you enjoy completely unobstructed views of the outside, while passersby see only a reflection of the sky.",
-          "For bathrooms, front doors, and street-facing lower windows, we also offer beautiful frosted and textured options that guarantee 24-hour obscurity, even with the lights on at night."
+          "Dense living environments compromise residential seclusion unless windows are covered with heavy blinds.",
+          "Dual-reflective films provide a daytime one-way mirror effect for outdoor privacy with crystal-clear outward visibility and heat control."
         ],
         descriptionImage: "/sub-solutions/residential-privacy.png",
         stats: [
@@ -327,9 +316,8 @@ export const solutionsData: Record<string, SolutionCategory> = {
         heroImage: "/sub-solutions/commercial-privacy.png",
         descriptionTitle: "Clean up your exterior architectural aesthetic.",
         descriptionParagraphs: [
-          "Commercial properties, retail storefronts, and hospitals frequently need to completely hide dropped ceilings, messy stockrooms, or active construction sites from public view.",
-          "Standard window tint is not enough. Our completely opaque blackout and whiteout solutions provide a solid, clean architectural finish from the outside while blocking 100% of the view and light.",
-          "These specialized films are engineered to integrate seamlessly into spandrel glass systems, creating a cohesive, professional building facade without the need for expensive structural changes."
+          "Commercial properties and retail spaces require clean concealment of storage areas, MEP fixtures, and construction zones.",
+          "Complete opaque blackout and whiteout films block 100% of visible light, creating uniform, sleek exterior spandrel facades."
         ],
         descriptionImage: "/sub-solutions/commercial-privacy.png",
         stats: [
@@ -353,16 +341,15 @@ export const solutionsData: Record<string, SolutionCategory> = {
     }
   },
   "decorative": {
-    name: "Decorative & Graphics",
+    name: "Decorative Films",
     slug: "decorative",
     shortDescription: "Transform ordinary glass into extraordinary bespoke design features.",
     heroImage: "/solutions/decorative.png",
     heroSubtitle: "Endless creative possibilities for architectural glass and blank walls.",
     descriptionTitle: "Customized premium aesthetics without the custom glass price tag.",
     descriptionParagraphs: [
-      "Why undergo the massive expense and hassle of replacing glass with factory-etched or custom-patterned panes when you can upgrade your existing surfaces on-site?",
-      "Our decorative solutions allow for endless, rapid manipulation of glass and wall surfaces. Whether you are an interior designer looking to add subtle geometric textures or a marketing director wanting to wrap an entire lobby, we have the material.",
-      "Incorporate crisp corporate branding, critical wayfinding, or breathtaking striking visual murals directly onto your existing environment, with the added benefit of clean removability when trends or leases change."
+      "Custom glass styling often comes with exorbitant lead times and the high cost of factory-etched glass.",
+      "Our architectural decorative films transform standard flat glass on-site with frosted textures, geometric gradients, and custom plotted graphics with clean removability."
     ],
     descriptionImage: "/solutions/decorative.png",
     subSolutions: {
@@ -374,9 +361,8 @@ export const solutionsData: Record<string, SolutionCategory> = {
         heroImage: "/sub-solutions/glass-design.png",
         descriptionTitle: "Bespoke Patterns and Fading Gradients.",
         descriptionParagraphs: [
-          "Choose from a massive catalog of hundreds of pre-designed premium patterns, including pinstripes, geometric grids, rice paper textures, and elegant fading gradients.",
-          "These designs beautifully break up the monotony of clear glass, adding depth and character to modern office spaces and upscale hospitality venues.",
-          "Crucially, these patterns also serve as critical safety distraction markers, preventing painful and litigious collisions with seemingly invisible glass walls."
+          "Clear glass partitions can look stark and create walk-through safety hazards in busy environments.",
+          "Choose from hundreds of patterns, gradients, and textures that serve both as high-end aesthetic features and visible safety distraction markers."
         ],
         descriptionImage: "/sub-solutions/glass-design.png",
         stats: [
@@ -405,9 +391,8 @@ export const solutionsData: Record<string, SolutionCategory> = {
         heroImage: "/sub-solutions/branding.png",
         descriptionTitle: "Seamless Corporate Identity Integration.",
         descriptionParagraphs: [
-          "Your brand is your most valuable asset. We can computer-cut your corporate logos, motivational mottos, and precise typography out of high-quality frosted, dusted, or solidly colored vinyl films.",
-          "Applied flawlessly to boardroom doors, main reception entrances, or glass dividing walls, it provides a highly professional, permanent-looking brand presence.",
-          "Unlike painted or etched glass, our precision-cut graphics can be easily removed or updated when your branding evolves or when relocating to a new suite."
+          "Incorporate crisp corporate identities, logos, and wayfinding directly onto glazed entrances and conference rooms.",
+          "Precision plotter-cut frosted and colored vinyls provide a permanent custom-etched appearance that remains simple to update when rebranding."
         ],
         descriptionImage: "/sub-solutions/branding.png",
         stats: [
@@ -436,9 +421,8 @@ export const solutionsData: Record<string, SolutionCategory> = {
         heroImage: "/sub-solutions/custom-designs.png",
         descriptionTitle: "Turn any glass wall into a stunning canvas.",
         descriptionParagraphs: [
-          "Utilizing advanced, optically clear printable polyester films and cutting-edge UV/Latex printing technology, we can print full-color photography, complex vector artwork, and massive custom murals directly for glass application.",
-          "The unprinted areas of the film remain perfectly, optically clear, creating an illusion that the graphics are floating directly on or within the glass itself.",
-          "This technology allows for breathtaking visual displays in retail storefronts, museum exhibits, creative agency offices, and modern hospital pediatric wards."
+          "Large-scale murals and photo-quality displays can be printed directly onto ultra-clear architectural polyester films.",
+          "Unprinted negative space remains optically clear, creating the visual impression of graphics floating seamlessly within the glass pane."
         ],
         descriptionImage: "/sub-solutions/custom-designs.png",
         stats: [
@@ -469,9 +453,8 @@ export const solutionsData: Record<string, SolutionCategory> = {
     heroSubtitle: "Proactively mitigate the spread of pathogens on high-touch surfaces.",
     descriptionTitle: "Continuous, 24/7 active microbial inhibition.",
     descriptionParagraphs: [
-      "In a world increasingly conscious of hygiene and public health, routine physical cleaning protocols, while essential, are not always enough. Surfaces can become re-contaminated the moment they are touched.",
-      "Our cutting-edge hygiene solutions provide an active, invisible layer of defense that works around the clock to inhibit bacterial and fungal growth between your routine facility cleanings.",
-      "These specialized films are critical infrastructure for hospitals, mass transit systems, schools, and high-traffic retail environments looking to protect their patrons and staff."
+      "High-touch surfaces in public facilities, clinics, and offices require continuous hygiene protection between routine janitorial cycles.",
+      "Our antimicrobial surface films utilize active silver ion (Ag+) technology to continuously inhibit bacterial and fungal proliferation 24/7."
     ],
     descriptionImage: "/solutions/health-and-hygiene.png",
     subSolutions: {
@@ -483,9 +466,8 @@ export const solutionsData: Record<string, SolutionCategory> = {
         heroImage: "/sub-solutions/antimicrobial.png",
         descriptionTitle: "Self-cleaning surface engineering.",
         descriptionParagraphs: [
-          "Our antimicrobial films are infused at the manufacturing level with powerful silver ion (Ag+) technology. When bacteria or mold land on the surface, the silver ions aggressively disrupt their cellular function, preventing them from multiplying and surviving.",
-          "This technology is completely non-toxic to humans but devastating to microbes. Because the silver is embedded in the film, it cannot be washed off and remains active 24/7.",
-          "When applied to highly trafficked touchscreens, door handles, push plates, and reception desks, it drastically reduces the overall microbial load in the facility, providing a significantly safer environment."
+          "Touchscreens, handrails, and door hardware can harbor pathogens within minutes of standard cleaning.",
+          "Infused with silver ions, our antimicrobial films deliver a 99.9% reduction in microbes (ISO 22196 tested) while resisting hospital-grade chemical disinfectants."
         ],
         descriptionImage: "/sub-solutions/antimicrobial.png",
         stats: [
@@ -509,16 +491,15 @@ export const solutionsData: Record<string, SolutionCategory> = {
     }
   },
   "interior-enhancement": {
-    name: "Interior Enhancement",
+    name: "Decorative Wraps",
     slug: "interior-enhancement",
-    shortDescription: "Radically renovate and upcycle surfaces without the demolition.",
+    shortDescription: "Radically renovate and upcycle surfaces without demolition.",
     heroImage: "/solutions/interior-enhancement.png",
     heroSubtitle: "Transform spaces overnight with hyper-realistic architectural finishes.",
     descriptionTitle: "Sustainable upcycling and premium visual upgrades.",
     descriptionParagraphs: [
-      "Why tear down solid walls, rip out elevators, or replace expensive casework just because the finish is outdated? Demolition is expensive, noisy, dusty, and environmentally wasteful.",
-      "Our interior enhancement solutions utilize advanced, 3D-conformable architectural vinyls to completely change the look, feel, and texture of existing surfaces in a fraction of the time.",
-      "By upcycling your existing infrastructure, you save massive amounts of capital budget, avoid operational downtime, and prevent tons of waste from entering local landfills."
+      "Traditional architectural renovation causes disruptive demolition, excessive noise, dust, and significant landfill waste.",
+      "Our decorative wraps utilize 3D-conformable architectural vinyls to upcycle existing walls, doors, casework, and elevators with luxury finishes overnight."
     ],
     descriptionImage: "/solutions/interior-enhancement.png",
     subSolutions: {
@@ -530,9 +511,8 @@ export const solutionsData: Record<string, SolutionCategory> = {
         heroImage: "/sub-solutions/interior-wrapping.png",
         descriptionTitle: "True Architectural Alchemy.",
         descriptionParagraphs: [
-          "Using highly conformable, premium architectural wraps (such as 3M DI-NOC or Belbien), we can take a standard, scratched metal elevator door and make it look and feel exactly like rich, textured mahogany or brushed champagne steel.",
-          "These finishes are not just flat prints; they feature deeply embossed, tactile textures that fool both the eye and the hand. They are highly durable, water-resistant, and fire-rated for commercial use.",
-          "Best of all, they can be applied rapidly and quietly. A hotel lobby or corporate elevator bank can be completely transformed overnight without disrupting business operations or generating a single speck of construction dust."
+          "Elevate dated interior surfaces with authentic wood grain, brushed metal, concrete, and stone textures.",
+          "These durable, Class A fire-rated architectural vinyls apply quietly without dust or business disruption, delivering major savings over full replacement."
         ],
         descriptionImage: "/sub-solutions/interior-wrapping.png",
         stats: [

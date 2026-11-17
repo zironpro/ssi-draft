@@ -118,7 +118,7 @@ export function QuoteForm() {
  <select className="w-full h-12 bg-[var(--color-warm-ivory)] border border-[var(--color-deep-forest)]/10 rounded-lg px-4 text-[var(--color-deep-forest)] focus:outline-none focus:border-[var(--color-muted-copper)] focus:ring-1 focus:ring-[var(--color-muted-copper)] transition-all appearance-none">
  <option>Heat & Energy Reduction</option>
  <option>Glare Control</option>
- <option>Safety & Security</option>
+ <option>Solar Safety Film (Anti-Shatter)</option>
  <option>Privacy & Aesthetics</option>
  <option>Not Sure Yet</option>
  </select>

@@ -22,9 +22,9 @@ const solutions = [
  },
  {
  id: 2,
- title:"Safety & Security",
- slug:"safety-and-security",
- features: ["Glass Protection","Shatter Protection","Security"],
+ title: "Solar Safety Film",
+    slug: "safety-and-security",
+    features: ["Glass Protection", "Anti-Shatter Protection", "Forced Entry Security"],
  image:"https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070&auto=format&fit=crop",
  className:"md:col-span-2 md:row-span-1",
  },
@@ -38,8 +38,8 @@ const solutions = [
  },
  {
  id: 4,
- title:"Decorative",
- slug:"decorative",
+ title: "Decorative Films",
+    slug: "decorative",
  features: ["Glass Design","Branding","Custom Designs"],
  image:"https://images.unsplash.com/photo-1600607688969-a5bfcd646154?q=80&w=2070&auto=format&fit=crop",
  className:"md:col-span-1 md:row-span-1",
@@ -54,10 +54,10 @@ const solutions = [
  },
  {
  id: 6,
- title:"Interior Enhancement",
- slug:"interior-enhancement",
- features: ["Interior Wrapping"],
- image:"https://images.unsplash.com/photo-1600566752355-35792bedcfea?q=80&w=2070&auto=format&fit=crop",
+ title: "Decorative Wraps",
+    slug: "interior-enhancement",
+    features: ["Architectural Interior Wrapping"],
+    image: "/sub-solutions/interior-wrapping.png",
  className:"md:col-span-2 md:row-span-1",
  }
 ];

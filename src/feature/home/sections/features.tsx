@@ -42,67 +42,63 @@ const features = [
 ];
 
 export function Features() {
- return (
- <section className="section-master bg-[var(--surface-primary)] text-[var(--foreground)] font-sans">
- <div className="container-master flex flex-col gap-16 md:gap-24">
- 
- {/* Header Section */}
- <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 lg:gap-16">
- <motion.div 
- initial={{ opacity: 0, y: 20 }}
- whileInView={{ opacity: 1, y: 0 }}
- viewport={{ once: true, margin:"-100px" }}
- transition={{ duration: 0.8 }}
- className="flex flex-col gap-4 max-w-2xl"
- >
- <p className="text-[10px] md:text-xs tracking-[0.2em] font-semibold text-[var(--color-deep-forest)]/70 uppercase">
- Why Window Film
- </p>
- <h2 className="text-[28px] md:text-[40px] lg:text-[48px] font-heading font-semibold tracking-[0.15em] leading-tight text-balance uppercase">
- Small Upgrade.<br />
- <span className="text-[var(--accent)]">A Big Difference.</span>
- </h2>
- </motion.div>
- 
- <motion.div 
- initial={{ opacity: 0, y: 20 }}
- whileInView={{ opacity: 1, y: 0 }}
- viewport={{ once: true, margin:"-100px" }}
- transition={{ duration: 0.8, delay: 0.2 }}
- className="max-w-xl lg:pb-2"
- >
- <p className="text-fluid-base text-[var(--color-deep-forest)]/70 leading-relaxed text-pretty">
- Window films do more than enhance glass — they improve comfort, increase privacy, reduce energy costs, and protect your interiors from harmful UV rays.
- </p>
- </motion.div>
- </div>
+  return (
+    <section className="py-12 md:py-16 lg:py-20 bg-[var(--surface-primary)] text-[var(--foreground)] font-sans border-b border-[var(--border-light)]">
+      <div className="container-master flex flex-col gap-10 md:gap-14">
+        {/* Header Section */}
+        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 lg:gap-12">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8 }}
+            className="flex flex-col gap-2 max-w-2xl"
+          >
+            <span className="text-xs md:text-sm font-semibold tracking-[0.2em] text-[var(--accent)] uppercase">
+              Small Upgrade. A Big Difference.
+            </span>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-heading font-bold tracking-[0.06em] leading-tight text-balance uppercase text-[var(--foreground)]">
+              Why Window Film?
+            </h2>
+          </motion.div>
 
- {/* Features Grid */}
- <div className="grid grid-cols-2 lg:grid-cols-4 gap-y-10 gap-x-4 md:gap-y-12 md:gap-x-8">
- {features.map((feature, index) => (
- <motion.div
- key={index}
- initial={{ opacity: 0, y: 30 }}
- whileInView={{ opacity: 1, y: 0 }}
- viewport={{ once: true, margin:"-50px" }}
- transition={{ duration: 0.7, delay: 0.3 + index * 0.1 }}
- className={`flex flex-col items-center text-center gap-4 ${
- index !== features.length - 1 ? 'lg:border-r lg:border-black/10' : ''
- } lg:pr-8`}
- >
- <div className="mb-2">
- {feature.icon}
- </div>
- <h3 className="text-lg font-semibold tracking-widest uppercase text-[var(--foreground)]">
- {feature.title}
- </h3>
- <p className="text-sm text-[var(--color-deep-forest)]/70 max-w-[200px] text-balance">
- {feature.description}
- </p>
- </motion.div>
- ))}
- </div>
- </div>
- </section>
- );
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="max-w-md lg:pb-1"
+          >
+            <p className="text-xs md:text-sm text-[var(--color-deep-forest)]/70 leading-relaxed text-pretty">
+              Window films enhance indoor comfort, increase privacy, lower cooling costs, and provide certified anti-shatter glass protection against extreme sun exposure.
+            </p>
+          </motion.div>
+        </div>
+
+        {/* Features Grid */}
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-y-8 gap-x-4 md:gap-x-8">
+          {features.map((feature, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.7, delay: 0.3 + index * 0.1 }}
+              className={`flex flex-col items-center text-center gap-3 ${
+                index !== features.length - 1 ? "lg:border-r lg:border-black/10" : ""
+              } lg:pr-8`}
+            >
+              <div className="mb-1">{feature.icon}</div>
+              <h3 className="text-base md:text-lg font-semibold tracking-wider uppercase text-[var(--foreground)]">
+                {feature.title}
+              </h3>
+              <p className="text-xs md:text-sm text-[var(--color-deep-forest)]/70 max-w-[200px] text-balance">
+                {feature.description}
+              </p>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
 }

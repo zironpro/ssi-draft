@@ -6,9 +6,9 @@ import Link from "next/link";
 const products = [
   {
     id: 1,
-    title: "Safety & Security",
+    title: "Solar Safety Film",
     slug: "safety-and-security",
-    description: "Deter unwanted entries and protect against flying glass from impact or weather.",
+    description: "Certified anti-shatter defense that binds glass together upon impact, preventing severe injury and forced entry.",
     image: "/products/safety-and-security.png",
   },
   {
@@ -27,17 +27,17 @@ const products = [
   },
   {
     id: 4,
-    title: "Decorative",
+    title: "Decorative Films",
     slug: "decorative",
     description: "Enhance privacy and elevate aesthetics with customizable frosted and patterned designs.",
     image: "/products/decorative.png",
   },
   {
     id: 5,
-    title: "Specialty",
+    title: "Decorative Wraps",
     slug: "specialty",
-    description: "Advanced solutions including antimicrobial layers and luxury interior wrapping.",
-    image: "/products/speciality.png",
+    description: "Architectural vinyl wraps for luxury resurfacing and antimicrobial surface protection.",
+    image: "/sub-solutions/interior-wrapping.png",
   },
 ];
 
