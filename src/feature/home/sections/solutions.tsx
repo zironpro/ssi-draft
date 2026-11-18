@@ -21,7 +21,7 @@ const solutions = [
     title: "SOLAR SAFETY FILM",
     slug: "safety-and-security",
     desc: "Heavy-duty anti-shatter film engineered to reinforce glass, resist forced entry, and hold hazardous shards together on impact.",
-    image: "/images/solutions/sol_safety.jpg",
+    image: "/images/solutions/solar-safety.webp",
   },
   {
     title: "PRIVACY FILMS",
