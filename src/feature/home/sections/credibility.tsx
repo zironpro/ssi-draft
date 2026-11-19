@@ -16,8 +16,8 @@ export default function Credibility() {
           />
         </div>
 
-        <p className="max-w-2xl text-lg md:text-2xl font-medium tracking-tight text-[var(--color-deep-forest)] leading-relaxed">
-          World-class window film technology engineered for solar heat control, anti-shatter safety, and architectural comfort.
+        <p className="max-w-3xl text-lg md:text-2xl font-medium tracking-tight text-[var(--color-deep-forest)] leading-relaxed">
+          We provide world-class window film technology engineered for solar heat control, anti-shatter safety, and architectural comfort.
         </p>
       </div>
     </section>

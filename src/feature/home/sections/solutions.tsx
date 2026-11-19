@@ -14,37 +14,37 @@ const solutions = [
   {
     title: "SOLAR HEAT CONTROL",
     slug: "solar-and-heat-control",
-    desc: "Reject up to 82% of solar heat and eliminate harsh glare while preserving crystal-clear natural daylight.",
+    desc: "Blocks up to 82% of solar heat and cuts glare.",
     image: "/images/solutions/sol_solar.jpg",
   },
   {
     title: "SOLAR SAFETY FILM",
     slug: "safety-and-security",
-    desc: "Heavy-duty anti-shatter film engineered to reinforce glass, resist forced entry, and hold hazardous shards together on impact.",
+    desc: "Strengthens glass and holds shards together on impact.",
     image: "/images/solutions/solar-safety.webp",
   },
   {
     title: "PRIVACY FILMS",
     slug: "privacy",
-    desc: "Provide daytime one-way privacy and visual confidentiality without blocking external views or natural light.",
+    desc: "One-way daytime privacy without losing light.",
     image: "/images/solutions/sol_privacy.jpg",
   },
   {
     title: "DECORATIVE FILMS",
     slug: "decorative",
-    desc: "Elevate interior glass partitions and facades with custom frosted, patterned, and embossed architectural films.",
+    desc: "Frosted and patterned films for glass partitions.",
     image: "/images/solutions/sol_decorative.jpg",
   },
   {
     title: "HEALTH & HYGIENE",
     slug: "health-and-hygiene",
-    desc: "Antimicrobial surface protection films designed for high-touch public, commercial, and healthcare environments.",
+    desc: "Antimicrobial films for high-touch surfaces.",
     image: "/images/solutions/sol_health.jpg",
   },
   {
     title: "DECORATIVE WRAPS",
     slug: "interior-enhancement",
-    desc: "Premium architectural vinyl wraps for resurfacing walls, reception desks, doors, and interior elements with luxury textures.",
+    desc: "Premium vinyl wraps for walls, doors, and desks.",
     image: "/images/solutions/wrapping.png",
   }
 ];
