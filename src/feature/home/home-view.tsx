@@ -20,7 +20,7 @@ const homeFaqs = [
   },
   {
     question: "Do you provide installation for both residential and commercial projects?",
-    answer: "Yes. As the official UAE distributor of Saint-Gobain Solar Gard, SSI Films provides certified professional consultation, supply, and installation across luxury villas, commercial towers, government facilities, and automotive projects.",
+    answer: "Yes. As an authorised premium partner of Saint-Gobain Solar Gard, SSI Films provides certified professional consultation, supply, and installation across luxury villas, commercial towers, government facilities, and automotive projects.",
   }
 ];
 

@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { Phone } from "lucide-react";
 
 type NavLink = {
   name: string;
@@ -13,8 +14,8 @@ type NavLink = {
 
 const navLinks: NavLink[] = [
   { name: "Home", href: "/" },
-  { 
-    name: "Products", 
+  {
+    name: "Products",
     href: "/products",
     subLinks: [
       { name: "Solar Safety Film", href: "/products/safety-and-security" },
@@ -22,10 +23,10 @@ const navLinks: NavLink[] = [
       { name: "Privacy", href: "/products/privacy" },
       { name: "Decorative Films", href: "/products/decorative" },
       { name: "Decorative Wraps", href: "/products/specialty" },
-    ]
+    ],
   },
-  { 
-    name: "Solutions", 
+  {
+    name: "Solutions",
     href: "/solutions",
     subLinks: [
       { name: "Solar Heat Control", href: "/solutions/solar-and-heat-control" },
@@ -35,7 +36,7 @@ const navLinks: NavLink[] = [
       { name: "Decorative Films", href: "/solutions/decorative" },
       { name: "Decorative Wraps", href: "/solutions/interior-enhancement" },
       { name: "All Solutions", href: "/solutions" },
-    ]
+    ],
   },
   { name: "Industries", href: "/industries" },
   { name: "About Us", href: "/about" },
@@ -63,14 +64,14 @@ export function Navbar() {
 
       setIsScrolled(currentScrollY > 20);
 
-      // In the top scroll video / at the top of the page, always show
+      // At the top of the page, always show
       if (currentScrollY <= 60) {
         setIsVisible(true);
       } else if (diff > 8) {
-        // When scrolling down -> hide
+        // Scrolling down -> hide
         setIsVisible(false);
       } else if (diff < -8) {
-        // When scrolling up -> show
+        // Scrolling up -> show
         setIsVisible(true);
       }
 
@@ -87,7 +88,6 @@ export function Navbar() {
       document.body.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "";
-      // reset dropdown state when closed
       setOpenMobileDropdown(null);
     }
     return () => {
@@ -97,7 +97,7 @@ export function Navbar() {
 
   const toggleMobileDropdown = (name: string, e: React.MouseEvent) => {
     e.preventDefault();
-    setOpenMobileDropdown(prev => prev === name ? null : name);
+    setOpenMobileDropdown((prev) => (prev === name ? null : name));
   };
 
   return (
@@ -116,28 +116,29 @@ export function Navbar() {
         }`}
       >
         <div className="container-master flex items-center justify-between">
-          
           {/* Logos */}
           <Link href="/" className="flex items-center gap-4 md:gap-6 group shrink-0">
             <div className="relative flex items-center shrink-0">
-              <img 
-                src="/logo/ssi" 
-                alt="SSI Logo" 
-                className="object-contain mix-blend-screen" 
-                style={{ height: '70px', width: 'auto', maxWidth: '240px' }}
+              <img
+                src="/logo/ssi"
+                alt="SSI Logo"
+                className="object-contain mix-blend-screen"
+                style={{ height: "70px", width: "auto", maxWidth: "240px" }}
                 onError={(e) => {
-                  e.currentTarget.style.display = 'none';
-                  e.currentTarget.parentElement!.innerHTML = '<span class="text-xl font-bold text-white tracking-widest uppercase">SSI Films</span>';
+                  e.currentTarget.style.display = "none";
+                  e.currentTarget.parentElement!.innerHTML =
+                    '<span class="text-xl font-bold text-white tracking-widest uppercase">SSI Films</span>';
                 }}
               />
             </div>
-            <div className="w-[1px] h-8 bg-white/20 shrink-0"></div>
+            <div className="w-[1px] h-12 bg-white/20 shrink-0"></div>
             <div className="flex relative items-center shrink-0">
-              <img 
-                src="/logo/solargard.png" 
-                alt="Solar Gard Logo" 
-                className="object-contain" 
-                style={{ height: '80px', width: 'auto', maxWidth: '300px' }}
+              {/* Larger Solar Gard logo. Negative margin lets it grow without making the navbar taller. */}
+              <img
+                src="/logo/solargard.png"
+                alt="Solar Gard Logo"
+                className="object-contain -my-4"
+                style={{ height: "120px", width: "auto", maxWidth: "400px" }}
               />
             </div>
           </Link>
@@ -152,7 +153,12 @@ export function Navbar() {
                 >
                   {link.name}
                   {link.subLinks && (
-                    <svg className="w-4 h-4 opacity-70 group-hover:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg
+                      className="w-4 h-4 opacity-70 group-hover:rotate-180 transition-transform"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                     </svg>
                   )}
@@ -162,10 +168,10 @@ export function Navbar() {
                 {link.subLinks && (
                   <div className="absolute top-[80%] left-0 pt-4 opacity-0 translate-y-2 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-200 z-50">
                     <div className="bg-[var(--color-obsidian)] border border-white/10 rounded-xl shadow-2xl w-60 p-2 flex flex-col">
-                      {link.subLinks.map(sub => (
-                        <Link 
-                          key={sub.name} 
-                          href={sub.href} 
+                      {link.subLinks.map((sub) => (
+                        <Link
+                          key={sub.name}
+                          href={sub.href}
                           className="text-sm text-gray-300 hover:text-[var(--text-on-dark)] hover:bg-[var(--accent)] px-4 py-2.5 rounded-lg transition-colors"
                         >
                           {sub.name}
@@ -176,28 +182,46 @@ export function Navbar() {
                 )}
               </div>
             ))}
-            <Link
-              href="/quote"
-              className="ml-4 rounded-full bg-[var(--accent)] px-6 py-2.5 text-sm font-button font-bold tracking-wide text-[var(--text-on-dark)] hover:bg-[var(--accent-muted)] transition-colors"
-            >
-              Get a Quote
-            </Link>
+            <div className="flex items-center gap-3 ml-2">
+              <a
+                href="tel:+971558408421"
+                className="flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-4 py-2 text-sm font-button font-medium text-white hover:bg-white/10 hover:border-white/40 transition-colors whitespace-nowrap"
+              >
+                <Phone className="w-4 h-4 text-[var(--accent)]" />
+                <span>Call Us</span>
+              </a>
+              <Link
+                href="/quote"
+                className="rounded-full bg-[var(--accent)] px-5 py-2 text-sm font-button font-bold tracking-wide text-[var(--text-on-dark)] hover:bg-[var(--accent-muted)] transition-colors whitespace-nowrap"
+              >
+                Get a Quote
+              </Link>
+            </div>
           </nav>
 
-          {/* Mobile Menu Toggle */}
-          <button
-            className="lg:hidden p-2 text-white relative z-50"
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            aria-label="Toggle menu"
-          >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              {mobileMenuOpen ? (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              ) : (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              )}
-            </svg>
-          </button>
+          {/* Mobile Actions & Menu Toggle */}
+          <div className="flex items-center gap-3 lg:hidden">
+            <a
+              href="tel:+971558408421"
+              className="flex items-center justify-center size-10 rounded-full border border-white/15 bg-white/10 text-white hover:bg-white/20 transition-colors"
+              aria-label="Call Us"
+            >
+              <Phone className="w-4 h-4 text-[var(--accent)]" />
+            </a>
+            <button
+              className="p-2 text-white relative z-50"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              aria-label="Toggle menu"
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                {mobileMenuOpen ? (
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                ) : (
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                )}
+              </svg>
+            </button>
+          </div>
         </div>
       </header>
 
@@ -213,7 +237,7 @@ export function Navbar() {
               onClick={() => setMobileMenuOpen(false)}
               className="lg:hidden fixed inset-0 z-[60] bg-black/60 backdrop-blur-sm"
             />
-            
+
             {/* Sheet */}
             <motion.div
               initial={{ y: "100%" }}
@@ -229,7 +253,7 @@ export function Navbar() {
                 }
               }}
               className="lg:hidden fixed bottom-0 left-0 right-0 z-[70] bg-[var(--color-obsidian)] rounded-t-3xl border-t border-white/10 shadow-2xl pb-8 flex flex-col"
-              style={{ maxHeight: '85vh' }}
+              style={{ maxHeight: "85vh" }}
             >
               {/* Drag Handle */}
               <div className="w-full flex justify-center py-4 cursor-grab active:cursor-grabbing shrink-0">
@@ -238,22 +262,23 @@ export function Navbar() {
 
               {/* Mobile Logos */}
               <div className="flex items-center justify-center gap-4 px-6 mb-4 shrink-0">
-                <img 
-                  src="/logo/ssi" 
-                  alt="SSI Logo" 
-                  className="object-contain mix-blend-screen" 
-                  style={{ height: '40px', width: 'auto' }}
+                <img
+                  src="/logo/ssi"
+                  alt="SSI Logo"
+                  className="object-contain mix-blend-screen"
+                  style={{ height: "40px", width: "auto" }}
                   onError={(e) => {
-                    e.currentTarget.style.display = 'none';
-                    e.currentTarget.parentElement!.innerHTML = '<span class="text-xl font-bold text-white tracking-widest uppercase">SSI</span>';
+                    e.currentTarget.style.display = "none";
+                    e.currentTarget.parentElement!.innerHTML =
+                      '<span class="text-xl font-bold text-white tracking-widest uppercase">SSI</span>';
                   }}
                 />
-                <div className="w-[1px] h-6 bg-white/20 shrink-0"></div>
-                <img 
-                  src="/logo/solargard.png" 
-                  alt="Solar Gard Logo" 
-                  className="object-contain" 
-                  style={{ height: '50px', width: 'auto' }}
+                <div className="w-[1px] h-8 bg-white/20 shrink-0"></div>
+                <img
+                  src="/logo/solargard.png"
+                  alt="Solar Gard Logo"
+                  className="object-contain"
+                  style={{ height: "75px", width: "auto" }}
                 />
               </div>
 
@@ -267,10 +292,12 @@ export function Navbar() {
                           className="flex items-center justify-between text-base font-medium text-gray-200 hover:text-[var(--accent)] transition-colors py-2.5 w-full text-left"
                         >
                           {link.name}
-                          <svg 
-                            className={`w-5 h-5 opacity-70 transition-transform ${openMobileDropdown === link.name ? "rotate-180" : ""}`} 
-                            fill="none" 
-                            stroke="currentColor" 
+                          <svg
+                            className={`w-5 h-5 opacity-70 transition-transform ${
+                              openMobileDropdown === link.name ? "rotate-180" : ""
+                            }`}
+                            fill="none"
+                            stroke="currentColor"
                             viewBox="0 0 24 24"
                           >
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
@@ -309,13 +336,23 @@ export function Navbar() {
                     )}
                   </div>
                 ))}
-                <Link
-                  href="/quote"
-                  className="mt-4 rounded-xl bg-[var(--accent)] px-6 py-3 text-center text-base font-button font-bold tracking-wide text-[var(--text-on-dark)] hover:bg-[var(--accent-muted)] transition-colors shrink-0"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  Get a Quote
-                </Link>
+                <div className="mt-4 flex flex-col gap-2.5 shrink-0">
+                  <a
+                    href="tel:+971558408421"
+                    className="flex items-center justify-center gap-2 rounded-xl border border-white/15 bg-white/5 px-6 py-3 text-center text-base font-button font-semibold text-white hover:bg-white/10 transition-colors"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    <Phone className="w-5 h-5 text-[var(--accent)]" />
+                    <span>Call: +971 55 840 8421</span>
+                  </a>
+                  <Link
+                    href="/quote"
+                    className="rounded-xl bg-[var(--accent)] px-6 py-3 text-center text-base font-button font-bold tracking-wide text-[var(--text-on-dark)] hover:bg-[var(--accent-muted)] transition-colors"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    Get a Quote
+                  </Link>
+                </div>
               </nav>
             </motion.div>
           </>

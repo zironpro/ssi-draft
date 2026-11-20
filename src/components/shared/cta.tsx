@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { Phone } from "lucide-react";
 
 export function Cta() {
  return (
@@ -49,13 +50,20 @@ export function Cta() {
  <p className="text-base md:text-lg text-white/90 leading-relaxed text-pretty">
  Talk to our experts and find the perfect window film solution for your home, office or vehicle.
  </p>
- <div className="pt-2">
+ <div className="pt-2 flex flex-wrap items-center gap-4">
  <Link
  href="/quote"
- className="inline-flex items-center justify-center rounded-lg bg-white px-8 py-4 text-center text-base font-button font-semibold text-[var(--foreground)] hover:bg-gray-100 hover:scale-105 active:scale-95 transition-all duration-300"
+ className="inline-flex items-center justify-center rounded-lg bg-white px-8 py-4 text-center text-base font-button font-semibold text-[var(--foreground)] hover:bg-gray-100 hover:scale-105 active:scale-95 transition-all duration-300 shadow-sm"
  >
  Get a Free Quote
  </Link>
+ <a
+ href="tel:+971558408421"
+ className="inline-flex items-center justify-center gap-2.5 rounded-lg border border-white/30 bg-white/10 px-8 py-4 text-center text-base font-button font-semibold text-white hover:bg-white/20 hover:scale-105 active:scale-95 transition-all duration-300 backdrop-blur-sm"
+ >
+ <Phone className="w-4 h-4 text-white" />
+ <span>Speak with a Specialist</span>
+ </a>
  </div>
  </motion.div>
 

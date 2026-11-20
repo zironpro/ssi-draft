@@ -8,7 +8,7 @@ import { GlobalFaq } from "@/components/shared/GlobalFaq";
 const aboutFaqs = [
   {
     question: "How long has SSI Films been serving the UAE and GCC region?",
-    answer: "SSI Films (Solar Safety Insulation LLC) has been delivering world-class architectural and automotive surface protection solutions for over two decades as the official UAE distributor for Saint-Gobain Solar Gard.",
+    answer: "SSI Films (Solar Safety Insulation LLC) has been delivering world-class architectural and automotive surface protection solutions for over two decades as an authorised premium partner for Saint-Gobain Solar Gard.",
   },
   {
     question: "Where is SSI Films located in the UAE?",
