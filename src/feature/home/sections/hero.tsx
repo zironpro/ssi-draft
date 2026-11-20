@@ -17,7 +17,7 @@ const iconProps = {
   viewBox: "0 0 24 24",
   fill: "none",
   stroke: "currentColor",
-  strokeWidth: 1.6,
+  strokeWidth: 1.4,
   strokeLinecap: "round" as const,
   strokeLinejoin: "round" as const,
 };
@@ -101,7 +101,7 @@ function FeatureLabel({
       }`}
     >
       <span className="shrink-0">{icon}</span>
-      <span className="text-sm md:text-base font-sans font-bold tracking-[0.16em] uppercase">
+      <span className="text-sm md:text-base font-sans font-medium tracking-[0.14em] uppercase">
         {title}
       </span>
 
