@@ -131,15 +131,15 @@ export const solutionsData: Record<string, SolutionCategory> = {
     }
   },
   "safety-and-security": {
-    name: "Solar Safety Film",
+    name: "Safety and Security Film",
     slug: "safety-and-security",
-    shortDescription: "Certified anti-shatter defense against impacts, forced entry, and severe storms.",
+    shortDescription: "Certified anti-shatter defense against impacts, forced entry, and severe storms without altering exterior aesthetics.",
     heroImage: "/solutions/safety-and-security.png",
-    heroSubtitle: "Engineered defense systems designed to hold shattered glass intact under extreme pressure.",
+    heroSubtitle: "Optically clear, high-tensile defense systems designed to hold fractured glass safely intact.",
     descriptionTitle: "Fortify glass surfaces into certified anti-shatter safety barriers.",
     descriptionParagraphs: [
       "Glass is the most vulnerable component of any building envelope during accidents, severe storms, or forced entry attempts.",
-      "Certified Solar Gard Solar Safety Film reinforces existing glazing with high-tensile polyester layers, binding shattered glass fragments firmly together to eliminate flying shard hazards and deter intrusion."
+      "Certified Solar Gard Safety and Security Film reinforces existing glazing with high-tensile, optically clear polyester layers, binding shattered glass fragments firmly together to eliminate flying shard hazards and deter intrusion."
     ],
     descriptionImage: "/solutions/safety-and-security.png",
     subSolutions: {
@@ -231,6 +231,111 @@ export const solutionsData: Record<string, SolutionCategory> = {
           { label: "Tensile Strength", value: "> 30,000 psi" },
           { label: "Tear Resistance", value: "Exceptional (Cross-woven micro-laminate)" },
           { label: "Attachment System", value: "Wet Glaze Structural Silicone (Dow Corning 995)" }
+        ]
+      }
+    }
+  },
+  "solar-safety": {
+    name: "Solar Safety Film",
+    slug: "solar-safety",
+    shortDescription: "Dual-action protection: extreme solar heat rejection combined with certified anti-shatter glass safety.",
+    heroImage: "/solutions/solar-safety.webp",
+    heroSubtitle: "Two critical functions in one advanced film: indoor climate control and certified life safety.",
+    descriptionTitle: "Dual-action technology: Extreme thermal control meets certified glass security.",
+    descriptionParagraphs: [
+      "Architectural glazing frequently demands solutions for both intense solar heat gain and critical glass shatter vulnerabilities. Solar Safety Film solves both in a single high-performance application.",
+      "Engineered by Saint-Gobain Solar Gard, our multi-layered dual-action films reject up to 75% of solar heat and 99% of damaging UV rays while maintaining certified anti-shatter tensile strength that holds glass shards firmly together during severe impacts."
+    ],
+    descriptionImage: "/solutions/solar-safety.webp",
+    subSolutions: {
+      "dual-action-heat-safety": {
+        name: "Dual-Action Heat & Shatter Defense",
+        slug: "dual-action-heat-safety",
+        shortDescription: "Simultaneously reject solar heat and reinforce glass against severe impacts.",
+        subtitle: "Integrated thermal control and structural glass containment.",
+        heroImage: "/sub-solutions/heat-reduction.png",
+        descriptionTitle: "Combined Energy Rejection and Impact Containment",
+        descriptionParagraphs: [
+          "Eliminate the compromise between indoor cooling efficiency and perimeter safety. Our dual-action films integrate multi-layered solar heat filters directly into heavy-gauge safety laminates.",
+          "Significantly cuts air conditioning loads and hot spots while meeting international human impact safety glazing standards to prevent glass shard injuries."
+        ],
+        descriptionImage: "/sub-solutions/heat-reduction.png",
+        stats: [
+          { label: "Heat Rejected", value: "Up to 75%" },
+          { label: "Film Thickness", value: "8 Mil" },
+          { label: "UV Rejection", value: "99%" }
+        ],
+        features: [
+          { title: "2-in-1 Dual Action", desc: "Delivers both solar heat control and certified glass safety in a single application.", icon: "Shield" },
+          { title: "Energy Savings", desc: "Significantly lowers air conditioning energy consumption.", icon: "Sun" },
+          { title: "Shard Containment", desc: "Holds broken glass securely in frame during accidental or storm impacts.", icon: "Layers" }
+        ],
+        specs: [
+          { label: "Solution Type", value: "Dual-Performance Solar + Safety Multi-Laminate" },
+          { label: "Total Solar Energy Rejected (TSER)", value: "Up to 75%" },
+          { label: "Tensile Strength", value: "28,500 psi" },
+          { label: "Safety Standard", value: "ANSI Z97.1 & CPSC 16 CFR 1201" },
+          { label: "Break Strength", value: "120 lbs/inch" }
+        ]
+      },
+      "glare-intrusion-control": {
+        name: "Solar Glare & Intrusion Protection",
+        slug: "glare-intrusion-control",
+        shortDescription: "Cut harsh sun glare and delay forced entry attempts.",
+        subtitle: "Visual comfort combined with perimeter physical fortification.",
+        heroImage: "/sub-solutions/glare-reduction.png",
+        descriptionTitle: "Visual Comfort Meets Perimeter Fortification",
+        descriptionParagraphs: [
+          "Harsh sun glare causes visual fatigue and screen reflections, while untreated glass remains an easy target for intrusion.",
+          "This dual-action solution filters out up to 80% of blinding light while toughening glass panes to withstand repeated kinetic impacts and forced entry attempts."
+        ],
+        descriptionImage: "/sub-solutions/glare-reduction.png",
+        stats: [
+          { label: "Glare Reduction", value: "Up to 80%" },
+          { label: "Forced Entry Delay", value: "Up to 2 Mins" },
+          { label: "UV Block", value: "99%" }
+        ],
+        features: [
+          { title: "Glare Reduction", desc: "Creates clear, comfortable interior views without harsh reflections.", icon: "Sun" },
+          { title: "Burglary Delay", desc: "Resists blunt force to buy vital security response time.", icon: "Shield" },
+          { title: "Fade Protection", desc: "Protects interior fabrics, artwork, and furniture from UV fading.", icon: "Layers" }
+        ],
+        specs: [
+          { label: "Solution Type", value: "Solar Glare Reduction & Security Laminate" },
+          { label: "Visible Light Transmitted (VLT)", value: "20% - 50%" },
+          { label: "Film Thickness", value: "8 Mil Multi-ply" },
+          { label: "Puncture Resistance", value: "85 lbs" },
+          { label: "Warranty", value: "10 Years Commercial" }
+        ]
+      },
+      "privacy-security": {
+        name: "Solar Privacy & Safety Shield",
+        slug: "privacy-security",
+        shortDescription: "One-way daytime privacy with heavy-duty glass shatter containment.",
+        subtitle: "Conceal valuable interiors while preventing break-ins.",
+        heroImage: "/sub-solutions/shatter-protection.png",
+        descriptionTitle: "Daytime Privacy with Maximum Glass Fortification",
+        descriptionParagraphs: [
+          "Keep prying eyes out while reinforcing exterior windows against deliberate breach or severe weather damage.",
+          "Offers a modern reflective exterior appearance during daylight hours backed by high-tensile tear resistance to eliminate glass hazard fallout."
+        ],
+        descriptionImage: "/sub-solutions/shatter-protection.png",
+        stats: [
+          { label: "Daytime Privacy", value: "100% One-Way" },
+          { label: "Impact Rating", value: "Heavy Duty" },
+          { label: "Solar Heat Drop", value: "Up to 70%" }
+        ],
+        features: [
+          { title: "Exterior Concealment", desc: "Prevents outsiders from seeing valuables or interior activity.", icon: "Layers" },
+          { title: "Blast & Impact Defense", desc: "Dampens shockwaves and prevents hazardous glass blowout.", icon: "Shield" },
+          { title: "Thermal Rejection", desc: "Cools interior spaces for round-the-clock comfort.", icon: "Sun" }
+        ],
+        specs: [
+          { label: "Solution Type", value: "Reflective Solar Safety Laminate" },
+          { label: "Visible Light Reflection", value: "External Reflective (High)" },
+          { label: "Film Thickness", value: "8 Mil" },
+          { label: "Attachment System", value: "Compatible with Structural Silicone" },
+          { label: "Warranty", value: "10 Years Commercial" }
         ]
       }
     }

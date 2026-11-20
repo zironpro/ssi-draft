@@ -121,7 +121,8 @@ export function QuoteForm() {
                     <select className={selectClass}>
                       <option>Heat & Energy Reduction</option>
                       <option>Glare Control</option>
-                      <option>Solar Safety Film (Anti-Shatter)</option>
+                      <option>Safety & Security Film (Anti-Shatter)</option>
+                      <option>Solar Safety Film (Heat & Safety Dual-Action)</option>
                       <option>Privacy & Aesthetics</option>
                       <option>Not Sure Yet</option>
                     </select>

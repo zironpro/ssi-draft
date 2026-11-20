@@ -29,7 +29,8 @@ const navLinks: NavLink[] = [
     href: "/solutions",
     subLinks: [
       { name: "Solar Heat Control", href: "/solutions/solar-and-heat-control" },
-      { name: "Solar Safety Film", href: "/solutions/safety-and-security" },
+      { name: "Safety & Security Film", href: "/solutions/safety-and-security" },
+      { name: "Solar Safety Film", href: "/solutions/solar-safety" },
       { name: "Privacy Films", href: "/solutions/privacy" },
       { name: "Decorative Films", href: "/solutions/decorative" },
       { name: "Decorative Wraps", href: "/solutions/interior-enhancement" },

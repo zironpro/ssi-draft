@@ -18,9 +18,15 @@ const solutions = [
     image: "/images/solutions/sol_solar.jpg",
   },
   {
-    title: "SOLAR SAFETY FILM",
+    title: "SAFETY AND SECURITY FILM",
     slug: "safety-and-security",
-    desc: "Strengthens glass and holds shards together on impact.",
+    desc: "Optically clear anti-shatter defense that reinforces glass and deters forced entry.",
+    image: "/images/solutions/safety-security.jpg",
+  },
+  {
+    title: "SOLAR SAFETY FILM",
+    slug: "solar-safety",
+    desc: "Dual-action film combining extreme solar heat rejection with heavy-duty anti-shatter protection.",
     image: "/images/solutions/solar-safety.webp",
   },
   {
@@ -36,17 +42,17 @@ const solutions = [
     image: "/images/solutions/sol_decorative.jpg",
   },
   {
+    title: "DECORATIVE WRAPS",
+    slug: "interior-enhancement",
+    desc: "Premium vinyl wraps for walls, doors, and desks.",
+    image: "/images/solutions/wrapping.png",
+  },
+  {
     title: "HEALTH & HYGIENE",
     slug: "health-and-hygiene",
     desc: "Antimicrobial films for high-touch surfaces.",
     image: "/images/solutions/sol_health.jpg",
   },
-  {
-    title: "DECORATIVE WRAPS",
-    slug: "interior-enhancement",
-    desc: "Premium vinyl wraps for walls, doors, and desks.",
-    image: "/images/solutions/wrapping.png",
-  }
 ];
 
 export default function Solutions() {

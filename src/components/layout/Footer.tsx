@@ -10,7 +10,8 @@ const footerLinks = {
   ],
   solutions: [
     { name: "Solar & Heat Control", href: "/solutions/solar-and-heat-control" },
-    { name: "Safety & Security", href: "/solutions/safety-and-security" },
+    { name: "Safety & Security Film", href: "/solutions/safety-and-security" },
+    { name: "Solar Safety Film", href: "/solutions/solar-safety" },
     { name: "Privacy & Decorative", href: "/solutions/privacy" },
     { name: "All Solutions", href: "/solutions" },
   ],

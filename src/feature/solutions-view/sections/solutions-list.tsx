@@ -21,10 +21,18 @@ const solutions = [
   },
   {
     id: 2,
-    title: "Solar Safety Film",
+    title: "Safety and Security Film",
     slug: "safety-and-security",
-    features: ["Glass Protection", "Anti-Shatter Protection", "Forced Entry Security"],
+    features: ["Impact Shatter Resistance", "Forced Entry Deterrence", "Anti-Graffiti Surface Protection"],
     image: "/solutions/safety-and-security.png",
+    className: "md:col-span-2 md:row-span-1",
+  },
+  {
+    id: 7,
+    title: "Solar Safety Film",
+    slug: "solar-safety",
+    features: ["Dual-Action Solar & Safety", "Infrared Heat Rejection", "Certified Anti-Shatter Defense"],
+    image: "/solutions/solar-safety.webp",
     className: "md:col-span-2 md:row-span-1",
   },
   {
