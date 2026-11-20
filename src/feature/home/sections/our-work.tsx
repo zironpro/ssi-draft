@@ -43,7 +43,7 @@ const products = [
     title: "Decorative Wraps",
     slug: "specialty",
     category: "Interior Architectural Resurfacing",
-    image: "/sub-solutions/interior-wrapping.png",
+    image: "/images/solutions/wrapping.png",
     href: "/products/specialty"
   }
 ];

@@ -16,13 +16,13 @@ export function Stats() {
  {/* Background Image anchored to the bottom */}
  <div className="absolute inset-0 z-0 opacity-80">
  <Image
- src="/images/stats.png"
+ src="/images/stats-bg.png"
  alt="Mountain background"
  fill
  className="object-cover object-bottom"
  />
  {/* Subtle white gradient overlay fading downwards so the top is clean white for the numbers */}
- <div className="absolute inset-0 bg-gradient-to-b from-white via-white/80 to-transparent" />
+ <div className="absolute inset-0 bg-gradient-to-b from-white via-white/90 to-transparent" />
  </div>
 
  {/* Stats Content */}
