@@ -71,9 +71,9 @@ export function Features() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="max-w-md lg:pb-1"
           >
-            <p className="text-xs md:text-sm text-[var(--color-deep-forest)]/70 leading-relaxed text-pretty">
+            {/* <p className="text-xs md:text-sm text-[var(--color-deep-forest)]/70 leading-relaxed text-pretty">
               Window films enhance indoor comfort, eliminate glare, provide daytime privacy, lower cooling costs, and provide certified anti-shatter glass protection.
-            </p>
+            </p> */}
           </motion.div>
         </div>
 
