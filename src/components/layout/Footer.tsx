@@ -27,7 +27,7 @@ const footerLinks = {
     { name: "United Arab Emirates", href: "#" },
     { name: "+971 55 840 8421", href: "tel:+971558408421" },
     { name: "sales@solarsafety.ae", href: "mailto:sales@solarsafety.ae" },
-  ]
+  ],
 };
 
 export function Footer() {
@@ -35,32 +35,33 @@ export function Footer() {
     <footer className="bg-[#0a0a0a] text-white pt-20 pb-10 border-t border-white/5">
       <div className="container-master">
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-12 gap-y-12 gap-x-8 mb-16">
-          
           {/* Brand & Logos Column */}
           <div className="col-span-2 md:col-span-4 lg:col-span-4 flex flex-col gap-6">
-            <div className="flex items-center gap-4 group shrink-0">
+            <div className="flex items-center gap-4 md:gap-5 group shrink-0">
               <div className="relative flex items-center shrink-0">
-                <img 
-                  src="/logo/ssi" 
-                  alt="SSI Logo" 
-                  className="object-contain mix-blend-screen" 
-                  style={{ height: '50px', width: 'auto', maxWidth: '180px' }}
+                <img
+                  src="/logo/ssi"
+                  alt="SSI Logo"
+                  className="object-contain mix-blend-screen"
+                  style={{ height: "60px", width: "auto", maxWidth: "220px" }}
                 />
               </div>
-              <div className="w-[1px] h-10 bg-white/20 shrink-0"></div>
+              <div className="w-[1px] h-12 bg-white/20 shrink-0"></div>
               <div className="flex relative items-center shrink-0">
-                <img 
-                  src="/logo/solargard.png" 
-                  alt="Solar Gard Logo" 
-                  className="object-contain" 
-                  style={{ height: '60px', width: 'auto', maxWidth: '240px' }}
+                {/* Larger height + negative margin so the logo visually matches the SSI logo
+                    without making the row taller. */}
+                <img
+                  src="/logo/solargard.png"
+                  alt="Solar Gard Logo"
+                  className="object-contain -my-3"
+                  style={{ height: "100px", width: "auto", maxWidth: "320px" }}
                 />
               </div>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed max-w-sm text-balance">
               Premium window film solutions for homes, businesses, and vehicles. Experience unmatched comfort, protection, and style powered by Solar Gard technology.
             </p>
-            
+
             {/* Social Links */}
             <div className="flex items-center gap-3 mt-2">
               <a href="#social" className="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center hover:bg-[var(--accent)] hover:text-[var(--text-on-dark)] transition-colors">
@@ -130,7 +131,6 @@ export function Footer() {
               ))}
             </ul>
           </div>
-
         </div>
 
         {/* Bottom Bar */}
