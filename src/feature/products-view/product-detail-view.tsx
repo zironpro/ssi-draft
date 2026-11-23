@@ -32,6 +32,8 @@ export function ProductDetailView({ slug }: ProductDetailViewProps) {
         subtitle={category.heroSubtitle}
         image={category.heroImage}
         breadcrumbs={breadcrumbs}
+        pdfUrl={category.pdfUrl}
+        catalogues={category.catalogues}
       />
       <ProductDetailDescription 
         title={category.descriptionTitle}

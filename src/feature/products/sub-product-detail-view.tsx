@@ -37,6 +37,8 @@ export function SubProductDetailView({ categorySlug, productSlug }: SubProductDe
         image={product.heroImage}
         stats={product.stats}
         breadcrumbs={breadcrumbs}
+        pdfUrl={product.pdfUrl}
+        catalogues={product.catalogues}
       />
       <ProductDetailDescription 
         title={product.descriptionTitle}
@@ -46,6 +48,8 @@ export function SubProductDetailView({ categorySlug, productSlug }: SubProductDe
       <SubProductSpecs 
         features={product.features}
         specs={product.specs}
+        pdfUrl={product.pdfUrl}
+        catalogues={product.catalogues}
       />
     </main>
   );

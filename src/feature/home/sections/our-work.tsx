@@ -11,7 +11,7 @@ const products = [
     title: "Sun Control Window Film",
     slug: "sun-control-window-film",
     category: "Solar Heat & Glare Reduction",
-    image: "/products/dsolar-control.png",
+    image: "/products/sun-control.png",
     href: "/products/sun-control-window-film"
   },
   {
@@ -19,7 +19,7 @@ const products = [
     title: "Exterior Sun Control",
     slug: "exterior-sun-control-window-film",
     category: "Outside Weather (OSW) Shield",
-    image: "/sub-solutions/heat-reduction.png",
+    image: "/products/exterior-sun-control.png",
     href: "/products/exterior-sun-control-window-film"
   },
   {

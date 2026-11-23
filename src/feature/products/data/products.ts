@@ -1,3 +1,8 @@
+export interface CatalogueItem {
+  title: string;
+  url: string;
+}
+
 export interface SubProduct {
   name: string;
   slug: string;
@@ -10,6 +15,8 @@ export interface SubProduct {
   stats: { label: string; value: string }[];
   features: { title: string; desc: string; icon: string }[];
   specs: { label: string; value: string }[];
+  pdfUrl?: string;
+  catalogues?: CatalogueItem[];
 }
 
 export interface Category {
@@ -22,6 +29,8 @@ export interface Category {
   descriptionParagraphs: string[];
   descriptionImage: string;
   subProducts: Record<string, SubProduct>;
+  pdfUrl?: string;
+  catalogues?: CatalogueItem[];
 }
 
 export const productsData: Record<string, Category> = {
@@ -29,7 +38,7 @@ export const productsData: Record<string, Category> = {
     name: "Sun Control Window Film",
     slug: "sun-control-window-film",
     shortDescription: "Advanced solar control window films rejecting up to 82% solar heat while maximizing daylight and UV protection.",
-    heroImage: "/products/dsolar-control.png",
+    heroImage: "/products/sun-control.png",
     heroSubtitle: "Engineered spectrally selective, reflective, and ceramic films designed for ultimate thermal comfort and energy efficiency.",
     descriptionTitle: "Intelligent solar management for architectural comfort and sustainability.",
     descriptionParagraphs: [
@@ -37,7 +46,8 @@ export const productsData: Record<string, Category> = {
       "From virtually clear, non-reflective spectrally selective films to dual-reflective and elegant neutral sputtered films, our solutions dramatically reduce air conditioning loads, optimize occupant productivity, and enhance building aesthetics.",
       "Engineered with cutting-edge optical technologies, these films provide enduring performance backed by industry-leading warranties across commercial and residential applications in demanding climates."
     ],
-    descriptionImage: "/sub-solutions/heat-reduction.png",
+    descriptionImage: "/products/sun-control.png",
+    pdfUrl: "/products/pdf/sun-control-window-film/LX 70 SAMPLE PAGE SOLAR GARD 0326.pdf",
     subProducts: {
       "lx-series-non-reflective": {
         name: "LX Series (Non Reflective)",
@@ -70,6 +80,13 @@ export const productsData: Record<string, Category> = {
           { label: "Shading Coefficient", value: "0.50 - 0.58" },
           { label: "Internal Reflectance", value: "9% (Natural Glass)" },
           { label: "Warranty", value: "10-15 Years Commercial / Lifetime Residential" }
+        ],
+        pdfUrl: "/products/pdf/sun-control-window-film/LX 70 SAMPLE PAGE SOLAR GARD 0326.pdf",
+        catalogues: [
+          {
+            title: "LX 70 Sample Page",
+            url: "/products/pdf/sun-control-window-film/LX 70 SAMPLE PAGE SOLAR GARD 0326.pdf"
+          }
         ]
       },
       "pure-vue-series": {
@@ -135,6 +152,25 @@ export const productsData: Record<string, Category> = {
           { label: "UV Rejection", value: "99%" },
           { label: "Solar Heat Gain Coefficient", value: "0.29 - 0.52" },
           { label: "Warranty", value: "10-12 Years Commercial" }
+        ],
+        pdfUrl: "/products/pdf/sun-control-window-film/Sterling 40 SAMPLE PAGE SOLAR GARD 0326.pdf",
+        catalogues: [
+          {
+            title: "Sterling 40 Sample Page",
+            url: "/products/pdf/sun-control-window-film/Sterling 40 SAMPLE PAGE SOLAR GARD 0326.pdf"
+          },
+          {
+            title: "Sterling 50 Sample Page",
+            url: "/products/pdf/sun-control-window-film/Sterling 50 SAMPLE PAGE SOLAR GARD 0326.pdf"
+          },
+          {
+            title: "Sterling 60 Sample Page",
+            url: "/products/pdf/sun-control-window-film/Sterling 60 SAMPLE PAGE SOLAR GARD 0326.pdf"
+          },
+          {
+            title: "Sterling 70 Sample Page",
+            url: "/products/pdf/sun-control-window-film/Sterling 70 SAMPLE PAGE SOLAR GARD 0326.pdf"
+          }
         ]
       },
       "true-vue-series": {
@@ -142,14 +178,14 @@ export const productsData: Record<string, Category> = {
         slug: "true-vue-series",
         shortDescription: "Dual-reflective solar control films offering maximum heat reduction and crystal-clear nighttime views.",
         subtitle: "Engineered dual-reflectance: high exterior reflection for privacy, low interior reflection for views.",
-        heroImage: "/products/dsolar-control.png",
+        heroImage: "/products/sun-control.png",
         descriptionTitle: "Enjoy exterior daytime privacy without looking at your own reflection at night.",
         descriptionParagraphs: [
           "Traditional reflective films create a mirror effect inside the building at night when indoor lights are switched on. True Vue solves this with dual-reflective technology.",
           "It provides strong reflective heat rejection and privacy on the exterior, while the interior layer is kept dark and low-reflectance, preserving your panoramic night views.",
           "It is one of the most effective solutions for slashing harsh desert glare and dramatically reducing cooling expenses."
         ],
-        descriptionImage: "/products/dsolar-control.png",
+        descriptionImage: "/products/sun-control.png",
         stats: [
           { label: "Total Solar Heat Rejected", value: "Up to 82%" },
           { label: "Glare Reduction", value: "Up to 94%" },
@@ -168,6 +204,25 @@ export const productsData: Record<string, Category> = {
           { label: "Interior Light Reflectance", value: "11% - 13%" },
           { label: "Exterior Light Reflectance", value: "22% - 56%" },
           { label: "Warranty", value: "12 Years Commercial" }
+        ],
+        pdfUrl: "/products/pdf/sun-control-window-film/TrueVue 15 SAMPLE PAGE SOLAR GARD 0326.pdf",
+        catalogues: [
+          {
+            title: "TrueVue 5 Sample Page",
+            url: "/products/pdf/sun-control-window-film/TrueVue 5 SAMPLE PAGE SOLAR GARD 0326.pdf"
+          },
+          {
+            title: "TrueVue 15 Sample Page",
+            url: "/products/pdf/sun-control-window-film/TrueVue 15 SAMPLE PAGE SOLAR GARD 0326.pdf"
+          },
+          {
+            title: "TrueVue 30 Sample Page",
+            url: "/products/pdf/sun-control-window-film/TrueVue 30 SAMPLE PAGE SOLAR GARD 0326.pdf"
+          },
+          {
+            title: "TrueVue 40 Sample Page",
+            url: "/products/pdf/sun-control-window-film/TrueVue 40 SAMPLE PAGE SOLAR GARD 0326.pdf"
+          }
         ]
       },
       "stainless-steel-series": {
@@ -175,14 +230,14 @@ export const productsData: Record<string, Category> = {
         slug: "stainless-steel-series",
         shortDescription: "Sputtered metal film with a neutral grey appearance for timeless architectural elegance.",
         subtitle: "Durable neutral aesthetic with high glare control and consistent solar performance.",
-        heroImage: "/images/low-angle-view-business-buildings-1-scaled.webp",
+        heroImage: "/sub-products/stainless-steel.png",
         descriptionTitle: "Architectural neutrality combined with high-performance solar protection.",
         descriptionParagraphs: [
           "The Stainless Steel Series is created by sputtering pure stainless steel alloy onto optical polyester. The result is a film that never looks overly shiny or mirrored, but maintains a tasteful, neutral grey finish.",
           "Because stainless steel is naturally resistant to corrosion, this film performs exceptionally well in humid or marine-adjacent architectural environments.",
           "It offers an ideal blend of solar heat reduction, glare dampening, and elegant architectural integration for modern office complexes and residential buildings."
         ],
-        descriptionImage: "/images/low-angle-view-business-buildings-1-scaled.webp",
+        descriptionImage: "/sub-products/stainless-steel.png",
         stats: [
           { label: "Solar Energy Rejected", value: "Up to 67%" },
           { label: "Corrosion Proof", value: "100% Alloy" },
@@ -201,6 +256,17 @@ export const productsData: Record<string, Category> = {
           { label: "Glare Reduction", value: "44% - 85%" },
           { label: "Metal Alloy", value: "Precision Sputtered Stainless Steel" },
           { label: "Warranty", value: "10-12 Years Commercial" }
+        ],
+        pdfUrl: "/products/pdf/sun-control-window-film/Stainless Steel 20 SAMPLE PAGE SOLAR GARD.pdf",
+        catalogues: [
+          {
+            title: "Stainless Steel 20 Sample Page",
+            url: "/products/pdf/sun-control-window-film/Stainless Steel 20 SAMPLE PAGE SOLAR GARD.pdf"
+          },
+          {
+            title: "Stainless Steel 35 - 50 Sample Pages",
+            url: "/products/pdf/sun-control-window-film/Stainless Steel 35 - 50 SAMPLE PAGES SOLAR GARD.pdf"
+          }
         ]
       },
       "silver-series": {
@@ -208,14 +274,14 @@ export const productsData: Record<string, Category> = {
         slug: "silver-series",
         shortDescription: "Classic highly reflective silver films for ultimate solar rejection and daytime one-way privacy.",
         subtitle: "The industry benchmark for maximum thermal defense and rapid HVAC cost reduction.",
-        heroImage: "/sub-products/grey-silver-grey.png",
+        heroImage: "/sub-products/silver-series.png",
         descriptionTitle: "Maximum solar heat reflection for demanding high-exposure facades.",
         descriptionParagraphs: [
           "The Silver Series uses vapor-deposited aluminum metallization to create a high-efficiency barrier that mirrors away heat before it enters the glass.",
           "Offering total daytime privacy, it creates a crisp exterior mirror finish that shields your interior spaces from all outside onlookers during daylight.",
           "It delivers the fastest return on investment of any solar film by dramatically curbing air conditioning consumption in sun-drenched structures."
         ],
-        descriptionImage: "/sub-products/grey-silver-grey.png",
+        descriptionImage: "/sub-products/silver-series.png",
         stats: [
           { label: "Total Solar Heat Rejected", value: "Up to 81%" },
           { label: "Daytime Privacy", value: "100% One-Way" },
@@ -234,6 +300,25 @@ export const productsData: Record<string, Category> = {
           { label: "UV Rejection", value: "99%" },
           { label: "Shading Coefficient", value: "0.22 - 0.44" },
           { label: "Warranty", value: "10 Years Commercial" }
+        ],
+        pdfUrl: "/products/pdf/sun-control-window-film/Silver 20 SAMPLE PAGE SOLAR GARD 0326.pdf",
+        catalogues: [
+          {
+            title: "Silver 20 Sample Page",
+            url: "/products/pdf/sun-control-window-film/Silver 20 SAMPLE PAGE SOLAR GARD 0326.pdf"
+          },
+          {
+            title: "Silver 35 Sample Page",
+            url: "/products/pdf/sun-control-window-film/Silver 35 SAMPLE PAGE SOLAR GARD 0326.pdf"
+          },
+          {
+            title: "Silver 50 Sample Page",
+            url: "/products/pdf/sun-control-window-film/Silver 50 SAMPLE PAGE SOLAR GARD 0326.pdf"
+          },
+          {
+            title: "Silver AG 50 Low-E Sample Page",
+            url: "/products/pdf/sun-control-window-film/Silver AG 50 Low-E SAMPLE PAGE SOLAR GARD 0326.pdf"
+          }
         ]
       },
       "solar-bronze-series": {
@@ -241,14 +326,14 @@ export const productsData: Record<string, Category> = {
         slug: "solar-bronze-series",
         shortDescription: "Warm copper-bronze reflective films combining rich architectural styling with powerful solar control.",
         subtitle: "Enriches building facades with warm bronze tones while stopping intense solar heat.",
-        heroImage: "/sub-solutions/heat-reduction.png",
+        heroImage: "/sub-products/bronze-series.png",
         descriptionTitle: "Distinctive warm aesthetics with superior thermal performance.",
         descriptionParagraphs: [
           "Solar Bronze Series is formulated with sputtered copper and bronze alloys to give glass a refined, warm amber-bronze tone that complements earth-toned building facades.",
           "In addition to its distinctive look, Solar Bronze rejects substantial solar heat and glare, improving tenant comfort and cooling system efficiency.",
           "It provides excellent daytime privacy and softens the harshness of direct sunlight into a warm, inviting interior ambience."
         ],
-        descriptionImage: "/sub-solutions/heat-reduction.png",
+        descriptionImage: "/sub-products/bronze-series.png",
         stats: [
           { label: "Solar Energy Rejected", value: "Up to 77%" },
           { label: "Aesthetic Finish", value: "Rich Bronze" },
@@ -267,6 +352,13 @@ export const productsData: Record<string, Category> = {
           { label: "UV Rejection", value: "99%" },
           { label: "Metallization", value: "Sputtered Bronze Alloy" },
           { label: "Warranty", value: "10-12 Years Commercial" }
+        ],
+        pdfUrl: "/products/pdf/sun-control-window-film/Solar Bronze 20 - 35 SAMPLE PAGE SOLAR GARD 0326.pdf",
+        catalogues: [
+          {
+            title: "Solar Bronze 20 - 35 Sample Page",
+            url: "/products/pdf/sun-control-window-film/Solar Bronze 20 - 35 SAMPLE PAGE SOLAR GARD 0326.pdf"
+          }
         ]
       },
       "grey-silver-grey": {
@@ -332,6 +424,25 @@ export const productsData: Record<string, Category> = {
           { label: "Adhesive Type", value: "Optically Clear Pressure-Sensitive" },
           { label: "Cleaning Compatibility", value: "Standard non-abrasive glass cleaner" },
           { label: "Warranty", value: "10 Years Interior" }
+        ],
+        pdfUrl: "/products/pdf/sun-control-window-film/Solar Gard Sample Page Clear Frost RA.pdf",
+        catalogues: [
+          {
+            title: "Clear Frost Sample Page",
+            url: "/products/pdf/sun-control-window-film/Solar Gard Sample Page Clear Frost RA.pdf"
+          },
+          {
+            title: "Clearfrost RA 50 Sample Page",
+            url: "/products/pdf/sun-control-window-film/Solar Gard Sample Page Clearfrost RA 50.pdf"
+          },
+          {
+            title: "Black Opaque Sample Page",
+            url: "/products/pdf/sun-control-window-film/Solar Gard Sample Page Black Opaque RA.pdf"
+          },
+          {
+            title: "White Opaque Sample Page",
+            url: "/products/pdf/sun-control-window-film/Solar Gard Sample Page White Opaque RA.pdf"
+          }
         ]
       }
     }
@@ -341,7 +452,7 @@ export const productsData: Record<string, Category> = {
     name: "Exterior Sun Control Window Film",
     slug: "exterior-sun-control-window-film",
     shortDescription: "Heavy-duty weather-resistant exterior films that stop heat at the first point of contact before it penetrates the glazing.",
-    heroImage: "/products/dsolar-control.png",
+    heroImage: "/products/exterior-sun-control.png",
     heroSubtitle: "Engineered Outside Weather (OSW) films for skylights, double-glazed units, and hard-to-access facades.",
     descriptionTitle: "Maximum solar defense applied directly to the outside face of the glass.",
     descriptionParagraphs: [
@@ -349,21 +460,21 @@ export const productsData: Record<string, Category> = {
       "This exterior application is particularly vital for modern tinted, laminated, Low-E, and double-glazed insulated units (IGUs) where interior films could otherwise cause thermal stress fractures.",
       "Formulated with durable hard-coat outdoor weathering technology, these films resist sand abrasion, intense UV weathering, rain, and environmental pollutants in demanding regional climates."
     ],
-    descriptionImage: "/sub-solutions/heat-reduction.png",
+    descriptionImage: "/products/exterior-sun-control.png",
     subProducts: {
       "sun-control-series-osw": {
         name: "Sun Control Series OSW (Outside Weather)",
         slug: "sun-control-series-osw",
         shortDescription: "Premium exterior-grade solar film with advanced UV inhibitors and abrasion-resistant exterior hardcoat.",
         subtitle: "Stops solar heat before it penetrates double glazing and skylights.",
-        heroImage: "/sub-products/lx-series.png",
+        heroImage: "/sub-products/sun-control-series-OSW.png",
         descriptionTitle: "Engineered specifically to survive exterior desert conditions while providing maximum cooling.",
         descriptionParagraphs: [
           "The Sun Control Series OSW features specialized inorganic UV stabilizers and an ultra-durable, weather-resistant hardcoat engineered to withstand harsh exterior climates.",
           "It solves solar heat and glare problems on architectural glass where interior installation is impossible due to ceiling heights, skylights, structural baffles, or glass thermal breakage risks.",
           "By repelling solar energy at the outer surface, OSW films provide the highest possible Total Solar Energy Rejection (TSER) on insulated glass units."
         ],
-        descriptionImage: "/sub-solutions/heat-reduction.png",
+        descriptionImage: "/sub-products/sun-control-series-OSW.png",
         stats: [
           { label: "Solar Heat Rejected", value: "Up to 83%" },
           { label: "Thermal Stress Risk", value: "0% on IGUs" },
@@ -399,6 +510,7 @@ export const productsData: Record<string, Category> = {
       "Available in optically clear variants that leave your windows completely indistinguishable from standard glass, as well as combined solar-safety options for simultaneous thermal control."
     ],
     descriptionImage: "/sub-products/clear-safety-film.png",
+    pdfUrl: "/products/pdf/safety-and-security-window-film/Armorcoat 4 - 7 - 8 Mil Clear SAMPLE PAGE SOLAR GARD 0326.pdf",
     subProducts: {
       "clear-safety-film-series": {
         name: "Clear Safety Film Series",
@@ -431,6 +543,17 @@ export const productsData: Record<string, Category> = {
           { label: "Visible Light Transmitted", value: "88% - 90%" },
           { label: "UV Rejection", value: "99%" },
           { label: "Warranty", value: "12 Years Commercial / Lifetime Residential" }
+        ],
+        pdfUrl: "/products/pdf/safety-and-security-window-film/Armorcoat 4 - 7 - 8 Mil Clear SAMPLE PAGE SOLAR GARD 0326.pdf",
+        catalogues: [
+          {
+            title: "Armorcoat 4 - 7 - 8 Mil Clear Sample Page",
+            url: "/products/pdf/safety-and-security-window-film/Armorcoat 4 - 7 - 8 Mil Clear SAMPLE PAGE SOLAR GARD 0326.pdf"
+          },
+          {
+            title: "Armorcoat 10 - 11 - 14 Mil Clear Sample Page",
+            url: "/products/pdf/safety-and-security-window-film/Armorcoat 10 - 11 - 14 Mil Clear SAMPLE PAGE SOLAR GARD 0326.pdf"
+          }
         ]
       },
       "sun-control-safety-film-series": {
@@ -488,14 +611,14 @@ export const productsData: Record<string, Category> = {
         slug: "wet-glaze-system",
         shortDescription: "High-modulus structural silicone anchoring creating a continuous elastomeric bond between film and frame.",
         subtitle: "Engineered structural silicone anchoring for seamless architectural blast and storm protection.",
-        heroImage: "/sub-products/anchor-systems.png",
+        heroImage: "/sub-products/wet-glaze-system.png",
         descriptionTitle: "Continuous structural bead providing dynamic shock absorption and retention.",
         descriptionParagraphs: [
           "The Wet Glaze System utilizes an engineered, high-modulus structural silicone sealant (such as Dow Corning 995) to create a continuous triangular bead bridging the safety-filmed glass and the perimeter frame.",
           "Under explosive blast or blunt impact, the silicone stretches elastomerically, absorbing kinetic energy and preventing the pane from collapsing into the building interior.",
           "It provides an aesthetically clean, unobtrusive finish that blends seamlessly with existing architectural window mullions."
         ],
-        descriptionImage: "/sub-products/anchor-systems.png",
+        descriptionImage: "/sub-products/wet-glaze-system.png",
         stats: [
           { label: "Blast Mitigation", value: "GSA Level C/D" },
           { label: "Adhesive Type", value: "Structural Silicone 995" },
@@ -520,14 +643,14 @@ export const productsData: Record<string, Category> = {
         slug: "gullwing-system",
         shortDescription: "Flexible elastomeric anchor profile delivering extreme blast and forced entry resistance without mechanical drilling.",
         subtitle: "Patented flexible energy-absorbing membrane linking glass to frame.",
-        heroImage: "/sub-solutions/security.png",
+        heroImage: "/sub-products/gullwing-system.png",
         descriptionTitle: "Patented elastomeric attachment absorbing massive explosive and physical shock.",
         descriptionParagraphs: [
           "The Gullwing System is a flexible mechanical attachment profile manufactured from heavy-duty elastomeric rubber and ultra-high-bond acrylic foam tapes.",
           "It adheres along the perimeter of the filmed glass and the window frame, creating a dual-action hinged energy damper that flexes under extreme pressure.",
           "Ideal for retrofitting existing facilities without drilling holes into sensitive structural frames or disturbing existing perimeter seals."
         ],
-        descriptionImage: "/sub-solutions/security.png",
+        descriptionImage: "/sub-products/gullwing-system.png",
         stats: [
           { label: "Attachment Type", value: "Elastomeric Membrane" },
           { label: "Installation", value: "No-Drill Retrofit" },
@@ -552,14 +675,14 @@ export const productsData: Record<string, Category> = {
         slug: "framegard-system",
         shortDescription: "Heavy-duty mechanical clamping system mechanically fastening the safety film directly to the frame.",
         subtitle: "The highest rated mechanical retention system for maximum blast and hurricane protection.",
-        heroImage: "/sub-products/anchor-systems.png",
+        heroImage: "/sub-products/framegard-system.png",
         descriptionTitle: "Heavy-gauge mechanical clamping for maximum blast mitigation and anti-intrusion.",
         descriptionParagraphs: [
           "The Framegard System is an engineered mechanical attachment that physically clamps the edge of the safety film to the window frame using high-strength aluminum extrusion profiles and hardened fasteners.",
           "Engineered to withstand the most catastrophic bomb blast loads, Framegard provides unmatched retention, ensuring the shattered glass envelope remains firmly in place.",
           "Specified worldwide for government embassies, military facilities, nuclear plants, and high-risk financial institutions."
         ],
-        descriptionImage: "/sub-products/anchor-systems.png",
+        descriptionImage: "/sub-products/framegard-system.png",
         stats: [
           { label: "Blast Rating", value: "GSA Level 1 & 2 / DoD" },
           { label: "Attachment", value: "Mechanical Clamp" },
@@ -595,6 +718,7 @@ export const productsData: Record<string, Category> = {
       "They are also the ideal solution for containing spontaneous tempered glass explosions (nickel sulfide inclusions) on exterior balustrades and curtain walls."
     ],
     descriptionImage: "/sub-solutions/shatter-protection.png",
+    pdfUrl: "/products/pdf/safety-and-security-window-film/Sentinel Plus 8 mil Clear SAMPLE PAGE SOLAR GARD 0326.pdf",
     subProducts: {
       "safety-and-security-series-osw": {
         name: "Safety & Security Series OSW",
@@ -627,6 +751,13 @@ export const productsData: Record<string, Category> = {
           { label: "Puncture Resistance", value: "115 lbs" },
           { label: "UV Block", value: "> 99%" },
           { label: "Warranty", value: "5-7 Years Exterior Exposure" }
+        ],
+        pdfUrl: "/products/pdf/safety-and-security-window-film/Sentinel Plus 8 mil Clear SAMPLE PAGE SOLAR GARD 0326.pdf",
+        catalogues: [
+          {
+            title: "Sentinel Plus 8 Mil Clear (OSW) Sample Page",
+            url: "/products/pdf/safety-and-security-window-film/Sentinel Plus 8 mil Clear SAMPLE PAGE SOLAR GARD 0326.pdf"
+          }
         ]
       },
       "polycarbonate-osw": {
@@ -683,14 +814,14 @@ export const productsData: Record<string, Category> = {
         slug: "xenith-ir",
         shortDescription: "Flagship marine ceramic film with extreme infrared rejection and maximum navigational clarity.",
         subtitle: "The pinnacle of marine solar protection with up to 96% infrared heat rejection.",
-        heroImage: "/sub-products/magnum-ir.png",
+        heroImage: "/sub-products/xenith-ir.webp",
         descriptionTitle: "Ultimate infrared cooling designed for yacht flybridges and pilot house windows.",
         descriptionParagraphs: [
           "Xenith IR features proprietary nanoparticles that selectively target and eliminate intense infrared wavelengths (the primary cause of cabin heat) without requiring dark or reflective tinting.",
           "It ensures pilot house windows maintain pristine, crystal-clear optical clarity for safe navigation in all sea conditions, day or night.",
           "Totally metal-free, Xenith IR will not corrode in salty ocean air or impede onboard electronic communications."
         ],
-        descriptionImage: "/sub-products/magnum-ir.png",
+        descriptionImage: "/sub-products/xenith-ir.webp",
         stats: [
           { label: "Infrared Heat Block (IR)", value: "Up to 96%" },
           { label: "Signal Interference", value: "0% VHF/GPS" },

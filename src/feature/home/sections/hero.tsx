@@ -17,7 +17,7 @@ const iconProps = {
   viewBox: "0 0 24 24",
   fill: "none",
   stroke: "currentColor",
-  strokeWidth: 1.4,
+  strokeWidth: 1.6,
   strokeLinecap: "round" as const,
   strokeLinejoin: "round" as const,
 };
@@ -96,12 +96,12 @@ function FeatureLabel({
 
   return (
     <div
-      className={`relative flex items-center gap-3 text-gray-950 [text-shadow:0_1px_8px_rgba(255,255,255,0.7)] [&_svg]:drop-shadow-[0_1px_4px_rgba(255,255,255,0.7)] ${
+      className={`relative flex items-center gap-3 text-white [text-shadow:0_1px_2px_rgba(0,0,0,0.6),0_2px_12px_rgba(0,0,0,0.5)] [&_svg]:drop-shadow-[0_1px_3px_rgba(0,0,0,0.7)] ${
         isRight ? "flex-row-reverse text-right" : "text-left"
       }`}
     >
       <span className="shrink-0">{icon}</span>
-      <span className="text-sm md:text-base font-sans font-medium tracking-[0.14em] uppercase">
+      <span className="text-sm md:text-base font-sans font-semibold tracking-[0.14em] uppercase">
         {title}
       </span>
 
@@ -227,7 +227,7 @@ export function Hero() {
               {/* Desktop Image */}
               <div className="absolute inset-0 hidden md:block">
                 <Image
-                  src="/main-hero/film.png"
+                  src="/main-hero/hero-with-tint.png"
                   alt="Tinted Glass House at Sunset"
                   fill
                   className="object-cover"
@@ -256,7 +256,7 @@ export function Hero() {
               }}
             >
               <Image
-                src="/main-hero/visible.png"
+                src="/main-hero/hero-without-tint.png"
                 alt="Modern Glass House at Sunset"
                 fill
                 className="object-cover"
@@ -293,6 +293,10 @@ export function Hero() {
 
       {/* UI Overlays */}
       <div className="absolute inset-0 z-20 pointer-events-none">
+        {/* Soft side scrims so white labels stay readable on the photo */}
+        <div className="absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-black/35 to-transparent" />
+        <div className="absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-black/35 to-transparent" />
+
         {/* Right Side Features */}
         <div className="absolute right-6 md:right-10 lg:right-14 top-1/4 md:top-[26%] flex flex-col items-end gap-6 md:gap-8">
           {rightFeatures.map((f) => (
@@ -306,25 +310,6 @@ export function Hero() {
             <FeatureLabel key={f.title} {...f} />
           ))}
         </div>
-
-        {/* Bottom Left Film Type Card */}
-        {/* <div className="absolute bottom-8 left-8 md:bottom-10 md:left-12 pointer-events-auto hidden md:block">
-          <div className="w-[140px] rounded-2xl bg-white/85 border border-black/10 p-4 shadow-xl backdrop-blur-md flex flex-col justify-between">
-            <div>
-              <span className="text-[10px] font-sans tracking-[0.18em] font-extrabold text-black/80 uppercase">FILM TYPE</span>
-              <div className="w-full h-[1px] bg-black/10 my-2" />
-            </div>
-            <div className="flex flex-col gap-2.5 text-[10px] font-sans tracking-[0.2em] font-bold text-gray-900">
-              <div>SOLAR</div>
-              <div>SAFETY</div>
-              <div>SECURITY</div>
-              <div>PRIVACY</div>
-            </div>
-            <div className="pt-2 mt-2 border-t border-black/10">
-              <span className="text-[9px] font-semibold text-[var(--accent)] tracking-wider uppercase">SOLAR GARD</span>
-            </div>
-          </div>
-        </div> */}
       </div>
     </section>
   );

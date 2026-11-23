@@ -1,6 +1,6 @@
 "use client";
 
-import { Share } from "lucide-react";
+import { FileText } from "lucide-react";
 import Link from "next/link";
 
 const products = [
@@ -9,14 +9,15 @@ const products = [
     title: "Sun Control Window Film",
     slug: "sun-control-window-film",
     description: "Reject up to 82% of solar heat, soften harsh glare, and significantly reduce cooling costs across architectural glazing.",
-    image: "/products/dsolar-control.png",
+    image: "/products/sun-control.png",
+    pdfUrl: "/products/pdf/sun-control-window-film/LX 70 SAMPLE PAGE SOLAR GARD 0326.pdf",
   },
   {
     id: 2,
     title: "Exterior Sun Control Window Film",
     slug: "exterior-sun-control-window-film",
     description: "Heavy-duty outside weather (OSW) films that intercept solar heat before it enters double glazing and skylights.",
-    image: "/sub-solutions/heat-reduction.png",
+    image: "/products/exterior-sun-control.png",
   },
   {
     id: 3,
@@ -24,6 +25,7 @@ const products = [
     slug: "safety-and-security-window-film",
     description: "Certified anti-shatter defense that binds glass together upon impact, preventing severe injury and forced entry.",
     image: "/products/safety-and-security.png",
+    pdfUrl: "/products/pdf/safety-and-security-window-film/Armorcoat 4 - 7 - 8 Mil Clear SAMPLE PAGE SOLAR GARD 0326.pdf",
   },
   {
     id: 4,
@@ -38,6 +40,7 @@ const products = [
     slug: "exterior-safety-window-film",
     description: "Weather-resistant impact and anti-shatter defense for building facades, glass balustrades, and polycarbonate glazing.",
     image: "/sub-solutions/shatter-protection.png",
+    pdfUrl: "/products/pdf/safety-and-security-window-film/Sentinel Plus 8 mil Clear SAMPLE PAGE SOLAR GARD 0326.pdf",
   },
   {
     id: 6,
@@ -73,20 +76,48 @@ export function ProductGrid() {
               href={`/products/${product.slug}`}
               className="flex flex-col md:flex-row items-stretch bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow border border-gray-100 group"
             >
-              <div className="w-full md:w-2/5 shrink-0 bg-gray-100 flex flex-col overflow-hidden md:min-h-[200px] min-h-[240px]">
+              <div className="w-full md:w-2/5 shrink-0 bg-gray-100 flex flex-col overflow-hidden md:min-h-[200px] min-h-[240px] relative">
                 <img
                   src={product.image}
                   alt={product.title}
                   className="w-full h-full flex-1 object-cover transition-transform duration-500 group-hover:scale-105"
                 />
+                {product.pdfUrl && (
+                  <div className="absolute top-3 left-3 z-10 inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-black/60 backdrop-blur-xs text-white text-[11px] font-medium tracking-wide">
+                    <FileText className="size-3 text-[var(--color-arch-sand)]" />
+                    Catalogue Available
+                  </div>
+                )}
               </div>
-              <div className="p-6 md:p-8 flex flex-col w-full bg-white z-10 relative">
-                <h4 className="text-xl md:text-[22px] font-bold text-gray-900 mb-3 leading-snug">
-                  {product.title}
-                </h4>
-                <p className="text-[var(--color-deep-forest)]/70 text-[15px] leading-relaxed">
-                  {product.description}
-                </p>
+              <div className="p-6 md:p-8 flex flex-col justify-between w-full bg-white z-10 relative">
+                <div>
+                  <h4 className="text-xl md:text-[22px] font-bold text-gray-900 mb-3 leading-snug">
+                    {product.title}
+                  </h4>
+                  <p className="text-[var(--color-deep-forest)]/70 text-[15px] leading-relaxed">
+                    {product.description}
+                  </p>
+                </div>
+
+                <div className="mt-6 pt-4 border-t border-gray-100 flex items-center justify-between gap-3">
+                  <span className="text-xs font-bold tracking-wider uppercase text-[var(--color-arch-sand)] group-hover:text-[var(--color-deep-forest)] transition-colors">
+                    Explore Series &rarr;
+                  </span>
+                  {product.pdfUrl && (
+                    <span
+                      onClick={(e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        window.open(encodeURI(product.pdfUrl!), "_blank", "noopener,noreferrer");
+                      }}
+                      className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold rounded-md bg-[var(--color-arch-sand)]/15 text-[var(--color-deep-forest)] hover:bg-[var(--color-arch-sand)] hover:text-white transition-all shadow-xs cursor-pointer z-20"
+                      title="Download Catalogue PDF"
+                    >
+                      <FileText className="size-3.5" />
+                      Catalogue (PDF)
+                    </span>
+                  )}
+                </div>
               </div>
             </Link>
           ))}
