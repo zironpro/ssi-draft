@@ -73,13 +73,6 @@ export function CategoryProducts({ slug }: { slug: string }) {
                     className="w-full h-56 object-cover transition-transform duration-700 group-hover:scale-110" 
                   />
                   <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-500" />
-                  
-                  {product.pdfUrl && (
-                    <div className="absolute top-3 right-3 z-10 inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-black/60 backdrop-blur-xs text-white text-[10px] font-semibold tracking-wider uppercase">
-                      <FileText className="size-3 text-[var(--color-arch-sand)]" />
-                      PDF Available
-                    </div>
-                  )}
                 </div>
                 
                 <div className="p-6 md:p-8">

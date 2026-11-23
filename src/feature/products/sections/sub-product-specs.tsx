@@ -190,10 +190,10 @@ export function SubProductSpecs({
                 </div>
                 <div>
                   <h3 className="text-lg md:text-xl font-bold text-[var(--color-deep-forest)]">
-                    Official Product Catalogue & Sample Pages
+                    Official Product Catalogue
                   </h3>
                   <p className="text-sm text-gray-600 mt-1">
-                    Download authentic technical specification sheets and sample documentation.
+                    Download authentic technical specifications and product documentation.
                   </p>
                 </div>
               </div>
@@ -215,7 +215,7 @@ export function SubProductSpecs({
             {catalogues.length > 0 && (
               <div className="mt-6">
                 <p className="text-xs font-bold tracking-wider uppercase text-gray-400 mb-3">
-                  Available Sample Pages ({catalogues.length})
+                  Available Catalogues ({catalogues.length})
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   {catalogues.map((cat, idx) => (

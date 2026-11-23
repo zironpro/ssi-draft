@@ -82,12 +82,6 @@ export function ProductGrid() {
                   alt={product.title}
                   className="w-full h-full flex-1 object-cover transition-transform duration-500 group-hover:scale-105"
                 />
-                {product.pdfUrl && (
-                  <div className="absolute top-3 left-3 z-10 inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-black/60 backdrop-blur-xs text-white text-[11px] font-medium tracking-wide">
-                    <FileText className="size-3 text-[var(--color-arch-sand)]" />
-                    Catalogue Available
-                  </div>
-                )}
               </div>
               <div className="p-6 md:p-8 flex flex-col justify-between w-full bg-white z-10 relative">
                 <div>

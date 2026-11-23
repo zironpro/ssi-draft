@@ -83,7 +83,7 @@ export const productsData: Record<string, Category> = {
         pdfUrl: "/products/pdf/sun-control-window-film/LX 70 SAMPLE PAGE SOLAR GARD 0326.pdf",
         catalogues: [
           {
-            title: "LX 70 Sample Page",
+            title: "LX 70",
             url: "/products/pdf/sun-control-window-film/LX 70 SAMPLE PAGE SOLAR GARD 0326.pdf"
           }
         ]
@@ -155,19 +155,19 @@ export const productsData: Record<string, Category> = {
         pdfUrl: "/products/pdf/sun-control-window-film/Sterling 40 SAMPLE PAGE SOLAR GARD 0326.pdf",
         catalogues: [
           {
-            title: "Sterling 40 Sample Page",
+            title: "Sterling 40",
             url: "/products/pdf/sun-control-window-film/Sterling 40 SAMPLE PAGE SOLAR GARD 0326.pdf"
           },
           {
-            title: "Sterling 50 Sample Page",
+            title: "Sterling 50",
             url: "/products/pdf/sun-control-window-film/Sterling 50 SAMPLE PAGE SOLAR GARD 0326.pdf"
           },
           {
-            title: "Sterling 60 Sample Page",
+            title: "Sterling 60",
             url: "/products/pdf/sun-control-window-film/Sterling 60 SAMPLE PAGE SOLAR GARD 0326.pdf"
           },
           {
-            title: "Sterling 70 Sample Page",
+            title: "Sterling 70",
             url: "/products/pdf/sun-control-window-film/Sterling 70 SAMPLE PAGE SOLAR GARD 0326.pdf"
           }
         ]
@@ -207,19 +207,19 @@ export const productsData: Record<string, Category> = {
         pdfUrl: "/products/pdf/sun-control-window-film/TrueVue 15 SAMPLE PAGE SOLAR GARD 0326.pdf",
         catalogues: [
           {
-            title: "TrueVue 5 Sample Page",
+            title: "TrueVue 5",
             url: "/products/pdf/sun-control-window-film/TrueVue 5 SAMPLE PAGE SOLAR GARD 0326.pdf"
           },
           {
-            title: "TrueVue 15 Sample Page",
+            title: "TrueVue 15",
             url: "/products/pdf/sun-control-window-film/TrueVue 15 SAMPLE PAGE SOLAR GARD 0326.pdf"
           },
           {
-            title: "TrueVue 30 Sample Page",
+            title: "TrueVue 30",
             url: "/products/pdf/sun-control-window-film/TrueVue 30 SAMPLE PAGE SOLAR GARD 0326.pdf"
           },
           {
-            title: "TrueVue 40 Sample Page",
+            title: "TrueVue 40",
             url: "/products/pdf/sun-control-window-film/TrueVue 40 SAMPLE PAGE SOLAR GARD 0326.pdf"
           }
         ]
@@ -259,11 +259,11 @@ export const productsData: Record<string, Category> = {
         pdfUrl: "/products/pdf/sun-control-window-film/Stainless Steel 20 SAMPLE PAGE SOLAR GARD.pdf",
         catalogues: [
           {
-            title: "Stainless Steel 20 Sample Page",
+            title: "Stainless Steel 20",
             url: "/products/pdf/sun-control-window-film/Stainless Steel 20 SAMPLE PAGE SOLAR GARD.pdf"
           },
           {
-            title: "Stainless Steel 35 - 50 Sample Pages",
+            title: "Stainless Steel 35 - 50",
             url: "/products/pdf/sun-control-window-film/Stainless Steel 35 - 50 SAMPLE PAGES SOLAR GARD.pdf"
           }
         ]
@@ -303,19 +303,19 @@ export const productsData: Record<string, Category> = {
         pdfUrl: "/products/pdf/sun-control-window-film/Silver 20 SAMPLE PAGE SOLAR GARD 0326.pdf",
         catalogues: [
           {
-            title: "Silver 20 Sample Page",
+            title: "Silver 20",
             url: "/products/pdf/sun-control-window-film/Silver 20 SAMPLE PAGE SOLAR GARD 0326.pdf"
           },
           {
-            title: "Silver 35 Sample Page",
+            title: "Silver 35",
             url: "/products/pdf/sun-control-window-film/Silver 35 SAMPLE PAGE SOLAR GARD 0326.pdf"
           },
           {
-            title: "Silver 50 Sample Page",
+            title: "Silver 50",
             url: "/products/pdf/sun-control-window-film/Silver 50 SAMPLE PAGE SOLAR GARD 0326.pdf"
           },
           {
-            title: "Silver AG 50 Low-E Sample Page",
+            title: "Silver AG 50 Low-E",
             url: "/products/pdf/sun-control-window-film/Silver AG 50 Low-E SAMPLE PAGE SOLAR GARD 0326.pdf"
           }
         ]
@@ -355,7 +355,7 @@ export const productsData: Record<string, Category> = {
         pdfUrl: "/products/pdf/sun-control-window-film/Solar Bronze 20 - 35 SAMPLE PAGE SOLAR GARD 0326.pdf",
         catalogues: [
           {
-            title: "Solar Bronze 20 - 35 Sample Page",
+            title: "Solar Bronze 20 - 35",
             url: "/products/pdf/sun-control-window-film/Solar Bronze 20 - 35 SAMPLE PAGE SOLAR GARD 0326.pdf"
           }
         ]
@@ -427,19 +427,19 @@ export const productsData: Record<string, Category> = {
         pdfUrl: "/products/pdf/sun-control-window-film/Solar Gard Sample Page Clear Frost RA.pdf",
         catalogues: [
           {
-            title: "Clear Frost Sample Page",
+            title: "Clear Frost",
             url: "/products/pdf/sun-control-window-film/Solar Gard Sample Page Clear Frost RA.pdf"
           },
           {
-            title: "Clearfrost RA 50 Sample Page",
+            title: "Clearfrost RA 50",
             url: "/products/pdf/sun-control-window-film/Solar Gard Sample Page Clearfrost RA 50.pdf"
           },
           {
-            title: "Black Opaque Sample Page",
+            title: "Black Opaque",
             url: "/products/pdf/sun-control-window-film/Solar Gard Sample Page Black Opaque RA.pdf"
           },
           {
-            title: "White Opaque Sample Page",
+            title: "White Opaque",
             url: "/products/pdf/sun-control-window-film/Solar Gard Sample Page White Opaque RA.pdf"
           }
         ]
@@ -545,11 +545,11 @@ export const productsData: Record<string, Category> = {
         pdfUrl: "/products/pdf/safety-and-security-window-film/Armorcoat 4 - 7 - 8 Mil Clear SAMPLE PAGE SOLAR GARD 0326.pdf",
         catalogues: [
           {
-            title: "Armorcoat 4 - 7 - 8 Mil Clear Sample Page",
+            title: "Armorcoat 4 - 7 - 8 Mil Clear",
             url: "/products/pdf/safety-and-security-window-film/Armorcoat 4 - 7 - 8 Mil Clear SAMPLE PAGE SOLAR GARD 0326.pdf"
           },
           {
-            title: "Armorcoat 10 - 11 - 14 Mil Clear Sample Page",
+            title: "Armorcoat 10 - 11 - 14 Mil Clear",
             url: "/products/pdf/safety-and-security-window-film/Armorcoat 10 - 11 - 14 Mil Clear SAMPLE PAGE SOLAR GARD 0326.pdf"
           }
         ]
@@ -752,7 +752,7 @@ export const productsData: Record<string, Category> = {
         pdfUrl: "/products/pdf/safety-and-security-window-film/Sentinel Plus 8 mil Clear SAMPLE PAGE SOLAR GARD 0326.pdf",
         catalogues: [
           {
-            title: "Sentinel Plus 8 Mil Clear (OSW) Sample Page",
+            title: "Sentinel Plus 8 Mil Clear (OSW)",
             url: "/products/pdf/safety-and-security-window-film/Sentinel Plus 8 mil Clear SAMPLE PAGE SOLAR GARD 0326.pdf"
           }
         ]
