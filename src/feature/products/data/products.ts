@@ -47,7 +47,6 @@ export const productsData: Record<string, Category> = {
       "Engineered with cutting-edge optical technologies, these films provide enduring performance backed by industry-leading warranties across commercial and residential applications in demanding climates."
     ],
     descriptionImage: "/products/sun-control.png",
-    pdfUrl: "/products/pdf/sun-control-window-film/LX 70 SAMPLE PAGE SOLAR GARD 0326.pdf",
     subProducts: {
       "lx-series-non-reflective": {
         name: "LX Series (Non Reflective)",
@@ -510,7 +509,6 @@ export const productsData: Record<string, Category> = {
       "Available in optically clear variants that leave your windows completely indistinguishable from standard glass, as well as combined solar-safety options for simultaneous thermal control."
     ],
     descriptionImage: "/sub-products/clear-safety-film.png",
-    pdfUrl: "/products/pdf/safety-and-security-window-film/Armorcoat 4 - 7 - 8 Mil Clear SAMPLE PAGE SOLAR GARD 0326.pdf",
     subProducts: {
       "clear-safety-film-series": {
         name: "Clear Safety Film Series",
@@ -718,7 +716,6 @@ export const productsData: Record<string, Category> = {
       "They are also the ideal solution for containing spontaneous tempered glass explosions (nickel sulfide inclusions) on exterior balustrades and curtain walls."
     ],
     descriptionImage: "/sub-solutions/shatter-protection.png",
-    pdfUrl: "/products/pdf/safety-and-security-window-film/Sentinel Plus 8 mil Clear SAMPLE PAGE SOLAR GARD 0326.pdf",
     subProducts: {
       "safety-and-security-series-osw": {
         name: "Safety & Security Series OSW",

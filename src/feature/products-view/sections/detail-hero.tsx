@@ -146,7 +146,7 @@ export function ProductDetailHero({
 
                 <span className="flex flex-col text-left">
                   <span className="text-sm font-semibold text-[var(--color-warm-ivory)] md:text-base">
-                    View catalogue
+                    View Catalogue
                   </span>
                   <span className="text-xs text-white/60">PDF · opens in a new tab</span>
                 </span>
