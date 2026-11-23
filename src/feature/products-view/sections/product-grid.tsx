@@ -6,38 +6,45 @@ import Link from "next/link";
 const products = [
   {
     id: 1,
-    title: "Solar Safety Film",
-    slug: "safety-and-security",
+    title: "Sun Control Window Film",
+    slug: "sun-control-window-film",
+    description: "Reject up to 82% of solar heat, soften harsh glare, and significantly reduce cooling costs across architectural glazing.",
+    image: "/products/dsolar-control.png",
+  },
+  {
+    id: 2,
+    title: "Exterior Sun Control Window Film",
+    slug: "exterior-sun-control-window-film",
+    description: "Heavy-duty outside weather (OSW) films that intercept solar heat before it enters double glazing and skylights.",
+    image: "/sub-solutions/heat-reduction.png",
+  },
+  {
+    id: 3,
+    title: "Safety & Security Window Film",
+    slug: "safety-and-security-window-film",
     description: "Certified anti-shatter defense that binds glass together upon impact, preventing severe injury and forced entry.",
     image: "/products/safety-and-security.png",
   },
   {
-    id: 2,
-    title: "Solar Control",
-    slug: "solar-control",
-    description: "Reject up to 82% of solar energy and significantly reduce air conditioning costs.",
-    image: "/products/dsolar-control.png",
-  },
-  {
-    id: 3,
-    title: "Privacy",
-    slug: "privacy",
-    description: "Achieve total or partial light block-out with premium textured and opaque films.",
-    image: "/products/privacy.png",
-  },
-  {
     id: 4,
-    title: "Decorative Films",
-    slug: "decorative",
-    description: "Enhance privacy and elevate aesthetics with customizable frosted and patterned designs.",
-    image: "/products/decorative.png",
+    title: "Anchor Systems",
+    slug: "anchor-systems",
+    description: "Advanced structural silicone and mechanical profile attachments that bind filmed glass securely to window frames.",
+    image: "/sub-products/anchor-systems.png",
   },
   {
     id: 5,
-    title: "Decorative Wraps",
-    slug: "specialty",
-    description: "Architectural vinyl wraps for luxury resurfacing and antimicrobial surface protection.",
-    image: "/sub-solutions/interior-wrapping.png",
+    title: "Exterior Safety Window Film",
+    slug: "exterior-safety-window-film",
+    description: "Weather-resistant impact and anti-shatter defense for building facades, glass balustrades, and polycarbonate glazing.",
+    image: "/sub-solutions/shatter-protection.png",
+  },
+  {
+    id: 6,
+    title: "Marine Window Film",
+    slug: "marine-window-film",
+    description: "Corrosion-proof ceramic and privacy window films engineered specifically for luxury yachts, boats, and maritime vessels.",
+    image: "/sub-products/magnum-ir.png",
   },
 ];
 
@@ -86,7 +93,7 @@ export function ProductGrid() {
           
           <Link
             href="/contact"
-            className="flex flex-col items-center justify-center p-6 md:p-8 text-center rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group bg-[var(--color-deep-forest)]"
+            className="lg:col-span-2 flex flex-col items-center justify-center p-8 md:p-12 text-center rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group bg-[var(--color-deep-forest)]"
           >
             <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/3 w-64 h-64 bg-[var(--color-arch-sand)] rounded-full blur-[80px] opacity-20 group-hover:opacity-30 transition-opacity duration-500"></div>
             <div className="absolute bottom-0 left-0 translate-y-1/3 -translate-x-1/3 w-48 h-48 bg-white rounded-full blur-[60px] opacity-10 group-hover:opacity-20 transition-opacity duration-500"></div>
@@ -95,8 +102,8 @@ export function ProductGrid() {
               <h4 className="text-xl md:text-2xl font-bold text-white mb-2 leading-snug">
                 Need a Custom Solution?
               </h4>
-              <p className="text-white/80 text-sm md:text-[15px] leading-relaxed mb-6 max-w-xs">
-                Talk to our experts today to find the perfect window film for your unique project.
+              <p className="text-white/80 text-sm md:text-[15px] leading-relaxed mb-6 max-w-md">
+                Talk to our window film specialists today to find the perfect performance film for your unique architectural or marine project.
               </p>
               <span className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-[var(--color-arch-sand)] text-white text-sm font-bold tracking-widest uppercase rounded-md hover:bg-white hover:text-[var(--color-deep-forest)] transition-colors">
                 Contact Us

@@ -18,11 +18,12 @@ const navLinks: NavLink[] = [
     name: "Products",
     href: "/products",
     subLinks: [
-      { name: "Solar Safety Film", href: "/products/safety-and-security" },
-      { name: "Solar Control", href: "/products/solar-control" },
-      { name: "Privacy", href: "/products/privacy" },
-      { name: "Decorative Films", href: "/products/decorative" },
-      { name: "Decorative Wraps", href: "/products/specialty" },
+      { name: "Sun Control Window Film", href: "/products/sun-control-window-film" },
+      { name: "Exterior Sun Control", href: "/products/exterior-sun-control-window-film" },
+      { name: "Safety & Security Film", href: "/products/safety-and-security-window-film" },
+      { name: "Anchor Systems", href: "/products/anchor-systems" },
+      { name: "Exterior Safety Film", href: "/products/exterior-safety-window-film" },
+      { name: "Marine Window Film", href: "/products/marine-window-film" },
     ],
   },
   {

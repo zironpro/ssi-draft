@@ -8,43 +8,51 @@ import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 const products = [
   {
     id: 1,
-    title: "Solar Safety Film",
-    slug: "safety-and-security",
-    category: "Anti-Shatter & Security",
-    image: "/products/safety-and-security.png",
-    href: "/products/safety-and-security"
+    title: "Sun Control Window Film",
+    slug: "sun-control-window-film",
+    category: "Solar Heat & Glare Reduction",
+    image: "/products/dsolar-control.png",
+    href: "/products/sun-control-window-film"
   },
   {
     id: 2,
-    title: "Solar Control",
-    slug: "solar-control",
-    category: "Heat & Glare Reduction",
-    image: "/products/dsolar-control.png",
-    href: "/products/solar-control"
+    title: "Exterior Sun Control",
+    slug: "exterior-sun-control-window-film",
+    category: "Outside Weather (OSW) Shield",
+    image: "/sub-solutions/heat-reduction.png",
+    href: "/products/exterior-sun-control-window-film"
   },
   {
     id: 3,
-    title: "Privacy",
-    slug: "privacy",
-    category: "Daytime Privacy",
-    image: "/products/privacy.png",
-    href: "/products/privacy"
+    title: "Safety & Security Film",
+    slug: "safety-and-security-window-film",
+    category: "Certified Anti-Shatter Defense",
+    image: "/products/safety-and-security.png",
+    href: "/products/safety-and-security-window-film"
   },
   {
     id: 4,
-    title: "Decorative Films",
-    slug: "decorative",
-    category: "Architectural & Frosted",
-    image: "/products/decorative.png",
-    href: "/products/decorative"
+    title: "Anchor Systems",
+    slug: "anchor-systems",
+    category: "Structural Frame Retention",
+    image: "/sub-products/anchor-systems.png",
+    href: "/products/anchor-systems"
   },
   {
     id: 5,
-    title: "Decorative Wraps",
-    slug: "specialty",
-    category: "Interior Architectural Resurfacing",
-    image: "/images/solutions/wrapping.png",
-    href: "/products/specialty"
+    title: "Exterior Safety Film",
+    slug: "exterior-safety-window-film",
+    category: "Facade & Polycarbonate Defense",
+    image: "/sub-solutions/shatter-protection.png",
+    href: "/products/exterior-safety-window-film"
+  },
+  {
+    id: 6,
+    title: "Marine Window Film",
+    slug: "marine-window-film",
+    category: "Yacht & Vessel Solar Defense",
+    image: "/sub-products/magnum-ir.png",
+    href: "/products/marine-window-film"
   }
 ];
 

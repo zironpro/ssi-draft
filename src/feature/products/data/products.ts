@@ -1,560 +1,795 @@
 export interface SubProduct {
- name: string;
- slug: string;
- shortDescription: string;
- subtitle: string;
- heroImage: string;
- descriptionTitle: string;
- descriptionParagraphs: string[];
- descriptionImage: string;
- stats: { label: string; value: string }[];
- features: { title: string; desc: string; icon: string }[];
- specs: { label: string; value: string }[];
+  name: string;
+  slug: string;
+  shortDescription: string;
+  subtitle: string;
+  heroImage: string;
+  descriptionTitle: string;
+  descriptionParagraphs: string[];
+  descriptionImage: string;
+  stats: { label: string; value: string }[];
+  features: { title: string; desc: string; icon: string }[];
+  specs: { label: string; value: string }[];
 }
 
 export interface Category {
- name: string;
- slug: string;
- shortDescription: string;
- heroImage: string;
- heroSubtitle: string;
- descriptionTitle: string;
- descriptionParagraphs: string[];
- descriptionImage: string;
- subProducts: Record<string, SubProduct>;
+  name: string;
+  slug: string;
+  shortDescription: string;
+  heroImage: string;
+  heroSubtitle: string;
+  descriptionTitle: string;
+  descriptionParagraphs: string[];
+  descriptionImage: string;
+  subProducts: Record<string, SubProduct>;
 }
 
 export const productsData: Record<string, Category> = {
-"safety-and-security": {
-    name: "Solar Safety Film",
- slug:"safety-and-security",
- shortDescription:"Deter unwanted entries and protect against flying glass.",
- heroImage:"https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?q=80&w=2070&auto=format&fit=crop",
- heroSubtitle:"Engineered defense systems designed to hold shattered glass intact under extreme pressure.",
- descriptionTitle:"Invisible armor for your most vulnerable points of entry.",
- descriptionParagraphs: [
-"Glass is the weakest link in any building's security perimeter. Our Safety & Security films transform standard windows into highly resilient barriers.",
-"In the event of an impact, explosion, or severe weather, these heavy-duty films hold the shattered shards tightly together, preventing dangerous flying glass and deterring smash-and-grab burglaries.",
-"Completely optically clear, these films provide peace of mind without altering the appearance of your property."
- ],
- descriptionImage:"https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070&auto=format&fit=crop",
- subProducts: {
-"clear-safety-film": {
- name:"Clear Safety Film",
- slug:"clear-safety-film",
- shortDescription:"Optically clear protection against impact and shattering.",
- subtitle:"Uncompromising clarity meets industrial-strength protection.",
- heroImage:"https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070&auto=format&fit=crop",
- descriptionTitle:"24/7 passive protection against forced entry and accidents.",
- descriptionParagraphs: [
-"Manufactured using heavy-duty polyester bonded by the industry's strongest adhesives, our Clear Safety Film creates an invisible shield on your windows.",
-"It buys crucial time during a break-in attempt, often deterring intruders entirely when the glass fails to yield immediately.",
-"It also provides life-saving protection during severe storms or accidental impacts by keeping hazardous glass shards contained."
- ],
- descriptionImage:"https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?q=80&w=2070&auto=format&fit=crop",
- stats: [
- { label:"Shatter Resistance", value:"Class A" },
- { label:"Visibility", value:"Clear" },
- { label:"UV Block", value:"99%" }
- ],
- features: [
- { title:"Tear Resistant", desc:"Multi-laminate construction resists tearing under stress.", icon:"Shield" },
- { title:"Optically Clear", desc:"Virtually undetectable once professionally installed.", icon:"Layers" },
- { title:"UV Protection", desc:"Blocks 99% of UV rays despite being completely clear.", icon:"Sun" }
- ],
- specs: [
- { label:"Thickness Options", value:"4 Mil, 7 Mil, 8 Mil, 14 Mil" },
- { label:"Tensile Strength", value:"32,000 psi" },
- { label:"Peel Strength", value:"> 7 lbs/inch" },
- { label:"Break Strength", value:"100 - 350 lbs/inch" },
- { label:"Puncture Strength", value:"93 lbs" },
- { label:"Visible Light Transmitted", value:"89%" },
- { label:"UV Rejection", value:"99%" },
- { label:"Warranty", value:"12 Years Commercial" }
- ]
- },
-"anchor-systems": {
- name:"Anchor Systems",
- slug:"anchor-systems",
- shortDescription:"Advanced anchoring for maximum structural integrity.",
- subtitle:"The ultimate reinforcement binding film to frame.",
- heroImage:"https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?q=80&w=2070&auto=format&fit=crop",
- descriptionTitle:"Securing the perimeter beyond the glass.",
- descriptionParagraphs: [
-"Safety film alone holds broken glass together, but if the impact is severe enough, the entire pane can be blown out of the window frame. Anchor Systems solve this problem.",
-"By physically attaching the safety-filmed glass to the window frame using structural silicone or mechanical profiles, anchor systems create a continuous, highly resistant barrier.",
-"This is the highest level of security available, recommended for government buildings, schools, and high-risk commercial properties."
- ],
- descriptionImage:"https://images.unsplash.com/photo-1541888045612-9c3fdf9bc3b6?q=80&w=2070&auto=format&fit=crop",
- stats: [
- { label:"Blast Mitigation", value:"GSA Level C" },
- { label:"Wind Load", value:"High" },
- { label:"Installation", value:"Wet/Dry Glaze" }
- ],
- features: [
- { title:"Structural Bond", desc:"Binds the filmed glass directly to the window frame.", icon:"Shield" },
- { title:"Blast Resistant", desc:"Absorbs and dissipates explosive blast energy.", icon:"Zap" },
- { title:"Custom Fit", desc:"Available in various profiles to match your existing window frames.", icon:"Layers" }
- ],
- specs: [
- { label:"System Type", value:"Wet Glaze / Mechanical Attachment" },
- { label:"Tensile Strength", value:"350 psi (Silicone)" },
- { label:"Elongation", value:"400% stretch before breaking" },
- { label:"Compatibility", value:"All 8+ Mil Safety Films" },
- { label:"Warranty", value:"10 Years" }
- ]
- },
-"safety-films": {
- name:"Safety Films",
- slug:"safety-films",
- shortDescription:"Heavy-duty tinted films designed for privacy and protection.",
- subtitle:"Dual-purpose protection: security meets solar control.",
- heroImage:"https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?q=80&w=2070&auto=format&fit=crop",
- descriptionTitle:"Combining shatter resistance with climate control.",
- descriptionParagraphs: [
-"Our tinted Safety Films offer a two-in-one solution. They provide the extreme tear resistance of our clear security films while simultaneously rejecting solar heat and glare.",
-"These films are perfect for facilities that require enhanced security but also suffer from intense sun exposure. The tinted finish adds daytime privacy, preventing outsiders from viewing interior layouts or valuables.",
-"Available in various shades and reflectivity levels to suit your aesthetic and performance needs."
- ],
- descriptionImage:"https://images.unsplash.com/photo-1497366811353-6870744d04b2?q=80&w=2069&auto=format&fit=crop",
- stats: [
- { label:"Solar Energy Rejected", value:"Up to 70%" },
- { label:"Thickness", value:"8 Mil" },
- { label:"Privacy", value:"Daytime" }
- ],
- features: [
- { title:"Dual Action", desc:"Provides security and heat rejection simultaneously.", icon:"Shield" },
- { title:"Glare Reduction", desc:"Darker tints drastically reduce eye strain.", icon:"Sun" },
- { title:"Daytime Privacy", desc:"Reflective exterior prevents prying eyes.", icon:"Layers" }
- ],
- specs: [
- { label:"Thickness", value:"8 Mil" },
- { label:"Total Solar Energy Rejected", value:"45% - 70%" },
- { label:"Visible Light Transmitted", value:"20% - 50%" },
- { label:"UV Rejection", value:"99%" },
- { label:"Warranty", value:"12 Years Commercial" }
- ]
- }
- }
- },
-"solar-control": {
- name:"Solar Control",
- slug:"solar-control",
- shortDescription:"Reject up to 82% of solar energy and significantly reduce air conditioning costs.",
- heroImage:"https://images.unsplash.com/photo-1497366811353-6870744d04b2?q=80&w=2069&auto=format&fit=crop",
- heroSubtitle:"The ultimate solution for heat rejection and energy efficiency without compromising natural light.",
- descriptionTitle:"Transform your glass into an invisible heat shield.",
- descriptionParagraphs: [
-"Our flagship Solar Control series represents the pinnacle of architectural window film technology. Designed to drastically reduce solar heat gain and eliminate harsh glare, this film allows you to enjoy natural light without the uncomfortable side effects.",
-"By rejecting up to 99% of harmful UV rays, it protects occupants' skin and significantly reduces the fading of interior furnishings, hardwood floors, and valuable artwork.",
-"It is an investment in comfort, energy efficiency, and aesthetic preservation."
- ],
- descriptionImage:"https://images.unsplash.com/photo-1600607687644-aac4c3eac7f4?q=80&w=2070&auto=format&fit=crop",
- subProducts: {
-"lx-series": {
- name:"LX Series",
- slug:"lx-series",
- shortDescription:"Premium ceramic technology for maximum heat rejection.",
- subtitle:"Unmatched clarity combined with extraordinary infrared heat rejection.",
- heroImage:"https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=2070&auto=format&fit=crop",
- descriptionTitle:"The absolute pinnacle of optical clarity and performance.",
- descriptionParagraphs: [
-"The LX Series utilizes advanced nano-ceramic technology to selectively filter the sun's spectrum. It blocks out the infrared heat and UV radiation while letting visible light pass through almost entirely undisturbed.",
-"Unlike traditional metalized films, the LX Series contains no dyes or metals, meaning it will never fade, corrode, or interfere with 5G, Wi-Fi, or cellular signals.",
-"It's the perfect choice for luxury residences and commercial spaces where preserving the original architectural aesthetic is paramount."
- ],
- descriptionImage:"https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2069&auto=format&fit=crop",
- stats: [
- { label:"UV Rejection", value:"99%" },
- { label:"Max Heat Control", value:"Yes" },
- { label:"Warranty", value:"Lifetime" }
- ],
- features: [
- { title:"Nano-Ceramic", desc:"Non-metalized construction ensures zero signal interference.", icon:"Layers" },
- { title:"Spectrally Selective", desc:"Targets infrared heat without darkening the glass.", icon:"Sun" },
- { title:"Zero Corrosion", desc:"Perfect for coastal and high-humidity environments.", icon:"Shield" }
- ],
- specs: [
- { label:"Visible Light Transmitted", value:"70%" },
- { label:"Visible Light Reflected", value:"9% (Interior / Exterior)" },
- { label:"Total Solar Energy Rejected", value:"55%" },
- { label:"Infrared Rejection", value:"95%" },
- { label:"Solar Heat Gain Coefficient (SHGC)", value:"0.45" },
- { label:"U-Value", value:"1.04" },
- { label:"UV Rejection", value:">99%" },
- { label:"Thickness", value:"2 Mil" },
- { label:"Warranty", value:"Lifetime Residential / 15 Yrs Commercial" }
- ]
- },
-"magnum-ir": {
- name:"Magnum IR",
- slug:"magnum-ir",
- shortDescription:"Superior infrared rejection with clear visibility.",
- subtitle:"A balanced hybrid film offering exceptional glare reduction and thermal comfort.",
- heroImage:"https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2069&auto=format&fit=crop",
- descriptionTitle:"Intelligent heat management for demanding environments.",
- descriptionParagraphs: [
-"Magnum IR is designed to tackle the most intense solar challenges. By integrating specialized infrared-absorbing particles, this film dramatically cuts down the heat entering your building.",
-"It features a subtle, neutral tint that reduces eye-straining glare while maintaining a highly natural view of the outside world.",
-"Ideal for office buildings and properties facing intense afternoon sun where cooling costs are a major concern."
- ],
- descriptionImage:"https://images.unsplash.com/photo-1600607687644-aac4c3eac7f4?q=80&w=2070&auto=format&fit=crop",
- stats: [
- { label:"IR Rejection", value:"85%" },
- { label:"Glare Control", value:"High" },
- { label:"Warranty", value:"10 Years" }
- ],
- features: [
- { title:"Hybrid Tech", desc:"Combines dyed and ceramic technologies for superior performance.", icon:"Layers" },
- { title:"Glare Reduction", desc:"Significantly reduces eye strain for screen workers.", icon:"Sun" },
- { title:"Neutral Hue", desc:"Maintains the natural colors of your interior and exterior views.", icon:"Shield" }
- ],
- specs: [
- { label:"Visible Light Transmitted", value:"35%" },
- { label:"Total Solar Energy Rejected", value:"62%" },
- { label:"Infrared Rejection", value:"85%" },
- { label:"UV Rejection", value:">99%" },
- { label:"Thickness", value:"1.5 Mil" },
- { label:"Warranty", value:"10 Years Commercial" }
- ]
- },
-"magnum-black": {
- name:"Magnum Black",
- slug:"magnum-black",
- shortDescription:"Ultimate privacy and glare reduction in a deep black finish.",
- subtitle:"Unparalleled glare control with a sleek, architectural black aesthetic.",
- heroImage:"https://images.unsplash.com/photo-1600607687644-aac4c3eac7f4?q=80&w=2070&auto=format&fit=crop",
- descriptionTitle:"Maximum shading for maximum comfort.",
- descriptionParagraphs: [
-"Magnum Black is engineered for spaces that require intense glare reduction and a high degree of daytime privacy. Its deep, rich black color provides a striking modern look to any exterior façade.",
-"By absorbing and reflecting a massive amount of solar energy, it creates incredibly cool, comfortable interiors even in the harshest summer conditions.",
-"Perfect for server rooms, media rooms, and architectural projects demanding a dark, uniform exterior aesthetic."
- ],
- descriptionImage:"https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=2070&auto=format&fit=crop",
- stats: [
- { label:"Glare Reduction", value:"93%" },
- { label:"Privacy", value:"Maximum" },
- { label:"Aesthetic", value:"Deep Black" }
- ],
- features: [
- { title:"Extreme Glare Control", desc:"Eliminates almost all harsh glare on screens and monitors.", icon:"Sun" },
- { title:"Daytime Privacy", desc:"Prevents outsiders from seeing in during daylight hours.", icon:"Shield" },
- { title:"Modern Look", desc:"Provides a sleek, uniform dark finish to building exteriors.", icon:"Layers" }
- ],
- specs: [
- { label:"Visible Light Transmitted", value:"5%" },
- { label:"Visible Light Reflected", value:"5% (Interior)" },
- { label:"Total Solar Energy Rejected", value:"72%" },
- { label:"Solar Heat Gain Coefficient (SHGC)", value:"0.28" },
- { label:"Glare Reduction", value:"93%" },
- { label:"Emissivity", value:"0.84" },
- { label:"UV Rejection", value:"99%" },
- { label:"Thickness", value:"1.5 Mil" },
- { label:"Warranty", value:"10 Years" }
- ]
- },
-"grey-silver-grey": {
- name:"Grey / Silver / Grey",
- slug:"grey-silver-grey",
- shortDescription:"Dual-Tone Solar Control Window Film designed to reduce heat and block harmful UV rays.",
- subtitle:"Advanced dual-tone solution for enhanced comfort and energy efficiency.",
- heroImage:"https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=2070&auto=format&fit=crop",
- descriptionTitle:"Grey / Silver / Grey Series \u2013 Dual Tone Solar Control Window Film",
- descriptionParagraphs: [
-"Solar Control Window Film is an advanced solution designed to reduce heat, block harmful UV rays, and improve indoor comfort in both residential and commercial spaces. In regions like Dubai, where sunlight intensity is high throughout the year, installing solar control films is essential.",
-"With modern technology, solar control window films not only enhance comfort but also protect interiors from fading caused by UV exposure. They also provide an added layer of safety by helping hold glass fragments together in case of breakage.",
-"By minimizing the amount of solar heat entering a building, these films help maintain cooler indoor temperatures, reducing the need for excessive air conditioning and lowering energy costs, contributing to more sustainable building practices."
- ],
- descriptionImage:"https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop",
- stats: [
- { label:"Glare Reduction", value:"94%" },
- { label:"Total Solar Energy Rejected", value:"70%" },
- { label:"UV Blocked", value:">99%" }
- ],
- features: [
- { title:"Dual-Tone Construction", desc:"Dual-Tone Grey / Silver / Grey Multilayer Construction for enhanced aesthetics.", icon:"Layers" },
- { title:"Heat & UV Rejection", desc:"Strong solar heat rejection and blocks 99% of harmful UV rays.", icon:"Sun" },
- { title:"Durable & Versatile", desc:"Durable construction suitable for commercial, office, and residential windows.", icon:"Shield" }
- ],
- specs: [
- { label:"Visible Light Transmission", value:"8%" },
- { label:"Exterior Reflectance", value:"10%" },
- { label:"Interior Reflectance", value:"10%" },
- { label:"Glare Reduction", value:"94%" },
- { label:"Total Solar Energy Rejected", value:"70%" },
- { label:"Solar Heat Gain Coefficient", value:"0.30" },
- { label:"UV Light Blocked", value:">99%" },
- { label:"Film Thickness", value:"50 microns" },
- { label:"Appearance", value:"Dark neutral grey with silver layer" },
- { label:"Best Use", value:"Maximum heat & glare reduction with strong privacy" }
- ]
- }
- }
- },
-"privacy": {
-    name: "Privacy Films",
- slug:"privacy",
- shortDescription:"Achieve total or partial light block-out with premium textured and opaque films.",
- heroImage:"https://images.unsplash.com/photo-1600566752355-35792bedcfea?q=80&w=2070&auto=format&fit=crop",
- heroSubtitle:"Elegant solutions for isolating spaces without resorting to walls or blinds.",
- descriptionTitle:"Control your environment, control your visibility.",
- descriptionParagraphs: [
-"In modern open-plan offices and glass-heavy homes, privacy can become a luxury. Our privacy films offer a sleek, architectural alternative to heavy curtains or expensive frosted glass.",
-"Whether you need to obscure a conference room, hide a storage area, or add a subtle frost to a bathroom window, our films provide customized visibility control.",
-"They are durable, easily cleanable, and can be updated or removed if the purpose of the room changes."
- ],
- descriptionImage:"https://images.unsplash.com/photo-1600607688969-a5bfcd646154?q=80&w=2070&auto=format&fit=crop",
- subProducts: {
-"frosted-film": {
- name:"Frosted Film",
- slug:"frosted-film",
- shortDescription:"Classic sandblasted look for elegant privacy.",
- subtitle:"The look of expensive sandblasted glass at a fraction of the cost.",
- heroImage:"https://images.unsplash.com/photo-1600566752355-35792bedcfea?q=80&w=2070&auto=format&fit=crop",
- descriptionTitle:"Diffused light and discrete spaces.",
- descriptionParagraphs: [
-"Frosted film is the staple of commercial interior design. It perfectly mimics the look of acid-etched or sandblasted glass, providing 24-hour privacy while still allowing soft, diffused natural light to pass through.",
-"It is ideal for glass partitions, conference rooms, and exterior bathroom windows. It eliminates the feeling of being closed in while ensuring complete obscurity from both sides of the glass.",
-"Can be computer-cut into bands, logos, or geometric shapes for a custom aesthetic."
- ],
- descriptionImage:"https://images.unsplash.com/photo-1574360773954-477005e83a65?q=80&w=2070&auto=format&fit=crop",
- stats: [
- { label:"Light Transmission", value:"High" },
- { label:"Privacy Level", value:"24/7" },
- { label:"Texture", value:"Matte" }
- ],
- features: [
- { title:"Diffuses Light", desc:"Softens harsh lighting while keeping the room bright.", icon:"Sun" },
- { title:"24-Hour Privacy", desc:"Obscures views day and night, regardless of lighting.", icon:"Shield" },
- { title:"Fingerprint Resistant", desc:"Easier to clean than actual sandblasted glass.", icon:"Layers" }
- ],
- specs: [
- { label:"Appearance", value:"Matte Frost" },
- { label:"Visible Light Transmitted", value:"65%" },
- { label:"Visible Light Reflected", value:"18%" },
- { label:"Shading Coefficient", value:"0.77" },
- { label:"UV Rejection", value:"95%" },
- { label:"Thickness", value:"2 Mil" },
- { label:"Tensile Strength", value:"25,000 psi" },
- { label:"Warranty", value:"5 Years" }
- ]
- },
-"opaque-film": {
- name:"Opaque Film",
- slug:"opaque-film",
- shortDescription:"Total light block-out and complete two-way privacy.",
- subtitle:"Blackout and Whiteout solutions for complete visual and luminous isolation.",
- heroImage:"https://images.unsplash.com/photo-1600607688969-a5bfcd646154?q=80&w=2070&auto=format&fit=crop",
- descriptionTitle:"Zero light, zero visibility.",
- descriptionParagraphs: [
-"When you need to completely block a view and stop all light transmission, our Opaque Films are the answer. Available in solid Blackout or bright Whiteout options.",
-"These films are commonly used to hide dropped ceilings, mask unsightly construction areas, or create dark rooms for media viewing and photography.",
-"They provide 100% two-way privacy, ensuring that absolutely nothing can be seen through the glass from either side."
- ],
- descriptionImage:"https://images.unsplash.com/photo-1542868840-7521094dc152?q=80&w=2070&auto=format&fit=crop",
- stats: [
- { label:"Light Transmission", value:"0%" },
- { label:"Privacy Level", value:"Total" },
- { label:"Finish", value:"Solid" }
- ],
- features: [
- { title:"Complete Blockout", desc:"Allows 0% visible light transmission.", icon:"Sun" },
- { title:"Hides Clutter", desc:"Perfect for masking storage rooms or mechanical spaces.", icon:"Shield" },
- { title:"High Contrast", desc:"Provides a solid, uniform architectural finish.", icon:"Layers" }
- ],
- specs: [
- { label:"Colors Available", value:"Black, White" },
- { label:"Visible Light Transmitted", value:"0%" },
- { label:"UV Rejection", value:"100%" },
- { label:"Thickness", value:"2 Mil" },
- { label:"Warranty", value:"5 Years" }
- ]
- },
-"frost-film": {
- name:"Frost Film",
- slug:"frost-film",
- shortDescription:"Textured translucent finish for a modern appeal.",
- subtitle:"A subtle, contemporary take on standard privacy glass.",
- heroImage:"https://images.unsplash.com/photo-1532012197267-da84d127e765?q=80&w=2070&auto=format&fit=crop",
- descriptionTitle:"Sophisticated translucency.",
- descriptionParagraphs: [
-"Frost Film offers a slightly different aesthetic than standard frosted film. It often features a subtle sparkle or a textured crystal finish that catches the light beautifully.",
-"It provides excellent privacy while elevating the interior design of the space, making it a popular choice for high-end retail, luxury offices, and modern residential bathrooms.",
-"The textured surface minimizes glare and hotspots from interior lighting."
- ],
- descriptionImage:"https://images.unsplash.com/photo-1505691938895-1758d7feb511?q=80&w=2070&auto=format&fit=crop",
- stats: [
- { label:"Aesthetic", value:"Crystal Texture" },
- { label:"Privacy Level", value:"High" },
- { label:"Light Trans.", value:"Medium" }
- ],
- features: [
- { title:"Textured Finish", desc:"Adds depth and visual interest to flat glass.", icon:"Layers" },
- { title:"Glare Reduction", desc:"Diffuses harsh spotlights and direct sun.", icon:"Sun" },
- { title:"Elegant Privacy", desc:"Obscures details while letting light glow through.", icon:"Shield" }
- ],
- specs: [
- { label:"Appearance", value:"Sparkle / Crystal Frost" },
- { label:"Visible Light Transmitted", value:"55%" },
- { label:"UV Rejection", value:"90%" },
- { label:"Thickness", value:"2 Mil" },
- { label:"Warranty", value:"5 Years" }
- ]
- }
- }
- },
-"decorative": {
-    name: "Decorative Films",
- slug:"decorative",
- shortDescription:"Enhance privacy and elevate aesthetics with customizable frosted and patterned designs.",
- heroImage:"https://images.unsplash.com/photo-1600607688969-a5bfcd646154?q=80&w=2070&auto=format&fit=crop",
- heroSubtitle:"Elevate your interior glass with striking visual elements and corporate branding.",
- descriptionTitle:"Customized glass design without the custom glass price.",
- descriptionParagraphs: [
-"Transform ordinary glass into extraordinary architectural features. Our decorative films allow architects and designers to manipulate glass surfaces with textures, patterns, and colors.",
-"Instead of replacing expensive glass panels, these films can be applied directly to existing glass, allowing for easy updates when rebranding or redesigning a space.",
-"From subtle distraction bands to full-color printed murals, the creative possibilities are literally endless."
- ],
- descriptionImage:"https://images.unsplash.com/photo-1507208773393-40d9fc670acf?q=80&w=2070&auto=format&fit=crop",
- subProducts: {
-"decorative-film": {
- name:"Decorative Film",
- slug:"decorative-film",
- shortDescription:"Custom patterns, lines, and gradients.",
- subtitle:"Lines, dots, gradients, and geometric patterns for visual interest.",
- heroImage:"https://images.unsplash.com/photo-1600607688969-a5bfcd646154?q=80&w=2070&auto=format&fit=crop",
- descriptionTitle:"Patterned privacy and distraction markers.",
- descriptionParagraphs: [
-"Decorative patterned films are the perfect way to add privacy without completely blocking the view. Choose from hundreds of pre-designed patterns including stripes, dots, squares, and elegant gradients.",
-"These films also serve a critical safety function as 'distraction markers', ensuring that clear glass partitions are visible to people walking by, preventing accidental collisions.",
-"We can also computer-cut custom patterns, logos, and typography to perfectly match your brand's identity."
- ],
- descriptionImage:"https://images.unsplash.com/photo-1542665952-66b1dd6f4209?q=80&w=2070&auto=format&fit=crop",
- stats: [
- { label:"Patterns", value:"100+ Options" },
- { label:"Customizable", value:"Yes" },
- { label:"Application", value:"Interior Glass" }
- ],
- features: [
- { title:"Visual Interest", desc:"Breaks up monotonous expanses of clear glass.", icon:"Layers" },
- { title:"Safety Compliance", desc:"Fulfills building codes for glass manifestation.", icon:"Shield" },
- { title:"Removable", desc:"Easily update the design when leases or branding changes.", icon:"Zap" }
- ],
- specs: [
- { label:"Design Types", value:"Stripes, Dots, Gradients, Rice Paper, Geometric" },
- { label:"Visible Light Transmitted", value:"Varies by Pattern" },
- { label:"Thickness", value:"2 Mil" },
- { label:"Warranty", value:"5 Years" }
- ]
- },
-"coloured-film": {
- name:"Coloured Film",
- slug:"coloured-film",
- shortDescription:"Vibrant architectural colors to match your brand identity.",
- subtitle:"Optically clear, highly vibrant translucent colors.",
- heroImage:"https://images.unsplash.com/photo-1507208773393-40d9fc670acf?q=80&w=2070&auto=format&fit=crop",
- descriptionTitle:"Paint your glass with light.",
- descriptionParagraphs: [
-"Coloured window films offer a brilliant, transparent pop of color to interior or exterior glass. By overlaying primary colors, we can create custom hues that perfectly match your corporate Pantone colors.",
-"These films retain perfect optical clarity, washing the interior space in colored light while allowing full visibility through the glass.",
-"Ideal for retail storefronts, creative agencies, museums, and striking architectural accents."
- ],
- descriptionImage:"https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2070&auto=format&fit=crop",
- stats: [
- { label:"Clarity", value:"Optically Clear" },
- { label:"Colors", value:"Unlimited Combos" },
- { label:"Durability", value:"Scratch Resistant" }
- ],
- features: [
- { title:"Vibrant Hues", desc:"Transforms ordinary glass into stained glass.", icon:"Sun" },
- { title:"Layerable", desc:"Can be combined to create infinite custom shades.", icon:"Layers" },
- { title:"Brand Matching", desc:"Align your office interior exactly with your brand colors.", icon:"Zap" }
- ],
- specs: [
- { label:"Colors Available", value:"Red, Blue, Yellow, Green, Custom" },
- { label:"Visible Light Transmitted", value:"Varies by Color" },
- { label:"UV Rejection", value:">90%" },
- { label:"Thickness", value:"2 Mil" },
- { label:"Warranty", value:"5 Years" }
- ]
- }
- }
- },
-"specialty": {
-    name: "Decorative Wraps",
- slug:"specialty",
- shortDescription:"Advanced solutions including antimicrobial layers and luxury interior wrapping.",
- heroImage:"https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=2053&auto=format&fit=crop",
- heroSubtitle:"Specialized films for specialized environments and unique architectural challenges.",
- descriptionTitle:"Innovation beyond standard glass tinting.",
- descriptionParagraphs: [
-"Our Specialty line encompasses cutting-edge film technologies designed to solve highly specific problems that go beyond simple solar control or privacy.",
-"From creating sterile environments in healthcare facilities to completely refinishing architectural surfaces without the need for demolition, these films represent the future of surface engineering."
- ],
- descriptionImage:"https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070&auto=format&fit=crop",
- subProducts: {
-"antimicrobial-films": {
- name:"Antimicrobial Films",
- slug:"antimicrobial-films",
- shortDescription:"Continuous protection against germs on high-touch surfaces.",
- subtitle:"Active surface protection for a healthier environment.",
- heroImage:"https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=2053&auto=format&fit=crop",
- descriptionTitle:"Self-cleaning technology for high-traffic areas.",
- descriptionParagraphs: [
-"Antimicrobial films are infused with silver ion technology that actively inhibits the growth of bacteria, mold, and mildew on the surface of the film.",
-"When applied to high-touch surfaces like glass doors, touchscreens, elevator buttons, and reception desks, it provides 24/7 continuous protection, working alongside your regular cleaning protocols.",
-"It is completely transparent, scratch-resistant, and an essential upgrade for hospitals, clinics, schools, and public transport."
- ],
- descriptionImage:"https://images.unsplash.com/photo-1584036561566-baf8f5f1b144?q=80&w=2070&auto=format&fit=crop",
- stats: [
- { label:"Efficacy", value:"99.9% Reduction" },
- { label:"Active Agent", value:"Silver Ions" },
- { label:"Visibility", value:"Optically Clear" }
- ],
- features: [
- { title:"24/7 Protection", desc:"Continuously works to inhibit bacterial growth.", icon:"Shield" },
- { title:"Safe & Non-Toxic", desc:"Uses natural silver ions rather than harsh chemicals.", icon:"Sun" },
- { title:"Scratch Resistant", desc:"Withstands rigorous cleaning and high traffic.", icon:"Layers" }
- ],
- specs: [
- { label:"Technology", value:"Silver Ion (Ag+)" },
- { label:"Tested Against", value:"E. Coli, Staph, MRSA" },
- { label:"Application", value:"Glass, Smooth Plastics, Metal" },
- { label:"Thickness", value:"2 Mil" },
- { label:"Lifespan", value:"Up to 5 Years (Active)" }
- ]
- },
-"luxury-interior-wrapping": {
- name:"Luxury Interior Wrapping",
- slug:"luxury-interior-wrapping",
- shortDescription:"Transform surfaces with premium textured wraps.",
- subtitle:"Architectural finishes that mimic wood, metal, stone, and leather.",
- heroImage:"https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070&auto=format&fit=crop",
- descriptionTitle:"Renovate without the demolition.",
- descriptionParagraphs: [
-"Architectural wrapping films (like DI-NOC) allow you to completely transform doors, columns, walls, and casework without the noise, dust, and expense of traditional demolition.",
-"These highly durable, textured vinyl films perfectly mimic the look and feel of natural materials like wood grain, marble, brushed aluminum, and leather.",
-"They can be heated and stretched to conform to complex 3D curves, providing a flawless, high-end finish in a fraction of the time it takes to rebuild."
- ],
- descriptionImage:"https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=2069&auto=format&fit=crop",
- stats: [
- { label:"Textures", value:"500+ Options" },
- { label:"Application", value:"3D Conformable" },
- { label:"Durability", value:"High Traffic" }
- ],
- features: [
- { title:"Ultra-Realistic", desc:"Features tactile textures you can actually feel.", icon:"Layers" },
- { title:"Eco-Friendly", desc:"Upcycles existing furniture and reduces landfill waste.", icon:"Sun" },
- { title:"Fire Rated", desc:"Meets commercial building codes for flammability.", icon:"Shield" }
- ],
- specs: [
- { label:"Material", value:"Textured PVC / Vinyl" },
- { label:"Finishes", value:"Wood, Metal, Stone, Carbon, Leather" },
- { label:"Installation", value:"Heat-Conformable, Air-Release Adhesive" },
- { label:"Thickness", value:"8 Mil" },
- { label:"Warranty", value:"5-10 Years" }
- ]
- }
- }
- }
+  "sun-control-window-film": {
+    name: "Sun Control Window Film",
+    slug: "sun-control-window-film",
+    shortDescription: "Advanced solar control window films rejecting up to 82% solar heat while maximizing daylight and UV protection.",
+    heroImage: "/products/dsolar-control.png",
+    heroSubtitle: "Engineered spectrally selective, reflective, and ceramic films designed for ultimate thermal comfort and energy efficiency.",
+    descriptionTitle: "Intelligent solar management for architectural comfort and sustainability.",
+    descriptionParagraphs: [
+      "Uncontrolled solar radiation causes excessive heat buildup, severe glare, and premature fading of interior furnishings. Our comprehensive Sun Control Window Films filter out harsh infrared heat and ultraviolet rays while keeping your spaces naturally illuminated.",
+      "From virtually clear, non-reflective spectrally selective films to dual-reflective and elegant neutral sputtered films, our solutions dramatically reduce air conditioning loads, optimize occupant productivity, and enhance building aesthetics.",
+      "Engineered with cutting-edge optical technologies, these films provide enduring performance backed by industry-leading warranties across commercial and residential applications in demanding climates."
+    ],
+    descriptionImage: "/sub-solutions/heat-reduction.png",
+    subProducts: {
+      "lx-series-non-reflective": {
+        name: "LX Series (Non Reflective)",
+        slug: "lx-series-non-reflective",
+        shortDescription: "State-of-the-art spectrally selective film offering high clarity with powerful solar heat rejection.",
+        subtitle: "Virtually invisible solar shield preserving natural daylight and exterior architecture.",
+        heroImage: "/sub-products/lx-series.png",
+        descriptionTitle: "Clear solar performance with zero optical distortion or reflectivity.",
+        descriptionParagraphs: [
+          "The LX Series utilizes advanced multi-layer precious metal sputtering to selectively filter infrared solar energy without increasing interior or exterior reflectance.",
+          "It maintains the original architectural aesthetics of your glass while delivering exceptional comfort and lowering cooling loads during peak sunlight hours.",
+          "Ideal for luxury residences, commercial storefronts, and heritage structures where maintaining clear glass visibility is non-negotiable."
+        ],
+        descriptionImage: "/sub-products/lx-series.png",
+        stats: [
+          { label: "Solar Energy Rejected", value: "Up to 65%" },
+          { label: "Visible Light Transmitted", value: "72%" },
+          { label: "UV Rejection", value: "99%+" }
+        ],
+        features: [
+          { title: "Spectrally Selective", desc: "Selectively targets heat-bearing infrared waves while transmitting daylight.", icon: "Sun" },
+          { title: "Non-Reflective Finish", desc: "Leaves glass looking natural from both inside and out.", icon: "Layers" },
+          { title: "Maximum UV Shield", desc: "Blocks 99%+ of damaging UV radiation to protect art and furniture.", icon: "Shield" }
+        ],
+        specs: [
+          { label: "Solar Energy Rejected", value: "55% - 65%" },
+          { label: "Visible Light Transmitted", value: "70% - 72%" },
+          { label: "UV Rejection", value: "> 99%" },
+          { label: "Glare Reduction", value: "22% - 35%" },
+          { label: "Shading Coefficient", value: "0.50 - 0.58" },
+          { label: "Internal Reflectance", value: "9% (Natural Glass)" },
+          { label: "Warranty", value: "10-15 Years Commercial / Lifetime Residential" }
+        ]
+      },
+      "pure-vue-series": {
+        name: "Pure Vue Series",
+        slug: "pure-vue-series",
+        shortDescription: "High-clarity nano-ceramic solar film with zero signal interference and neutral appearance.",
+        subtitle: "Advanced ceramic technology engineered for crystal-clear outward vision and maximum heat rejection.",
+        heroImage: "/sub-solutions/glare-reduction.png",
+        descriptionTitle: "100% metal-free ceramic protection that keeps signals strong and spaces cool.",
+        descriptionParagraphs: [
+          "Pure Vue Series is formulated with advanced nano-ceramic chemistry that blocks intense infrared heat without containing conductive metals.",
+          "Because it is completely metal-free, Pure Vue will never interfere with cellular signals, GPS, Wi-Fi, or RF-based building management sensors.",
+          "Its balanced, natural neutral hue ensures warm daylight fills your room while glare is comfortably softened and solar heat is turned away."
+        ],
+        descriptionImage: "/sub-solutions/glare-reduction.png",
+        stats: [
+          { label: "Infrared Rejection", value: "Up to 88%" },
+          { label: "Signal Interference", value: "0%" },
+          { label: "UV Defense", value: "99%" }
+        ],
+        features: [
+          { title: "Nano-Ceramic Formulation", desc: "High heat rejection without metallized reflection or corrosion risk.", icon: "Zap" },
+          { title: "Signal Friendly", desc: "Zero interference with 5G, Wi-Fi, cell phones, or wireless sensors.", icon: "Layers" },
+          { title: "Low Reflectivity", desc: "Provides crisp, undistorted views day and night.", icon: "Sun" }
+        ],
+        specs: [
+          { label: "Film Technology", value: "Nano-Ceramic Non-Metallic" },
+          { label: "Total Solar Energy Rejected", value: "52% - 68%" },
+          { label: "Infrared Rejection (IRER)", value: "Up to 88%" },
+          { label: "Visible Light Transmitted", value: "30% - 60%" },
+          { label: "UV Protection", value: "99%" },
+          { label: "Corrosion Resistance", value: "Non-corrosive (Coastal safe)" },
+          { label: "Warranty", value: "12 Years Commercial" }
+        ]
+      },
+      "sterling-series-reflective": {
+        name: "Sterling Series (Reflective)",
+        slug: "sterling-series-reflective",
+        shortDescription: "Spectrally selective reflective solar films delivering high light transmission and cooling power.",
+        subtitle: "Optimal balance of brilliant natural illumination and superior thermal rejection.",
+        heroImage: "/sub-solutions/heat-reduction.png",
+        descriptionTitle: "High light transmission meets high solar heat rejection.",
+        descriptionParagraphs: [
+          "The Sterling Series is designed for clients who want maximum solar heat rejection while maintaining higher visible light transmission than conventional reflective films.",
+          "Engineered with micro-thin precious metals, Sterling provides a subtle reflective appearance externally that offers daytime privacy while maintaining high clarity from within.",
+          "By neutralizing hot spots near perimeter glazing, it significantly enhances tenant comfort and curbs cooling utility expenditures."
+        ],
+        descriptionImage: "/sub-solutions/heat-reduction.png",
+        stats: [
+          { label: "Solar Heat Rejected", value: "Up to 71%" },
+          { label: "Glare Reduction", value: "Up to 78%" },
+          { label: "UV Blocking", value: "99%" }
+        ],
+        features: [
+          { title: "High Light Transmission", desc: "Allows ample daylight indoors without the oppressive solar heat.", icon: "Sun" },
+          { title: "Daytime Privacy", desc: "Subtle reflective sheen prevents prying eyes from outside during the day.", icon: "Shield" },
+          { title: "Spectrally Selective Metallization", desc: "Engineered specifically to target heat-producing wavelengths.", icon: "Zap" }
+        ],
+        specs: [
+          { label: "Available Grades", value: "Sterling 20, 40, 50, 60, 70" },
+          { label: "Total Solar Energy Rejected", value: "48% - 71%" },
+          { label: "Visible Light Transmitted", value: "23% - 68%" },
+          { label: "UV Rejection", value: "99%" },
+          { label: "Solar Heat Gain Coefficient", value: "0.29 - 0.52" },
+          { label: "Warranty", value: "10-12 Years Commercial" }
+        ]
+      },
+      "true-vue-series": {
+        name: "True Vue Series",
+        slug: "true-vue-series",
+        shortDescription: "Dual-reflective solar control films offering maximum heat reduction and crystal-clear nighttime views.",
+        subtitle: "Engineered dual-reflectance: high exterior reflection for privacy, low interior reflection for views.",
+        heroImage: "/products/dsolar-control.png",
+        descriptionTitle: "Enjoy exterior daytime privacy without looking at your own reflection at night.",
+        descriptionParagraphs: [
+          "Traditional reflective films create a mirror effect inside the building at night when indoor lights are switched on. True Vue solves this with dual-reflective technology.",
+          "It provides strong reflective heat rejection and privacy on the exterior, while the interior layer is kept dark and low-reflectance, preserving your panoramic night views.",
+          "It is one of the most effective solutions for slashing harsh desert glare and dramatically reducing cooling expenses."
+        ],
+        descriptionImage: "/products/dsolar-control.png",
+        stats: [
+          { label: "Total Solar Heat Rejected", value: "Up to 82%" },
+          { label: "Glare Reduction", value: "Up to 94%" },
+          { label: "Interior Reflectance", value: "Low (Anti-Mirror)" }
+        ],
+        features: [
+          { title: "Dual-Reflective Tech", desc: "High exterior privacy combined with clear, non-reflective night views inside.", icon: "Layers" },
+          { title: "Maximum Glare Cut", desc: "Cuts up to 94% of blinding sun glare on computer screens and televisions.", icon: "Sun" },
+          { title: "Supreme Energy Savings", desc: "Rejects up to 82% of total solar energy for rapid HVAC payback.", icon: "Zap" }
+        ],
+        specs: [
+          { label: "Available Variants", value: "True Vue 5, 15, 30, 40" },
+          { label: "Total Solar Energy Rejected", value: "59% - 82%" },
+          { label: "Visible Light Transmitted", value: "5% - 41%" },
+          { label: "Glare Reduction", value: "56% - 94%" },
+          { label: "Interior Light Reflectance", value: "11% - 13%" },
+          { label: "Exterior Light Reflectance", value: "22% - 56%" },
+          { label: "Warranty", value: "12 Years Commercial" }
+        ]
+      },
+      "stainless-steel-series": {
+        name: "Stainless Steel Series",
+        slug: "stainless-steel-series",
+        shortDescription: "Sputtered metal film with a neutral grey appearance for timeless architectural elegance.",
+        subtitle: "Durable neutral aesthetic with high glare control and consistent solar performance.",
+        heroImage: "/images/low-angle-view-business-buildings-1-scaled.webp",
+        descriptionTitle: "Architectural neutrality combined with high-performance solar protection.",
+        descriptionParagraphs: [
+          "The Stainless Steel Series is created by sputtering pure stainless steel alloy onto optical polyester. The result is a film that never looks overly shiny or mirrored, but maintains a tasteful, neutral grey finish.",
+          "Because stainless steel is naturally resistant to corrosion, this film performs exceptionally well in humid or marine-adjacent architectural environments.",
+          "It offers an ideal blend of solar heat reduction, glare dampening, and elegant architectural integration for modern office complexes and residential buildings."
+        ],
+        descriptionImage: "/images/low-angle-view-business-buildings-1-scaled.webp",
+        stats: [
+          { label: "Solar Energy Rejected", value: "Up to 67%" },
+          { label: "Corrosion Proof", value: "100% Alloy" },
+          { label: "Glare Reduction", value: "Up to 85%" }
+        ],
+        features: [
+          { title: "Neutral Grey Tone", desc: "No brassy or artificial mirror tint; matches contemporary glass facades.", icon: "Layers" },
+          { title: "Corrosion Resistant Alloy", desc: "Pure stainless steel sputtering resists oxidation in humid climates.", icon: "Shield" },
+          { title: "Balanced Daylighting", desc: "Softens harsh sunlight into comfortable, diffused natural ambient light.", icon: "Sun" }
+        ],
+        specs: [
+          { label: "Available Shades", value: "Stainless Steel 20, 30, 50" },
+          { label: "Total Solar Energy Rejected", value: "48% - 67%" },
+          { label: "Visible Light Transmitted", value: "21% - 51%" },
+          { label: "UV Protection", value: "99%" },
+          { label: "Glare Reduction", value: "44% - 85%" },
+          { label: "Metal Alloy", value: "Precision Sputtered Stainless Steel" },
+          { label: "Warranty", value: "10-12 Years Commercial" }
+        ]
+      },
+      "silver-series": {
+        name: "Silver Series",
+        slug: "silver-series",
+        shortDescription: "Classic highly reflective silver films for ultimate solar rejection and daytime one-way privacy.",
+        subtitle: "The industry benchmark for maximum thermal defense and rapid HVAC cost reduction.",
+        heroImage: "/sub-products/grey-silver-grey.png",
+        descriptionTitle: "Maximum solar heat reflection for demanding high-exposure facades.",
+        descriptionParagraphs: [
+          "The Silver Series uses vapor-deposited aluminum metallization to create a high-efficiency barrier that mirrors away heat before it enters the glass.",
+          "Offering total daytime privacy, it creates a crisp exterior mirror finish that shields your interior spaces from all outside onlookers during daylight.",
+          "It delivers the fastest return on investment of any solar film by dramatically curbing air conditioning consumption in sun-drenched structures."
+        ],
+        descriptionImage: "/sub-products/grey-silver-grey.png",
+        stats: [
+          { label: "Total Solar Heat Rejected", value: "Up to 81%" },
+          { label: "Daytime Privacy", value: "100% One-Way" },
+          { label: "UV Block", value: "99%" }
+        ],
+        features: [
+          { title: "Ultimate Heat Shield", desc: "Vapor-metallized aluminum bounces up to 81% of incoming solar heat away.", icon: "Zap" },
+          { title: "One-Way Daytime Mirror", desc: "Total privacy from outside while retaining clear outward vision.", icon: "Shield" },
+          { title: "Maximum Glare Cut", desc: "Eliminates intense desert sunlight on computer screens and workspaces.", icon: "Sun" }
+        ],
+        specs: [
+          { label: "Variants", value: "Silver 20, Silver 35, Silver 50" },
+          { label: "Solar Energy Rejected", value: "62% - 81%" },
+          { label: "Visible Light Transmitted", value: "17% - 47%" },
+          { label: "Visible Light Reflectance", value: "43% - 62%" },
+          { label: "UV Rejection", value: "99%" },
+          { label: "Shading Coefficient", value: "0.22 - 0.44" },
+          { label: "Warranty", value: "10 Years Commercial" }
+        ]
+      },
+      "solar-bronze-series": {
+        name: "Solar Bronze Series",
+        slug: "solar-bronze-series",
+        shortDescription: "Warm copper-bronze reflective films combining rich architectural styling with powerful solar control.",
+        subtitle: "Enriches building facades with warm bronze tones while stopping intense solar heat.",
+        heroImage: "/sub-solutions/heat-reduction.png",
+        descriptionTitle: "Distinctive warm aesthetics with superior thermal performance.",
+        descriptionParagraphs: [
+          "Solar Bronze Series is formulated with sputtered copper and bronze alloys to give glass a refined, warm amber-bronze tone that complements earth-toned building facades.",
+          "In addition to its distinctive look, Solar Bronze rejects substantial solar heat and glare, improving tenant comfort and cooling system efficiency.",
+          "It provides excellent daytime privacy and softens the harshness of direct sunlight into a warm, inviting interior ambience."
+        ],
+        descriptionImage: "/sub-solutions/heat-reduction.png",
+        stats: [
+          { label: "Solar Energy Rejected", value: "Up to 77%" },
+          { label: "Aesthetic Finish", value: "Rich Bronze" },
+          { label: "UV Protection", value: "99%" }
+        ],
+        features: [
+          { title: "Warm Architectural Tone", desc: "Complements brick, stone, and bronze-anodized window frames seamlessly.", icon: "Layers" },
+          { title: "High Heat Rejection", desc: "Blocks up to 77% of total solar energy, lowering cooling utility bills.", icon: "Zap" },
+          { title: "Glare Reduction", desc: "Reduces visual fatigue and eye strain from direct desert sunlight.", icon: "Sun" }
+        ],
+        specs: [
+          { label: "Variants", value: "Solar Bronze 20, Solar Bronze 35" },
+          { label: "Total Solar Energy Rejected", value: "65% - 77%" },
+          { label: "Visible Light Transmitted", value: "20% - 34%" },
+          { label: "Glare Reduction", value: "62% - 78%" },
+          { label: "UV Rejection", value: "99%" },
+          { label: "Metallization", value: "Sputtered Bronze Alloy" },
+          { label: "Warranty", value: "10-12 Years Commercial" }
+        ]
+      },
+      "grey-silver-grey": {
+        name: "Grey/Silver/Grey",
+        slug: "grey-silver-grey",
+        shortDescription: "Specialized multi-layer tri-laminate film offering neutral low-reflectance looks inside and out.",
+        subtitle: "Tri-laminate technology delivering high solar defense with subdued visual reflectivity.",
+        heroImage: "/sub-products/grey-silver-grey.png",
+        descriptionTitle: "The high-heat performance of silver with the subtle look of neutral grey.",
+        descriptionParagraphs: [
+          "Grey/Silver/Grey is an advanced composite film construction sandwiching a high-performance silver metallized layer between two tinted grey polyester layers.",
+          "This unique architecture cancels out the harsh mirror look of traditional reflective films, resulting in a soft, elegant neutral charcoal finish.",
+          "It provides high solar heat rejection, high glare control, and exceptional visual clarity without altering the building's architectural profile."
+        ],
+        descriptionImage: "/sub-products/grey-silver-grey.png",
+        stats: [
+          { label: "Total Solar Energy Rejected", value: "Up to 75%" },
+          { label: "Appearance", value: "Neutral Charcoal" },
+          { label: "UV Block", value: "99%" }
+        ],
+        features: [
+          { title: "Tri-Laminate Sandwich", desc: "Silver reflective core encased in dual dyed-grey layers for subdued shine.", icon: "Layers" },
+          { title: "Superior Glare Cut", desc: "Ideal for conference rooms, offices, and homes facing harsh direct sun.", icon: "Sun" },
+          { title: "Long-Term Color Stability", desc: "Engineered dyes resistant to bubbling, purpling, or thermal breakdown.", icon: "Shield" }
+        ],
+        specs: [
+          { label: "Thickness", value: "1.5 Mil - 2 Mil" },
+          { label: "Solar Energy Rejected", value: "64% - 75%" },
+          { label: "Visible Light Transmitted", value: "12% - 32%" },
+          { label: "UV Rejection", value: "99%" },
+          { label: "Interior Reflection", value: "14% - 18% (Subdued)" },
+          { label: "Exterior Reflection", value: "16% - 22% (Subdued)" },
+          { label: "Warranty", value: "10 Years Commercial" }
+        ]
+      },
+      "opaque-films-and-frost-films": {
+        name: "Opaque Films and Frost Films",
+        slug: "opaque-films-and-frost-films",
+        shortDescription: "Total light blocking and translucent decorative frost films for privacy and light diffusion.",
+        subtitle: "Complete 24/7 visual privacy and refined sandblasted glass aesthetics.",
+        heroImage: "/sub-products/opaque-film.png",
+        descriptionTitle: "Engineered privacy solutions from translucent diffusion to 100% black-out/white-out.",
+        descriptionParagraphs: [
+          "Our Opaque Films (Blackout and Whiteout) deliver total privacy by stopping 100% of visible light transmission, ideal for server rooms, secure areas, and back-of-house storage.",
+          "Our Frost Films mimic the sophisticated look of etched or sandblasted glass at a fraction of the cost, diffusing natural light without sacrificing room brightness.",
+          "Easy to maintain and wipe clean, these films upgrade plain glass partitions into elegant, private architectural features."
+        ],
+        descriptionImage: "/sub-products/frost-film.png",
+        stats: [
+          { label: "Privacy Rating", value: "100% 24/7" },
+          { label: "Light Control", value: "Diffused / Total Block" },
+          { label: "UV Protection", value: "99%" }
+        ],
+        features: [
+          { title: "Day & Night Privacy", desc: "Maintains complete visual privacy under all interior and exterior lighting.", icon: "Shield" },
+          { title: "Acid-Etch Look", desc: "Simulates luxury sandblasted or etched glazing without structural weakening.", icon: "Layers" },
+          { title: "UV Barrier", desc: "Blocks 99% of damaging UV rays through the filmed surface.", icon: "Sun" }
+        ],
+        specs: [
+          { label: "Options Available", value: "Matte Frost, Whiteout Opaque, Blackout Opaque" },
+          { label: "Light Transmission", value: "0% (Opaque) / 68% (Frost)" },
+          { label: "UV Rejection", value: "> 99%" },
+          { label: "Adhesive Type", value: "Optically Clear Pressure-Sensitive" },
+          { label: "Cleaning Compatibility", value: "Standard non-abrasive glass cleaner" },
+          { label: "Warranty", value: "10 Years Interior" }
+        ]
+      }
+    }
+  },
+
+  "exterior-sun-control-window-film": {
+    name: "Exterior Sun Control Window Film",
+    slug: "exterior-sun-control-window-film",
+    shortDescription: "Heavy-duty weather-resistant exterior films that stop heat at the first point of contact before it penetrates the glazing.",
+    heroImage: "/products/dsolar-control.png",
+    heroSubtitle: "Engineered Outside Weather (OSW) films for skylights, double-glazed units, and hard-to-access facades.",
+    descriptionTitle: "Maximum solar defense applied directly to the outside face of the glass.",
+    descriptionParagraphs: [
+      "When solar energy strikes a window, standard interior films absorb or reflect heat after it has passed through the outer glass lite. Exterior Sun Control Window Films stop solar heat on the exterior surface before it ever enters the glazing unit.",
+      "This exterior application is particularly vital for modern tinted, laminated, Low-E, and double-glazed insulated units (IGUs) where interior films could otherwise cause thermal stress fractures.",
+      "Formulated with durable hard-coat outdoor weathering technology, these films resist sand abrasion, intense UV weathering, rain, and environmental pollutants in demanding regional climates."
+    ],
+    descriptionImage: "/sub-solutions/heat-reduction.png",
+    subProducts: {
+      "sun-control-series-osw": {
+        name: "Sun Control Series OSW (Outside Weather)",
+        slug: "sun-control-series-osw",
+        shortDescription: "Premium exterior-grade solar film with advanced UV inhibitors and abrasion-resistant exterior hardcoat.",
+        subtitle: "Stops solar heat before it penetrates double glazing and skylights.",
+        heroImage: "/sub-products/lx-series.png",
+        descriptionTitle: "Engineered specifically to survive exterior desert conditions while providing maximum cooling.",
+        descriptionParagraphs: [
+          "The Sun Control Series OSW features specialized inorganic UV stabilizers and an ultra-durable, weather-resistant hardcoat engineered to withstand harsh exterior climates.",
+          "It solves solar heat and glare problems on architectural glass where interior installation is impossible due to ceiling heights, skylights, structural baffles, or glass thermal breakage risks.",
+          "By repelling solar energy at the outer surface, OSW films provide the highest possible Total Solar Energy Rejection (TSER) on insulated glass units."
+        ],
+        descriptionImage: "/sub-solutions/heat-reduction.png",
+        stats: [
+          { label: "Solar Heat Rejected", value: "Up to 83%" },
+          { label: "Thermal Stress Risk", value: "0% on IGUs" },
+          { label: "Weather Durability", value: "Extreme OSW" }
+        ],
+        features: [
+          { title: "Exterior Heat Interception", desc: "Reflects heat outside before it heats up double-glazed cavity air.", icon: "Zap" },
+          { title: "Heavy-Duty Weather Hardcoat", desc: "Formulated to resist sand scouring, rain, and intense solar UV.", icon: "Shield" },
+          { title: "Skylight & Atrium Safe", desc: "The safest solar film solution for high-expansion overhead glass.", icon: "Layers" }
+        ],
+        specs: [
+          { label: "Application Face", value: "Exterior (Surface 1)" },
+          { label: "Total Solar Energy Rejected", value: "68% - 83%" },
+          { label: "Visible Light Transmitted", value: "15% - 40%" },
+          { label: "UV Rejection", value: "> 99%" },
+          { label: "Weathering Hardcoat", value: "Cross-Linked Fluoropolymer / Acrylic" },
+          { label: "Warranty", value: "5-7 Years Exterior Exposure" }
+        ]
+      }
+    }
+  },
+
+  "safety-and-security-window-film": {
+    name: "Safety & Security Window Film",
+    slug: "safety-and-security-window-film",
+    shortDescription: "Industrial-strength multi-laminate safety films holding broken glass in place to deter forced entry and prevent flying glass injuries.",
+    heroImage: "/products/safety-and-security.png",
+    heroSubtitle: "Certified impact protection transforming standard glass into a shatter-resistant barrier.",
+    descriptionTitle: "Passive 24/7 structural defense for your building's most vulnerable perimeter.",
+    descriptionParagraphs: [
+      "Glass is universally the easiest point of entry for burglars and the most hazardous material in the event of an accident, storm, or blast. Our Safety & Security Window Films are engineered with micro-layered high-tensile polyester bonded by heavy-duty pressure-sensitive adhesives.",
+      "When struck with heavy force, the glass will crack, but the safety film securely holds the jagged shards together inside the frame, deterring intrusion and eliminating flying glass hazards.",
+      "Available in optically clear variants that leave your windows completely indistinguishable from standard glass, as well as combined solar-safety options for simultaneous thermal control."
+    ],
+    descriptionImage: "/sub-products/clear-safety-film.png",
+    subProducts: {
+      "clear-safety-film-series": {
+        name: "Clear Safety Film Series",
+        slug: "clear-safety-film-series",
+        shortDescription: "Optically clear, high-tensile safety films providing certified anti-shatter and forced entry protection.",
+        subtitle: "Uncompromising optical clarity backed by industrial-strength tensile resilience.",
+        heroImage: "/sub-products/clear-safety-film.png",
+        descriptionTitle: "Invisible armor shielding against accidental impacts and break-ins.",
+        descriptionParagraphs: [
+          "Manufactured from multi-ply optical-grade polyester with industry-leading tensile and puncture resistance, Clear Safety Film forms a tough, invisible barrier across your windows.",
+          "It prevents dangerous flying glass shards during storms or accidental human impacts, complying with international building safety glazing regulations.",
+          "In break-in attempts, it buys critical time by absorbing repeated blunt impacts, frustrating intruders and forcing them to abandon their entry attempt."
+        ],
+        descriptionImage: "/sub-products/clear-safety-film.png",
+        stats: [
+          { label: "Tensile Strength", value: "32,000 psi" },
+          { label: "Optical Clarity", value: "100% Clear" },
+          { label: "UV Block", value: "99%" }
+        ],
+        features: [
+          { title: "Tear-Resistant Multi-Ply", desc: "Layered polyester structure resists punctures and tearing under severe impact.", icon: "Shield" },
+          { title: "Optically Undetectable", desc: "Completely transparent, maintaining original views and architectural aesthetics.", icon: "Layers" },
+          { title: "Certified Safety Compliance", desc: "Meets ANSI Z97.1, EN 12600, and CPSC 16 CFR 1201 safety glazing codes.", icon: "Sun" }
+        ],
+        specs: [
+          { label: "Thickness Options", value: "4 Mil, 7 Mil, 8 Mil, 14 Mil" },
+          { label: "Tensile Strength", value: "32,000 psi" },
+          { label: "Break Strength", value: "100 - 350 lbs/inch" },
+          { label: "Puncture Strength", value: "Up to 150 lbs" },
+          { label: "Visible Light Transmitted", value: "88% - 90%" },
+          { label: "UV Rejection", value: "99%" },
+          { label: "Warranty", value: "12 Years Commercial / Lifetime Residential" }
+        ]
+      },
+      "sun-control-safety-film-series": {
+        name: "Sun Control & Safety Film Series",
+        slug: "sun-control-safety-film-series",
+        shortDescription: "Dual-action hybrid films combining certified shatter resistance with powerful solar heat and glare rejection.",
+        subtitle: "Two essential protections in one single high-performance installation.",
+        heroImage: "/sub-products/safety-films.png",
+        descriptionTitle: "Shield your space from both intense heat and dangerous glass shattering.",
+        descriptionParagraphs: [
+          "The Sun Control & Safety Film Series merges the heat-rejecting properties of solar window films with the robust tensile reinforcement of thick safety film.",
+          "Instead of installing two separate products, this hybrid solution slashes air conditioning costs, softens sun glare, and protects occupants from broken glass and intruders.",
+          "It is the premier choice for commercial facades, banks, retail display windows, and luxury homes requiring both climate defense and high-level security."
+        ],
+        descriptionImage: "/sub-products/safety-films.png",
+        stats: [
+          { label: "Solar Heat Rejected", value: "Up to 78%" },
+          { label: "Safety Thickness", value: "4 to 8 Mil" },
+          { label: "UV Protection", value: "99%" }
+        ],
+        features: [
+          { title: "Dual Protection", desc: "Combines high solar energy rejection with certified shatter-resistant defense.", icon: "Shield" },
+          { title: "Energy Cost Reducer", desc: "Reduces peak cooling loads while bolstering perimeter window security.", icon: "Zap" },
+          { title: "Daytime Privacy", desc: "Reflective and tinted hybrid options provide one-way daytime privacy.", icon: "Layers" }
+        ],
+        specs: [
+          { label: "Film Structure", value: "Multi-Laminate Sputtered Solar Safety" },
+          { label: "Thickness Options", value: "4 Mil, 6 Mil, 8 Mil" },
+          { label: "Total Solar Heat Rejected", value: "54% - 78%" },
+          { label: "Tensile Strength", value: "28,500 - 32,000 psi" },
+          { label: "Break Strength", value: "100 - 220 lbs/inch" },
+          { label: "UV Rejection", value: "> 99%" },
+          { label: "Warranty", value: "10-12 Years Commercial" }
+        ]
+      }
+    }
+  },
+
+  "anchor-systems": {
+    name: "Anchor Systems",
+    slug: "anchor-systems",
+    shortDescription: "Advanced structural attachment systems anchoring safety-filmed glass directly into the window frame to withstand severe blasts and forced entry.",
+    heroImage: "/sub-products/anchor-systems.png",
+    heroSubtitle: "The critical mechanical and structural connection that prevents filmed glass from popping out under heavy impact.",
+    descriptionTitle: "Securing the perimeter beyond the glass: frame-to-film structural reinforcement.",
+    descriptionParagraphs: [
+      "Safety film keeps shattered glass from breaking apart into hazardous shards, but in severe blast events, storm wind loads, or heavy forced-entry attacks, the entire intact sheet of shattered glass can pop cleanly out of the frame.",
+      "Anchor Systems solve this vulnerability by physically binding the filmed glass pane directly to the structural window frame using structural silicones, flexible gaskets, or engineered aluminum clamping profiles.",
+      "Tested and compliant with demanding GSA, ASTM, and blast-mitigation criteria, anchor systems represent the ultimate standard in facility hardening."
+    ],
+    descriptionImage: "/sub-products/anchor-systems.png",
+    subProducts: {
+      "wet-glaze-system": {
+        name: "Wet Glaze System",
+        slug: "wet-glaze-system",
+        shortDescription: "High-modulus structural silicone anchoring creating a continuous elastomeric bond between film and frame.",
+        subtitle: "Engineered structural silicone anchoring for seamless architectural blast and storm protection.",
+        heroImage: "/sub-products/anchor-systems.png",
+        descriptionTitle: "Continuous structural bead providing dynamic shock absorption and retention.",
+        descriptionParagraphs: [
+          "The Wet Glaze System utilizes an engineered, high-modulus structural silicone sealant (such as Dow Corning 995) to create a continuous triangular bead bridging the safety-filmed glass and the perimeter frame.",
+          "Under explosive blast or blunt impact, the silicone stretches elastomerically, absorbing kinetic energy and preventing the pane from collapsing into the building interior.",
+          "It provides an aesthetically clean, unobtrusive finish that blends seamlessly with existing architectural window mullions."
+        ],
+        descriptionImage: "/sub-products/anchor-systems.png",
+        stats: [
+          { label: "Blast Mitigation", value: "GSA Level C/D" },
+          { label: "Adhesive Type", value: "Structural Silicone 995" },
+          { label: "Elongation at Break", value: "100%+" }
+        ],
+        features: [
+          { title: "Structural Silicone Bond", desc: "High-strength chemical adhesion locks film to aluminum or steel frames.", icon: "Shield" },
+          { title: "Dynamic Energy Dissipation", desc: "Flexes under blast loads to disperse kinetic impact without separating.", icon: "Zap" },
+          { title: "Clean Appearance", desc: "Forms a neat, uniform perimeter bead that matches standard architectural seals.", icon: "Layers" }
+        ],
+        specs: [
+          { label: "Silicone Standard", value: "High-Modulus Structural Silicone (Dow 995 or equivalent)" },
+          { label: "Bite Dimensions", value: "1/2-inch to 3/4-inch triangular fillet" },
+          { label: "Tensile Adhesion", value: "> 100 psi" },
+          { label: "Tested Standards", value: "ASTM F1642, GSA TS01-2003" },
+          { label: "Compatible Frame Materials", value: "Anodized Aluminum, Steel, Powder-Coated Metal" },
+          { label: "Warranty", value: "10 Years Structural System" }
+        ]
+      },
+      "gullwing-system": {
+        name: "Gullwing System",
+        slug: "gullwing-system",
+        shortDescription: "Flexible elastomeric anchor profile delivering extreme blast and forced entry resistance without mechanical drilling.",
+        subtitle: "Patented flexible energy-absorbing membrane linking glass to frame.",
+        heroImage: "/sub-solutions/security.png",
+        descriptionTitle: "Patented elastomeric attachment absorbing massive explosive and physical shock.",
+        descriptionParagraphs: [
+          "The Gullwing System is a flexible mechanical attachment profile manufactured from heavy-duty elastomeric rubber and ultra-high-bond acrylic foam tapes.",
+          "It adheres along the perimeter of the filmed glass and the window frame, creating a dual-action hinged energy damper that flexes under extreme pressure.",
+          "Ideal for retrofitting existing facilities without drilling holes into sensitive structural frames or disturbing existing perimeter seals."
+        ],
+        descriptionImage: "/sub-solutions/security.png",
+        stats: [
+          { label: "Attachment Type", value: "Elastomeric Membrane" },
+          { label: "Installation", value: "No-Drill Retrofit" },
+          { label: "Shock Absorption", value: "Extreme" }
+        ],
+        features: [
+          { title: "Hinged Shock Damping", desc: "Absorbs blast shockwaves through controlled elastomeric deformation.", icon: "Zap" },
+          { title: "Preserves Window Frame", desc: "Installs without destructive mechanical fastener penetrations.", icon: "Shield" },
+          { title: "Rapid Retrofit", desc: "Installs cleanly with minimal disruption to ongoing commercial operations.", icon: "Layers" }
+        ],
+        specs: [
+          { label: "Material Composition", value: "EPDM / Engineered Elastomer with VHB adhesive" },
+          { label: "Peel Strength", value: "> 25 lbs/inch" },
+          { label: "Blast Performance", value: "GSA Level 3B / Level 2" },
+          { label: "Operating Temperature", value: "-40°C to +90°C" },
+          { label: "Maintenance", value: "Zero maintenance required" },
+          { label: "Warranty", value: "10 Years Manufacturer Warranty" }
+        ]
+      },
+      "framegard-system": {
+        name: "Framegard System",
+        slug: "framegard-system",
+        shortDescription: "Heavy-duty mechanical clamping system mechanically fastening the safety film directly to the frame.",
+        subtitle: "The highest rated mechanical retention system for maximum blast and hurricane protection.",
+        heroImage: "/sub-products/anchor-systems.png",
+        descriptionTitle: "Heavy-gauge mechanical clamping for maximum blast mitigation and anti-intrusion.",
+        descriptionParagraphs: [
+          "The Framegard System is an engineered mechanical attachment that physically clamps the edge of the safety film to the window frame using high-strength aluminum extrusion profiles and hardened fasteners.",
+          "Engineered to withstand the most catastrophic bomb blast loads, Framegard provides unmatched retention, ensuring the shattered glass envelope remains firmly in place.",
+          "Specified worldwide for government embassies, military facilities, nuclear plants, and high-risk financial institutions."
+        ],
+        descriptionImage: "/sub-products/anchor-systems.png",
+        stats: [
+          { label: "Blast Rating", value: "GSA Level 1 & 2 / DoD" },
+          { label: "Attachment", value: "Mechanical Clamp" },
+          { label: "Intrusion Deterrence", value: "Maximum" }
+        ],
+        features: [
+          { title: "Mechanical Clamp Lock", desc: "Rigid aluminum profile locks the film edge securely with hardened screws.", icon: "Shield" },
+          { title: "Military Grade Defense", desc: "Certified for stringent blast criteria and extreme force resistance.", icon: "Zap" },
+          { title: "Architectural Trim Covers", desc: "Finished with aesthetic clip-on snap covers matching frame colors.", icon: "Layers" }
+        ],
+        specs: [
+          { label: "Profile Material", value: "6063-T6 Extruded Aluminum" },
+          { label: "Fasteners", value: "High-Tensile Self-Drilling Screws" },
+          { label: "Tested Criteria", value: "GSA TS01, ASTM F1642" },
+          { label: "Finishes Available", value: "Clear Anodized, Bronze, White, Custom RAL" },
+          { label: "Compatible Films", value: "8 Mil - 14 Mil Multi-Ply Safety Films" },
+          { label: "Warranty", value: "15 Years Structural System" }
+        ]
+      }
+    }
+  },
+
+  "exterior-safety-window-film": {
+    name: "Exterior Safety Window Film",
+    slug: "exterior-safety-window-film",
+    shortDescription: "Heavy-duty exterior-applied safety and security films engineered to withstand weather extremes while defending against impacts.",
+    heroImage: "/products/safety-and-security.png",
+    heroSubtitle: "Weather-resistant impact protection for exterior glass facades and polycarbonate glazing.",
+    descriptionTitle: "Robust exterior shatter defense against storms, physical vandalism, and spontaneous glass breakage.",
+    descriptionParagraphs: [
+      "In many high-rise facades, overhead skylights, and transit stations, interior access for safety film application is technically impossible or cost-prohibitive. Exterior Safety Window Films are engineered to provide maximum shatter resistance installed directly on the outdoor glass face.",
+      "Formulated with specialized outdoor weatherable hardcoats and heavy UV inhibitors, these films endure scorching sun, sand abrasion, and heavy precipitation without peeling, yellowing, or crazing.",
+      "They are also the ideal solution for containing spontaneous tempered glass explosions (nickel sulfide inclusions) on exterior balustrades and curtain walls."
+    ],
+    descriptionImage: "/sub-solutions/shatter-protection.png",
+    subProducts: {
+      "safety-and-security-series-osw": {
+        name: "Safety & Security Series OSW",
+        slug: "safety-and-security-series-osw",
+        shortDescription: "Exterior-grade impact safety film designed for glass facades, balustrades, and overhead skylights.",
+        subtitle: "Weather-resistant anti-shatter defense applied to exterior glass surfaces.",
+        heroImage: "/sub-products/safety-films.png",
+        descriptionTitle: "Defend against spontaneous glass failure and storm impacts from the outside.",
+        descriptionParagraphs: [
+          "Safety & Security Series OSW is manufactured from high-gauge multi-laminate polyester protected by an exterior fluoropolymer scratch-resistant coating.",
+          "It binds broken glass fragments securely on exterior balustrades, balconies, and curtain walls, preventing shards from falling and injuring pedestrians below.",
+          "Engineered to withstand prolonged UV exposure and extreme desert temperatures without loss of tensile integrity."
+        ],
+        descriptionImage: "/sub-products/safety-films.png",
+        stats: [
+          { label: "Tensile Strength", value: "28,500 psi" },
+          { label: "Exterior UV Block", value: "99%+" },
+          { label: "Falling Glass Defense", value: "100% Contained" }
+        ],
+        features: [
+          { title: "Spontaneous Breakage Defense", desc: "Safely holds tempered glass together if nickel sulfide inclusions trigger failure.", icon: "Shield" },
+          { title: "Exterior Weather Durability", desc: "Hardcoat resists UV degradation, salt air, and sand abrasions.", icon: "Layers" },
+          { title: "Public Safety Protection", desc: "Prevents hazardous glass from raining down onto pedestrian walkways.", icon: "Zap" }
+        ],
+        specs: [
+          { label: "Thickness Options", value: "4 Mil, 7 Mil, 8 Mil OSW" },
+          { label: "Application", value: "Exterior (Surface 1)" },
+          { label: "Tensile Strength", value: "28,500 psi" },
+          { label: "Elongation at Break", value: "135%" },
+          { label: "Puncture Resistance", value: "115 lbs" },
+          { label: "UV Block", value: "> 99%" },
+          { label: "Warranty", value: "5-7 Years Exterior Exposure" }
+        ]
+      },
+      "polycarbonate-osw": {
+        name: "Polycarbonate OSW",
+        slug: "polycarbonate-osw",
+        shortDescription: "Specialized exterior film engineered specifically for acrylic and polycarbonate plastic glazing surfaces.",
+        subtitle: "Outgassing-safe exterior protection for polycarbonate and acrylic glazing.",
+        heroImage: "/sub-solutions/glass-protection.png",
+        descriptionTitle: "Breathable adhesive technology engineered specifically for plastic substrates.",
+        descriptionParagraphs: [
+          "Standard window film adhesives cannot be applied to polycarbonate, acrylic, or Plexiglas because plastic substrates continuously release outgassing vapors that cause standard films to bubble and blister.",
+          "Polycarbonate OSW utilizes a unique vapor-permeable, breathable pressure-sensitive adhesive system that accommodates thermal expansion and outgassing without bubbling.",
+          "It provides scratch protection, UV blocking, and enhanced impact retention for plastic skylights, bus shelters, acoustic barriers, and marine hatches."
+        ],
+        descriptionImage: "/sub-solutions/glass-protection.png",
+        stats: [
+          { label: "Substrate Compatibility", value: "Polycarbonate & Acrylic" },
+          { label: "Bubble Resistance", value: "Outgassing Proof" },
+          { label: "UV Protection", value: "99%" }
+        ],
+        features: [
+          { title: "Vapor Permeable Adhesive", desc: "Allows outgassing vapors from plastic sheets to pass through without bubbling.", icon: "Layers" },
+          { title: "Anti-Scratch Shield", desc: "Protects soft polycarbonate surfaces against abrasive scratches and graffiti.", icon: "Shield" },
+          { title: "UV Degradation Blocker", desc: "Prevents yellowing and hazing of polycarbonate from intense sunlight.", icon: "Sun" }
+        ],
+        specs: [
+          { label: "Compatible Substrates", value: "Polycarbonate, PMMA / Acrylic, Lexan, Plexiglas" },
+          { label: "Thickness", value: "4 Mil - 6 Mil" },
+          { label: "Adhesive Type", value: "Specially formulated outgassing-compatible acrylic" },
+          { label: "UV Rejection", value: "99%" },
+          { label: "Surface Hardness", value: "2H Scratch Resistance" },
+          { label: "Warranty", value: "5 Years Exterior / 10 Years Interior" }
+        ]
+      }
+    }
+  },
+
+  "marine-window-film": {
+    name: "Marine Window Film",
+    slug: "marine-window-film",
+    shortDescription: "High-performance marine-grade solar and privacy window films engineered specifically for yachts, boats, and maritime vessels.",
+    heroImage: "/sub-products/magnum-ir.png",
+    heroSubtitle: "Corrosion-proof ceramic and hybrid films engineered to conquer ocean glare and high humidity.",
+    descriptionTitle: "Specialized thermal defense and optical comfort for seafaring vessels and luxury yachts.",
+    descriptionParagraphs: [
+      "Operating on the open water exposes marine vessels to intensified solar radiation reflected off the water surface, excessive heat in pilot houses, and rapid interior leather fading. Our Marine Window Films are precision-engineered to withstand harsh salt-spray environments.",
+      "Formulated with 100% non-corrosive ceramic and carbon nanomaterials, these films will never oxidize, discolor, or interfere with essential VHF radio, marine radar, autopilot, or satellite communication systems.",
+      "They provide outstanding heat reduction for onboard air conditioning efficiency, eliminate blinding water glare for the captain, and enhance guest privacy in yacht staterooms."
+    ],
+    descriptionImage: "/sub-products/magnum-black.png",
+    subProducts: {
+      "xenith-ir": {
+        name: "Xenith IR",
+        slug: "xenith-ir",
+        shortDescription: "Flagship marine ceramic film with extreme infrared rejection and maximum navigational clarity.",
+        subtitle: "The pinnacle of marine solar protection with up to 96% infrared heat rejection.",
+        heroImage: "/sub-products/magnum-ir.png",
+        descriptionTitle: "Ultimate infrared cooling designed for yacht flybridges and pilot house windows.",
+        descriptionParagraphs: [
+          "Xenith IR features proprietary nanoparticles that selectively target and eliminate intense infrared wavelengths (the primary cause of cabin heat) without requiring dark or reflective tinting.",
+          "It ensures pilot house windows maintain pristine, crystal-clear optical clarity for safe navigation in all sea conditions, day or night.",
+          "Totally metal-free, Xenith IR will not corrode in salty ocean air or impede onboard electronic communications."
+        ],
+        descriptionImage: "/sub-products/magnum-ir.png",
+        stats: [
+          { label: "Infrared Heat Block (IR)", value: "Up to 96%" },
+          { label: "Signal Interference", value: "0% VHF/GPS" },
+          { label: "UV Block", value: "99.9%" }
+        ],
+        features: [
+          { title: "Ultra-High IR Rejection", desc: "Blocks up to 96% of infrared heat waves for a cool, quiet yacht cabin.", icon: "Zap" },
+          { title: "Crystal Clear Vision", desc: "High optical transparency ensures safe day and night vessel navigation.", icon: "Sun" },
+          { title: "Zero Corrosion", desc: "Contains no metallic elements; completely impervious to salt mist.", icon: "Shield" }
+        ],
+        specs: [
+          { label: "Film Technology", value: "Next-Gen Nano-Ceramic Marine" },
+          { label: "Infrared Rejection (IRER)", value: "Up to 96%" },
+          { label: "Total Solar Heat Rejected", value: "62% - 70%" },
+          { label: "Visible Light Transmitted", value: "35% - 75%" },
+          { label: "UV Protection", value: "99.9%" },
+          { label: "Radio Transparency", value: "100% (Radar, GPS, VHF, Satcom)" },
+          { label: "Warranty", value: "10 Years Marine Lifetime" }
+        ]
+      },
+      "magnum-ir": {
+        name: "Magnum IR",
+        slug: "magnum-ir",
+        shortDescription: "High-performance ceramic heat-rejecting film with balanced shading and glare suppression.",
+        subtitle: "Superior thermal comfort and glare dampening for salon areas and yacht cabins.",
+        heroImage: "/sub-products/magnum-ir.png",
+        descriptionTitle: "Exceptional heat and glare suppression for maritime leisure spaces.",
+        descriptionParagraphs: [
+          "Magnum IR combines high infrared rejection with comfortable tint levels, dramatically reducing water glare and creating a tranquil, relaxed ambiance inside yacht salons.",
+          "Its advanced nano-ceramic matrix blocks 99% of UV rays, shielding exquisite marine upholstery, teak woodwork, and custom leather finishes from sun damage.",
+          "Engineered to deliver heavy thermal relief, easing the continuous electrical load on marine generators and chiller plants."
+        ],
+        descriptionImage: "/sub-products/magnum-ir.png",
+        stats: [
+          { label: "Infrared Rejection", value: "Up to 90%" },
+          { label: "Glare Reduction", value: "Up to 80%" },
+          { label: "Marine Corrosion Proof", value: "100%" }
+        ],
+        features: [
+          { title: "Significant Glare Dampening", desc: "Softens blinding ocean reflections on water and digital navigation screens.", icon: "Sun" },
+          { title: "Protects Luxury Interiors", desc: "Safeguards custom marine leather, fabrics, and fine teak millwork.", icon: "Shield" },
+          { title: "Chiller Efficiency", desc: "Reduces continuous onboard AC load and generator fuel burn.", icon: "Zap" }
+        ],
+        specs: [
+          { label: "Technology", value: "Deep-Dyed Nano-Ceramic Marine Hybrid" },
+          { label: "Total Solar Energy Rejected", value: "55% - 66%" },
+          { label: "Infrared Rejection", value: "Up to 90%" },
+          { label: "Visible Light Transmitted", value: "20% - 50%" },
+          { label: "UV Rejection", value: "99%" },
+          { label: "Salt Spray Tested", value: "Exceeds ASTM B117 salt spray standards" },
+          { label: "Warranty", value: "10 Years Marine" }
+        ]
+      },
+      "magnum-black": {
+        name: "Magnum Black",
+        slug: "magnum-black",
+        shortDescription: "Deep, elegant marine privacy film delivering dark shading and VIP stateroom seclusion.",
+        subtitle: "Deep charcoal tone providing luxurious privacy and dramatic exterior styling.",
+        heroImage: "/sub-products/magnum-black.png",
+        descriptionTitle: "Total stateroom privacy and sleek exterior aesthetics for luxury vessels.",
+        descriptionParagraphs: [
+          "Magnum Black gives yacht hulls and cabin windows a rich, dark charcoal exterior profile that creates a unified, modern silhouette on the water.",
+          "It provides complete daytime privacy for guest staterooms and VIP suites, shielding occupants from dockside onlookers and neighboring vessels at anchor.",
+          "Designed with color-stable carbon compounds that will never turn purple or bubble despite constant exposure to harsh marine sun."
+        ],
+        descriptionImage: "/sub-products/magnum-black.png",
+        stats: [
+          { label: "Glare Reduction", value: "Up to 93%" },
+          { label: "Stateroom Privacy", value: "VIP High" },
+          { label: "Color Stability", value: "Zero Fade" }
+        ],
+        features: [
+          { title: "VIP Privacy", desc: "Shields staterooms from neighboring boats and marina piers during the day.", icon: "Shield" },
+          { title: "Sleek Yacht Silhouette", desc: "Creates a seamless tinted glass band complementing modern boat designs.", icon: "Layers" },
+          { title: "Non-Fading Carbon Matrix", desc: "Resists color degradation and purpling in high-UV ocean environments.", icon: "Sun" }
+        ],
+        specs: [
+          { label: "Material Composition", value: "Color-Stable Marine Carbon" },
+          { label: "Available VLTs", value: "5%, 15%, 20%, 35%" },
+          { label: "Solar Energy Rejected", value: "50% - 63%" },
+          { label: "Glare Reduction", value: "65% - 93%" },
+          { label: "UV Rejection", value: "99%" },
+          { label: "Corrosion Risk", value: "Zero (Metal-free)" },
+          { label: "Warranty", value: "10 Years Marine" }
+        ]
+      }
+    }
+  }
+};
+
+// Category alias mapping for backward compatibility
+export const categoryAliases: Record<string, string> = {
+  "solar-control": "sun-control-window-film",
+  "safety-and-security": "safety-and-security-window-film"
+};
+
+// Sub-product alias mapping for backward compatibility
+export const subProductAliases: Record<string, string> = {
+  "lx-series": "lx-series-non-reflective",
+  "clear-safety-film": "clear-safety-film-series",
+  "safety-films": "sun-control-safety-film-series"
 };

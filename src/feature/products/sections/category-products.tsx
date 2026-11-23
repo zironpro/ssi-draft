@@ -10,13 +10,14 @@ if (typeof window !=="undefined") {
  gsap.registerPlugin(ScrollTrigger);
 }
 
-import { productsData } from"../data/products";
+import { productsData, categoryAliases } from "../data/products";
 
 export function CategoryProducts({ slug }: { slug: string }) {
- const sectionRef = useRef<HTMLElement>(null);
- 
- const category = productsData[slug];
- const products = category ? Object.values(category.subProducts) : [];
+  const sectionRef = useRef<HTMLElement>(null);
+  
+  const resolvedSlug = categoryAliases[slug] || slug;
+  const category = productsData[resolvedSlug];
+  const products = category ? Object.values(category.subProducts) : [];
 
  useEffect(() => {
  if (!sectionRef.current || products.length === 0) return;

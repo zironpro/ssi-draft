@@ -2,11 +2,12 @@ import Link from "next/link";
 
 const footerLinks = {
   products: [
-    { name: "Safety & Security", href: "/products/safety-and-security" },
-    { name: "Solar Control", href: "/products/solar-control" },
-    { name: "Privacy", href: "/products/privacy" },
-    { name: "Decorative", href: "/products/decorative" },
-    { name: "Specialty", href: "/products/specialty" },
+    { name: "Sun Control Window Film", href: "/products/sun-control-window-film" },
+    { name: "Exterior Sun Control", href: "/products/exterior-sun-control-window-film" },
+    { name: "Safety & Security Film", href: "/products/safety-and-security-window-film" },
+    { name: "Anchor Systems", href: "/products/anchor-systems" },
+    { name: "Exterior Safety Film", href: "/products/exterior-safety-window-film" },
+    { name: "Marine Window Film", href: "/products/marine-window-film" },
   ],
   solutions: [
     { name: "Solar & Heat Control", href: "/solutions/solar-and-heat-control" },
