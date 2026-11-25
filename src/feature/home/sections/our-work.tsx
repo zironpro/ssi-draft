@@ -9,7 +9,7 @@ const products = [
   {
     id: 1,
     title: "Sun Control Window Film",
-    image: "/products/sun-control.png",
+    image: "/products/sun-control-film.png",
     href: "/products/sun-control-window-film",
   },
   {

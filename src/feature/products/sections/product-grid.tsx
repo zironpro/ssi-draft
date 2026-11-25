@@ -9,7 +9,7 @@ const products = [
     title: "Sun Control Window Film",
     slug: "sun-control-window-film",
     description: "Reject up to 82% of solar heat, soften harsh glare, and significantly reduce cooling costs across architectural glazing.",
-    image: "/products/sun-control.png",
+    image: "/products/sun-control-film.png",
     pdfUrl: "/products/pdf/sun-control-window-film/LX 70 SAMPLE PAGE SOLAR GARD 0326.pdf",
   },
   {

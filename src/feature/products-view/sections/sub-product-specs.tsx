@@ -112,8 +112,8 @@ export function SubProductSpecs({
               className="flex flex-col justify-between gap-10 rounded-lg bg-[var(--color-deep-forest)] p-8 text-white lg:col-span-5 md:p-10"
             >
               <div>
-                <p className="text-sm text-white/60">{primary.label}</p>
-                <p className="mt-2 break-words text-3xl font-semibold leading-tight tracking-tight text-[var(--color-arch-sand)] md:text-4xl">
+                <p className="text-sm text-white/70">{primary.label}</p>
+                <p className="mt-2 break-words text-3xl font-semibold leading-tight tracking-tight text-white md:text-4xl">
                   {primary.value}
                 </p>
               </div>

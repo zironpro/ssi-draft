@@ -38,7 +38,7 @@ export const productsData: Record<string, Category> = {
     name: "Sun Control Window Film",
     slug: "sun-control-window-film",
     shortDescription: "Advanced solar control window films rejecting up to 82% solar heat while maximizing daylight and UV protection.",
-    heroImage: "/products/sun-control.png",
+    heroImage: "/products/sun-control-film.png",
     heroSubtitle: "Engineered spectrally selective, reflective, and ceramic films designed for ultimate thermal comfort and energy efficiency.",
     descriptionTitle: "Intelligent solar management for architectural comfort and sustainability.",
     descriptionParagraphs: [
@@ -46,7 +46,7 @@ export const productsData: Record<string, Category> = {
       "From virtually clear, non-reflective spectrally selective films to dual-reflective and elegant neutral sputtered films, our solutions dramatically reduce air conditioning loads, optimize occupant productivity, and enhance building aesthetics.",
       "Engineered with cutting-edge optical technologies, these films provide enduring performance backed by industry-leading warranties across commercial and residential applications in demanding climates."
     ],
-    descriptionImage: "/products/sun-control.png",
+    descriptionImage: "/products/sun-control-film.png",
     subProducts: {
       "lx-series-non-reflective": {
         name: "LX Series (Non Reflective)",
@@ -177,14 +177,14 @@ export const productsData: Record<string, Category> = {
         slug: "true-vue-series",
         shortDescription: "Dual-reflective solar control films offering maximum heat reduction and crystal-clear nighttime views.",
         subtitle: "Engineered dual-reflectance: high exterior reflection for privacy, low interior reflection for views.",
-        heroImage: "/products/sun-control.png",
+        heroImage: "/products/sun-control-film.png",
         descriptionTitle: "Enjoy exterior daytime privacy without looking at your own reflection at night.",
         descriptionParagraphs: [
           "Traditional reflective films create a mirror effect inside the building at night when indoor lights are switched on. True Vue solves this with dual-reflective technology.",
           "It provides strong reflective heat rejection and privacy on the exterior, while the interior layer is kept dark and low-reflectance, preserving your panoramic night views.",
           "It is one of the most effective solutions for slashing harsh desert glare and dramatically reducing cooling expenses."
         ],
-        descriptionImage: "/products/sun-control.png",
+        descriptionImage: "/products/sun-control-film.png",
         stats: [
           { label: "Total Solar Heat Rejected", value: "Up to 82%" },
           { label: "Glare Reduction", value: "Up to 94%" },
@@ -451,7 +451,7 @@ export const productsData: Record<string, Category> = {
     name: "Exterior Sun Control Window Film",
     slug: "exterior-sun-control-window-film",
     shortDescription: "Heavy-duty weather-resistant exterior films that stop heat at the first point of contact before it penetrates the glazing.",
-    heroImage: "/products/exterior-sun-control.png",
+    heroImage: "/products/exterior-sun-control-film.png",
     heroSubtitle: "Engineered Outside Weather (OSW) films for skylights, double-glazed units, and hard-to-access facades.",
     descriptionTitle: "Maximum solar defense applied directly to the outside face of the glass.",
     descriptionParagraphs: [
